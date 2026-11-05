@@ -1,0 +1,119 @@
+services:
+  db:
+    # Postgres 18 is the fleet standard (fog docs/postgres-18-proposal.md).
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: ${DATABASE_USER:-fin}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-fin}
+      POSTGRES_DB: ${DATABASE_NAME:-fin_development}
+    # The postgres:18 image keeps its data at /var/lib/postgresql/<major>/docker
+    # and declares /var/lib/postgresql as the volume, so the mount is the
+    # parent directory, not .../data.
+    volumes:
+      - db_data_18:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+    networks:
+      - fin
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USER:-fin} -d ${DATABASE_NAME:-fin_development}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    # db:prepare runs here (not in the entrypoint) so only one process loads
+    # the schema — prevents a race condition with the worker trying to
+    # CREATE EXTENSION pgcrypto at the same moment.
+    command: bash -c "bin/rails db:prepare && rm -f tmp/pids/server.pid && bin/rails server -b 0.0.0.0 -p 3000"
+    environment:
+      RAILS_ENV: development
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USER: ${DATABASE_USER:-fin}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-fin}
+      DATABASE_NAME: ${DATABASE_NAME:-fin_development}
+      DATABASE_NAME_TEST: ${DATABASE_NAME_TEST:-fin_test}
+      ALPHA_VANTAGE_API_KEY: ${ALPHA_VANTAGE_API_KEY:-}
+      PLAID_CLIENT_ID: ${PLAID_CLIENT_ID:-}
+      PLAID_SECRET: ${PLAID_SECRET:-}
+      PLAID_ENV: ${PLAID_ENV:-sandbox}
+      AR_ENCRYPTION_PRIMARY_KEY: ${AR_ENCRYPTION_PRIMARY_KEY:-}
+      AR_ENCRYPTION_DETERMINISTIC_KEY: ${AR_ENCRYPTION_DETERMINISTIC_KEY:-}
+      AR_ENCRYPTION_KEY_DERIVATION_SALT: ${AR_ENCRYPTION_KEY_DERIVATION_SALT:-}
+    volumes:
+      - .:/rails
+      - bundle_cache:/usr/local/bundle
+    ports:
+      - "3001:3000"
+    networks:
+      - fin
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:3000/up || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    tty: true
+    stdin_open: true
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: ["bin/jobs"]
+    environment:
+      RAILS_ENV: development
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USER: ${DATABASE_USER:-fin}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-fin}
+      DATABASE_NAME: ${DATABASE_NAME:-fin_development}
+      ALPHA_VANTAGE_API_KEY: ${ALPHA_VANTAGE_API_KEY:-}
+      PLAID_CLIENT_ID: ${PLAID_CLIENT_ID:-}
+      PLAID_SECRET: ${PLAID_SECRET:-}
+      PLAID_ENV: ${PLAID_ENV:-sandbox}
+      AR_ENCRYPTION_PRIMARY_KEY: ${AR_ENCRYPTION_PRIMARY_KEY:-}
+      AR_ENCRYPTION_DETERMINISTIC_KEY: ${AR_ENCRYPTION_DETERMINISTIC_KEY:-}
+      AR_ENCRYPTION_KEY_DERIVATION_SALT: ${AR_ENCRYPTION_KEY_DERIVATION_SALT:-}
+    volumes:
+      - .:/rails
+      - bundle_cache:/usr/local/bundle
+    networks:
+      - fin
+    depends_on:
+      db:
+        condition: service_healthy
+      web:
+        condition: service_healthy
+
+  frontend:
+    image: node:24-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run dev"
+    environment:
+      API_TARGET: http://web:3000
+    volumes:
+      - ./frontend:/app
+      - frontend_node_modules:/app/node_modules
+    ports:
+      - "5173:5173"
+    networks:
+      - fin
+    depends_on:
+      - web
+
+networks:
+  fin:
+    driver: bridge
+
+volumes:
+  db_data_18:
+  bundle_cache:
+  frontend_node_modules:

@@ -1,0 +1,47 @@
+default: &default
+  dispatchers:
+    - polling_interval: 1
+      batch_size: 500
+  workers:
+    # Solid Queue has no queue exclusion, so this worker lists the app queues
+    # explicitly instead of "*" — a job enqueued to a queue missing from this
+    # file will never run. Add new queue names here.
+    #
+    # This MUST be a YAML list. Solid Queue does not split a comma-separated
+    # string (that is a Sidekiq-ism): "default,workflows" is matched as a
+    # single literal queue name, so the worker claims nothing and every
+    # default/workflows job silently piles up unprocessed.
+    - queues: [ default, workflows ]
+      threads: 3
+      processes: <%= ENV.fetch("JOB_CONCURRENCY", 1) %>
+      polling_interval: 0.1
+    # Both of these queues run slow, sleep-heavy jobs: market-price sync paces
+    # provider calls with in-thread sleeps (minutes per run), and on-chain
+    # history backfill loops pages with courtesy sleeps for many minutes on
+    # deep wallets. The point of splitting them out is keeping them off the
+    # main pool so they can't starve workflow ticks, notifications and syncs —
+    # they share one process with a thread each because a whole extra booted
+    # Rails process costs ~57 MB RSS and buys nothing beyond that isolation.
+    # They can now delay each other, which is fine: both are daily/periodic
+    # background refreshes with no latency requirement.
+    - queues: [ market_data, backfill ]
+      threads: 2
+      processes: 1
+      polling_interval: 1
+    # fog-backup/2 artifact production: a full pg_dump + tar, one at a time.
+    # Its own queue so a backup fog is waiting on can't sit behind a
+    # market-data backfill (and per the rule above: unlisted queues never
+    # run).
+    - queues: [ backup ]
+      threads: 1
+      processes: 1
+      polling_interval: 5
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

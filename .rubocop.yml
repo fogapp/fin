@@ -1,0 +1,72 @@
+# Omakase Ruby styling for Rails
+inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+
+plugins: rubocop-sorbet
+require: ./lib/rubocop/cop/layout/empty_line_after_extend_t_sig
+
+AllCops:
+  Exclude:
+    # Reference clones of other personal-finance apps, kept locally for study
+    # and excluded from git (see .gitignore) and Sorbet (see sorbet/config).
+    # Without this, `bin/rubocop` inspects 3,772 files and reports ~3,700
+    # offenses from other people's repos, burying the ~35 real ones.
+    - "firefly/**/*"
+    - "maybe/**/*"
+    - "sure/**/*"
+    - "node_modules/**/*"
+    - "frontend/**/*"
+    - "vendor/**/*"
+
+Layout/EmptyLineAfterExtendTSig:
+  Enabled: true
+# Overwrite or add rules to create your own house style
+#
+# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
+# Layout/SpaceInsideArrayLiteralBrackets:
+#   Enabled: false
+
+Sorbet/FalseSigil:
+  Enabled: false
+
+Sorbet/TrueSigil:
+  Enabled: true
+  Exclude:
+    # MCP::Tool subclasses build themselves through the mcp gem's untyped
+    # class-level DSL (tool_name/description/input_schema); the gem ships no
+    # RBI, so these files stay typed: false.
+    - "app/domain/mcp/**/*"
+    - "config/**/*"
+    - "db/**/*"
+    - "spec/**/*"
+    - "test/**/*"
+    - "sorbet/**/*"
+    - "lib/**/*"
+    - "app/helpers/**/*"
+    - "app/models/concerns/**/*"
+    - "config.ru"
+
+Sorbet/StrictSigil:
+  Enabled: true
+  Include:
+    - "app/services/**/*"
+    - "app/domain/**/*"
+  Exclude:
+    - "app/services/transfer_candidate_service.rb"
+    # See the TrueSigil exclusion above — the mcp gem's DSL is untyped.
+    - "app/domain/mcp/**/*"
+
+Sorbet/ValidSigil:
+  Enabled: true
+
+Sorbet/ConstantsFromStrings:
+  Enabled: false
+
+Sorbet/BlockMethodDefinition: # new in 0.10.1
+  Enabled: false
+Sorbet/ForbidTAnyWithNil: # new in 0.11.0
+  Enabled: true
+Sorbet/Refinement: # new in 0.8.6
+  Enabled: true
+
+Sorbet/ForbidUntypedStructProps:
+  Enabled: false

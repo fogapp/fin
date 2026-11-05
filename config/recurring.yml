@@ -1,0 +1,110 @@
+default: &default
+  prune_activity:
+    class: PruneActivityJob
+    schedule: "at 2:00am every day"
+    description: "Prunes activity entries (90 days, errors 1 year), finished workflow runs (90 days), and balance snapshots (2 years)"
+  workflow_schedule_tick:
+    class: Workflows::ScheduleTickJob
+    schedule: "every 5 minutes"
+    description: "Fires schedule-triggered workflows that are due"
+  workflow_monitor_sweep:
+    class: Workflows::MonitorSweepJob
+    schedule: "every 15 minutes"
+    description: "Re-evaluates monitor workflows (balance thresholds, spend limits) whose conditions can change without a record event"
+  workflow_stranded_run_sweep:
+    class: Workflows::StrandedRunSweepJob
+    schedule: "every 30 minutes"
+    description: "Re-enqueues workflow runs stuck in status running (killed mid-execution); marks day-old strays failed"
+  detect_transfer_candidates:
+    class: DetectTransferCandidatesJob
+    schedule: "every 6 hours"
+    description: "Scans transactions for likely transfer pairs and stores them as unconfirmed Transfer records"
+  snapshot_account_balances:
+    class: SnapshotAccountBalancesJob
+    schedule: "at 1:00am every day"
+    description: "Records a daily balance snapshot for every account that has a balance set"
+  equity_vest_scan:
+    class: EquityVestScanJob
+    schedule: "at 7:00am every day"
+    description: "Publishes equity vesting workflow events (14-day and 1-day upcoming, day-of vests) and 90/30-day grant expiration warnings"
+  tax_scan:
+    class: TaxScanJob
+    schedule: "every monday at 7:30am"
+    description: "Weekly tax vigilance scan: quarterly due dates approaching, safe harbor behind, contribution limits at 90%, overdue documents, recent wash sales"
+  metrics_refresh:
+    class: Metrics::RefreshJob
+    schedule: "at 6:45am every day"
+    description: "Backfills newly registered metrics and refreshes trailing metric points for every household (after the 1am balance snapshot and 5am market sync, so level metrics see fresh prices)"
+  orphaned_concurrency_sweep:
+    class: OrphanedConcurrencySweepJob
+    schedule: "every 5 minutes"
+    description: "Detects and clears Solid Queue semaphores locked with no claimed execution (caused by OOM-killed workers), preventing permanent concurrency deadlocks"
+
+  clear_solid_queue_finished_jobs:
+    class: ClearSolidQueueFinishedJobsJob
+    schedule: every hour at minute 12
+    args:
+      - retain_days: 30
+        max_executions: 0
+    description: "Removes finished Solid Queue jobs. retain_days: delete jobs older than N days. max_executions: keep at most N most-recent finished jobs (0 = unlimited)."
+
+  # ── Core data syncs ──────────────────────────────────────────────────────────
+  # These used to be triggered only by user-editable schedule workflows —
+  # archiving "Bank & card sync" silently froze all bank data. The entries
+  # below are the infrastructure baseline; the seeded workflows may still
+  # trigger the same jobs (extra runs are harmless — every job is idempotent
+  # and guarded by limits_concurrency).
+  plaid_sync:
+    class: PlaidSyncJob
+    schedule: "at 4:30am every day"
+    description: "Fans out one per-item Plaid sync job for every active item (before the 6:45am metrics refresh)"
+  market_price_sync:
+    class: MarketPriceSyncJob
+    schedule: "at 5:00am every day"
+    description: "Daily candles for held/watched/benchmark instruments (metrics_refresh at 6:45am depends on this)"
+  market_data_cross_check:
+    class: MarketData::CrossCheckJob
+    schedule: "at 5:40am every day"
+    description: "Verifies stored candle closes against a second configured provider (Tiingo vs Alpha Vantage/CoinGecko) and raises per-security Issues on disagreement"
+  fx_sync:
+    class: MarketData::FxSyncJob
+    schedule: "at 5:45am every day"
+    description: "Daily FX rates for non-USD account currencies"
+  system_audit:
+    class: SystemAuditJob
+    schedule: "at 6:00am every day"
+    description: "Data-health audit: Plaid staleness/errors, instrument identity, stuck imports, permanently failed background jobs"
+  recurring_detect:
+    class: Recurring::DetectJob
+    schedule: "at 6:15am every day"
+    description: "Recurring-series pipeline: match new charges, advance occurrence states, detect new subscription suggestions"
+  monthly_review:
+    class: MonthlyReviewJob
+    schedule: "every 1st of the month at 7:15am"
+    description: "Publishes review.month_ready per household for the just-closed month (after the 6:45am metrics refresh, so the review page's net-worth numbers are fresh)"
+  sync_crypto_prices:
+    class: SyncCryptoPricesJob
+    schedule: "every 4 hours"
+    description: "Refreshes crypto spot prices per household via CoinMarketCap"
+  coinbase_sync:
+    class: CoinbaseSyncTickJob
+    schedule: "every 6 hours at minute 20"
+    description: "Syncs Coinbase accounts/transactions for every configured household"
+  alchemy_sync:
+    class: AlchemySyncTickJob
+    schedule: "every 6 hours at minute 40"
+    description: "Syncs on-chain wallet balances via Alchemy for every configured household"
+  real_estate_sync:
+    class: RealEstate::SyncTickJob
+    schedule: "every monday at 6:15am"
+    description: "Weekly RentCast valuation refresh for every property, budgeted against the plan's monthly request allowance (runs before the 6:45am metrics refresh so net-worth metrics see fresh values)"
+  alchemy_transaction_tick:
+    class: Alchemy::TransactionSyncTickJob
+    schedule: "every 5 minutes"
+    description: "Enqueues on-chain transaction sync for households whose configured frequency is due"
+
+development:
+  <<: *default
+
+production:
+  <<: *default

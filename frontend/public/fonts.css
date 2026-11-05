@@ -1,0 +1,50 @@
+/* Self-hosted webfonts (public/fonts/) — same-origin replacement for the
+ * Google Fonts CDN link this app used to inject at runtime. Loaded as a
+ * blocking <link> from index.html so every family is known before first
+ * paint; each file only downloads once text actually renders in that face.
+ *
+ * Each source file is the single variable-weight "latin" woff2 Google
+ * Fonts itself serves for weights 400/500/600/700 of these families (its
+ * own CSS response repeats the same URL for each discrete weight) — one
+ * `font-weight: 400 700` range per family covers the same ground.
+ */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/inter.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/dm-sans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/nunito.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/ibm-plex.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/outfit.woff2") format("woff2");
+}

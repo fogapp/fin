@@ -1,0 +1,21 @@
+#!/bin/bash -e
+
+# Restore-on-boot guard (fog-backup, fog:docs/backup-contract.md): when an
+# artifact is staged and armed — the first-run restore door arms one and
+# exits so the container restarts through here — restore it before serving.
+# The Postgres advisory lock inside the task makes exactly one process
+# perform the restore while siblings wait. A failed restore exits nonzero on
+# purpose: refusing to serve beats booting half-restored.
+if [ -f /rails/storage/fog/restore/pending.json ]; then
+  echo "fog: staged restore detected — restoring before boot"
+  ./bin/rails fog:restore_if_staged
+fi
+
+# Dev compose mounts a bundle_cache volume that may be fresh/empty; the
+# production image has its gems baked, so skip the (network-touching)
+# bundle install there.
+if [ "${RAILS_ENV:-development}" != "production" ]; then
+  bundle install
+fi
+
+exec "${@}"

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fin</title>
+    <script>
+      (function () {
+        var ls = localStorage;
+        var el = document.documentElement;
+        var theme = ls.getItem("theme") || "copper";
+        el.setAttribute("data-theme", theme === "light" ? "" : theme);
+        el.setAttribute("data-palette", ls.getItem("chart-palette") || "moss");
+        var font = ls.getItem("font") || "nunito";
+        el.setAttribute("data-font", font);
+        var sizes = { xs: "13px", sm: "14px", md: "16px", lg: "18px", xl: "20px" };
+        el.style.fontSize = sizes[ls.getItem("font-size")] || "14px";
+        // All families are declared in fonts.css (self-hosted, public/fonts/)
+        // via a normal blocking <link> below, so the browser already knows
+        // about every @font-face before this fires — this just starts the
+        // active family's file downloading immediately instead of waiting
+        // for fonts.css to be fetched/parsed first. Must mirror the
+        // filenames in public/fonts.css.
+        var files = { inter: "inter", "dm-sans": "dm-sans", nunito: "nunito", "ibm-plex": "ibm-plex", outfit: "outfit" };
+        if (files[font]) {
+          var preload = document.createElement("link");
+          preload.rel = "preload";
+          preload.as = "font";
+          preload.type = "font/woff2";
+          preload.crossOrigin = "anonymous";
+          preload.href = "/fonts/" + files[font] + ".woff2";
+          document.head.appendChild(preload);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/fonts.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

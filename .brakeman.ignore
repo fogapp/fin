@@ -1,0 +1,100 @@
+{
+  "ignored_warnings": [
+    {
+      "fingerprint": "edf687f759ec9765bd5db185dbc615c80af77d6e7e19386fc42934e7a80307af",
+      "note": "Unmaintained Ruby version \u2014 upgrade tracked separately, not a code issue"
+    },
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "effdbb1b34fcaf3d3ec36e8e1418dad97fa99dd4d4b6283847470243fab89a35",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "app/models/transfer.rb",
+      "line": 73,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "candidates.where(\"NOT (#{side_available_sql(\"from\")} AND #{side_available_sql(\"to\")})\")",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Transfer",
+        "method": "stale_candidates"
+      },
+      "user_input": "side_available_sql(\"from\")",
+      "confidence": "Medium",
+      "cwe_id": [
+        89
+      ],
+      "note": "False positive: side_available_sql takes only the literals 'from'/'to' (its sole caller is the stale_candidates scope, used by Transfers::CandidateDetector) and interpolates them with a hardcoded type->table map; no user input reaches it. Identifiers/column names can't be bound, and an Arel rewrite of the EXISTS pair would be harder to read."
+    },
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "f0f7dd4539c1c7166e349081bd3dce43d7d8c77a3de82790261d4415c334af39",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "app/services/market_data/price_series.rb",
+      "line": 111,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "::ActiveRecord::Base.connection.select_rows(\"SELECT DISTINCT ON (p.security_id) p.security_id, p.date, COALESCE(p.adjusted_close, p.close)\\nFROM #{table} p\\nJOIN (VALUES #{befores.compact.map do\n ::ActiveRecord::Base.sanitize_sql_array([\"(?::uuid, ?::date)\", security_id, before])\n end.join(\", \")}) AS w(security_id, before_date)\\n  ON w.security_id = p.security_id\\nWHERE p.date < w.before_date #{extra}\\nORDER BY p.security_id, p.date DESC\\n\".squish)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "MarketData::PriceSeries",
+        "method": "self.closes_before_by_security"
+      },
+      "user_input": "table",
+      "confidence": "Medium",
+      "cwe_id": [
+        89
+      ],
+      "note": "False positive: table and extra come from the fixed two-row in-code list (market_prices / candles), and every (security_id, date) pair is bound through sanitize_sql_array. The only caller, Valuation::PortfolioSeries, passes security ids and dates computed from the household's holdings, not request input. Table names can't be bound."
+    },
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "7cf4038804fc39bbca574c51f4b270bbd09c2af7206dee4727c4f3657c43cfcd",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "app/services/fog_backup/restorer.rb",
+      "line": 184,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "ActiveRecord::Base.connection.execute(\"TRUNCATE #{ActiveRecord::Base.connection.select_values(\"SELECT tablename FROM pg_tables\\nWHERE schemaname = 'public'\\n  AND (tablename LIKE 'solid_queue_%' OR tablename = 'solid_cache_entries')\\n\").map do\n ActiveRecord::Base.connection.quote_table_name(t)\n end.join(\", \")} CASCADE\")",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "FogBackup::Restorer",
+        "method": "truncate_queue_and_cache"
+      },
+      "user_input": "ActiveRecord::Base.connection.select_values(\"SELECT tablename FROM pg_tables\\nWHERE schemaname = 'public'\\n  AND (tablename LIKE 'solid_queue_%' OR tablename = 'solid_cache_entries')\\n\").map do\n ActiveRecord::Base.connection.quote_table_name(t)\n end.join(\", \")",
+      "confidence": "Medium",
+      "cwe_id": [
+        89
+      ],
+      "note": "False positive: TRUNCATE takes identifiers, which can't be bound. The list is the solid_queue_* / solid_cache_entries table names read back from pg_tables after a restore, each quoted with connection.quote_table_name; no request parameter or other user input reaches it (truncate_queue_and_cache takes no arguments and is called only from Restorer#call)."
+    },
+    {
+      "warning_type": "SQL Injection",
+      "warning_code": 0,
+      "fingerprint": "bd4f596aabd6b045068b19b50749515011c6779f7a9af4f8934ede6554df7825",
+      "check_name": "SQL",
+      "message": "Possible SQL injection",
+      "file": "app/services/fog_backup/restorer.rb",
+      "line": 202,
+      "link": "https://brakemanscanner.org/docs/warning_types/sql_injection/",
+      "code": "ActiveRecord::Base.connection.execute(\"DROP TABLE IF EXISTS #{ActiveRecord::Base.connection.select_values(\"SELECT format('%I.%I', schemaname, tablename) FROM pg_tables\\nWHERE schemaname = #{ActiveRecord::Base.connection.quote(schema)} AND tableowner = current_user\\n\".squish).join(\", \")} CASCADE\")",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "FogBackup::Restorer",
+        "method": "drop_own_tables"
+      },
+      "user_input": "ActiveRecord::Base.connection.select_values(\"SELECT format('%I.%I', schemaname, tablename) FROM pg_tables\\nWHERE schemaname = #{ActiveRecord::Base.connection.quote(schema)} AND tableowner = current_user\\n\".squish).join(\", \")",
+      "confidence": "Medium",
+      "cwe_id": [
+        89
+      ],
+      "note": "False positive: DROP TABLE takes identifiers, which can't be bound. Postgres itself quotes each one (format('%I.%I', schemaname, tablename)) from pg_tables rows owned by the current role, and the schema filter goes through connection.quote; drop_own_tables is called only from Restorer#call with the default 'public' (and from its spec with a fixed schema name), never with user input."
+    }
+  ]
+}

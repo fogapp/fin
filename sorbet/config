@@ -1,0 +1,14 @@
+--dir
+.
+--ignore=tmp/
+--ignore=vendor/
+--ignore=db/
+--ignore=config/
+--ignore=spec/
+--ignore=test/
+--ignore=.claude/
+--ignore=/firefly/
+--ignore=/maybe/
+--ignore=/sure/
+--parser=prism
+--enable-experimental-requires-ancestor

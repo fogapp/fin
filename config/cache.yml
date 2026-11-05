@@ -1,0 +1,10 @@
+# solid_cache lives in the primary database (no `database:` key) so the web
+# and worker containers share one cache — see CreateSolidCacheEntries.
+default: &default
+  store_options:
+    max_age: <%= 1.week.to_i %>
+    max_size: <%= 256.megabytes %>
+    namespace: <%= Rails.env.slice(0, 3) %>
+
+production:
+  <<: *default

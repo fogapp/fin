@@ -1,0 +1,42 @@
+# syntax=docker/dockerfile:1
+ARG RUBY_VERSION=4.0.9
+FROM docker.io/library/ruby:$RUBY_VERSION-slim
+
+ENV LANG=C.UTF-8 \
+    BUNDLE_PATH=/usr/local/bundle \
+    RAILS_ENV=development
+
+# postgresql-client-18 from PGDG for the same reason as the production
+# image: the dev image must dump/restore the same major the fleet runs.
+# zstd likewise: restoring a fog-backup/1 artifact unpacks a zstd tar.
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y ca-certificates curl && \
+    install -d /usr/share/postgresql-common/pgdg && \
+    curl -fsSL -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc https://www.postgresql.org/media/keys/ACCC4CF8.asc && \
+    echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt '"$(. /etc/os-release && echo "$VERSION_CODENAME")"'-pgdg main' > /etc/apt/sources.list.d/pgdg.list && \
+    apt-get update -qq && \
+    apt-get install --no-install-recommends -y \
+      build-essential \
+      git \
+      libjemalloc2 \
+      libpq-dev \
+      libyaml-dev \
+      pkg-config \
+      postgresql-client-18 \
+      zstd && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /rails
+
+# The vendored gems (vendor/gems/*) are path: gems in the Gemfile, so they
+# must be in place before bundle install resolves them.
+COPY vendor ./vendor
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+
+COPY . .
+
+EXPOSE 3000
+
+ENTRYPOINT ["bin/docker-entrypoint"]
+CMD ["bin/rails", "server", "-b", "0.0.0.0", "-p", "3000"]

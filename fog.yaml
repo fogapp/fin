@@ -1,0 +1,54 @@
+# Fin's app manifest for fog (https://github.com/fogapp/fog), the
+# self-hosting platform Fin runs on in production. Fog reads this file from
+# the repo on every deploy. Outside fog it is ignored.
+
+# Household sign-in, fog-signin/1 (fog's docs/signin-contract.md): fog
+# registers Fin as a client of its OpenID provider and injects OIDC_ISSUER,
+# OIDC_CLIENT_ID and OIDC_CLIENT_SECRET. Fin holds the household's money, so
+# fog signs people in to it only with a passkey (acr: phr); a password
+# session is asked to step up first. fog maps its roles onto a household
+# membership's (admin, member), and the app's Sign-in tab in fog decides who
+# may sign in at all. Fin does not ask fog for email addresses. Outside fog
+# the same three variables point Fin at any OIDC provider.
+signin:
+  contract: fog-signin/1
+  redirect: /auth/oidc/callback
+  logout: /auth/oidc/backchannel
+  roles: [admin, member]
+  default:
+    operator: admin
+    member: member
+  acr: phr
+
+# Integrations, fog-integration/1 (fog's docs/integrations-contract.md). A
+# change here reaches the installed Fin with its next deploy.
+#
+# The offer: what other apps connect to on their Integrations tab in fog.
+# Fin's tokens are a person's and its data is the household's money, so
+# `finance` asks for consent: POST /fog/integrations answers a page on
+# Fin's console, /connect/<ticket>, where a household admin approves or
+# declines; approved, fog claims a read-only API token in their name
+# (FogIntegrations), minted for that app alone, and fills {{url}} with
+# Fin's address on the fog network. Needs fog to have a domain.
+#
+# The wants: offers from other fog apps that Fin is built to use, suggested
+# first on its own tab. Office's `documents` sets OFFICE_URL and
+# OFFICE_API_TOKEN, which OfficeConfiguration falls back to when nothing is
+# saved in Settings › Integrations; Lucid's `monitoring` sets LUCID_URL and
+# LUCID_API_KEY, which the vendored lucid gem reads at boot. Both are
+# optional: Fin runs the same without them.
+integrations:
+  offers:
+    - id: finance
+      title: Finances
+      blurb: This app can read the household's accounts, transactions, budget, cashflow and net worth in Fin, as the person who approves it, and change nothing.
+      consent: true
+      env:
+        FIN_URL: "{{url}}"
+      secrets: [FIN_API_TOKEN]
+      capabilities:
+        - Read accounts, transactions and the budget
+        - Read cashflow and net worth
+  wants:
+    - offer: office/documents
+    - offer: lucid/monitoring
