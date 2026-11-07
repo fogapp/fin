@@ -30,8 +30,8 @@ module Tax
 
     sig { params(household: Household, year: Integer).void }
     def initialize(household:, year:)
-      @household = T.let(household, Household)
-      @year      = T.let(year, Integer)
+      @household = household
+      @year      = year
       @range     = T.let(Date.new(year, 1, 1)..Date.new(year, 12, 31), T::Range[Date])
     end
 

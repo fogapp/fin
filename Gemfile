@@ -36,7 +36,7 @@ gem "plaid"
 # for ~12 MB of heap, and only the two passkey controllers ever touch it.
 # WebauthnRelyingParty requires it in a before_action, so the worker container
 # and every non-passkey request boot without it.
-gem "webauthn", "~> 3.4", require: false
+gem "webauthn", "~> 3.5", require: false
 
 # API documentation
 gem "rswag-api"
@@ -53,10 +53,10 @@ gem "sorbet-runtime"
 # FLARE_DSN env Fog injects, so dev/test are unaffected.
 gem "flare", path: "vendor/gems/flare"
 
-# Metrics, traces, profiles, logs and browser analytics to Lucid. Vendored
-# (synced from lucid:clients/ruby); must follow gem "rails" so its railtie
-# loads. Inert without LUCID_URL + LUCID_API_KEY, so dev/test are unaffected.
-gem "lucid", path: "vendor/gems/lucid"
+# Metrics, traces, profiles, logs and browser analytics to Glass. Vendored
+# (synced from glass:clients/ruby); must follow gem "rails" so its railtie
+# loads. Inert without GLASS_URL + GLASS_API_KEY, so dev/test are unaffected.
+gem "glass", path: "vendor/gems/glass"
 
 # The app-side view of fog (synced from fog:clients/fog-client), here for
 # household sign-in (FogClient::Signin, fog:docs/signin-proposal.md §15).
@@ -85,8 +85,8 @@ end
 
 group :test do
   gem "shoulda-matchers", "~> 7.0"
-  gem "webmock", "~> 3.24"
-  gem "simplecov", "~> 0.22", require: false
+  gem "webmock", "~> 3.34"
+  gem "simplecov", "~> 1.2", require: false
 end
 
 group :development do

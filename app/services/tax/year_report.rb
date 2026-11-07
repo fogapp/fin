@@ -33,8 +33,8 @@ module Tax
 
     sig { params(household: Household, year: Integer).void }
     def initialize(household:, year:)
-      @household = T.let(household, Household)
-      @year      = T.let(year, Integer)
+      @household = household
+      @year      = year
       @context   = T.let(Sections::Context.new(household: household, year: year), Sections::Context)
     end
 

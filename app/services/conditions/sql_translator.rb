@@ -20,9 +20,9 @@ module Conditions
     # RuleCondition rows and the controllers' param structs both qualify.
     sig { params(conditions: T::Array[T.untyped], model_class: T.untyped, match_all: T::Boolean).void }
     def initialize(conditions, model_class, match_all:)
-      @conditions = T.let(conditions, T::Array[T.untyped])
-      @klass      = T.let(model_class, T.untyped)
-      @match_all  = T.let(match_all, T::Boolean)
+      @conditions = conditions
+      @klass      = model_class
+      @match_all  = match_all
       @conn       = T.let(model_class.connection, T.untyped)
     end
 

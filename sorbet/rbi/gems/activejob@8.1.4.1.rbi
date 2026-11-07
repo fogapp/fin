@@ -182,6 +182,7 @@ class ActiveJob::Base
   include ::ActiveJob::Logging
   include ::ActiveJob::ExecutionState
   include ::ActiveJob::ConcurrencyControls
+  include ::ActiveJob::BatchId
   include ::ActiveJob::TestHelper::TestQueueAdapter
   extend ::ActiveJob::Core::ClassMethods
   extend ::ActiveJob::QueueAdapter::ClassMethods
@@ -226,6 +227,18 @@ class ActiveJob::Base
 
   # pkg:gem/activejob#lib/active_job/base.rb:71
   def after_discard_procs?; end
+
+  # pkg:gem/activejob#lib/active_job/base.rb:76
+  def batch_id; end
+
+  # pkg:gem/activejob#lib/active_job/base.rb:76
+  def batch_id=(_arg0); end
+
+  # pkg:gem/activejob#lib/active_job/base.rb:76
+  def callback_batch_id; end
+
+  # pkg:gem/activejob#lib/active_job/base.rb:76
+  def callback_batch_id=(_arg0); end
 
   # pkg:gem/activejob#lib/active_job/base.rb:76
   def concurrency_duration; end

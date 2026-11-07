@@ -65,6 +65,13 @@ module Fin
     # AccountBalanceSnapshot.local_date_sql).
     config.time_zone = "America/Los_Angeles"
 
+    # Solid Queue 1.5+ reads zone-less schedules in config/recurring.yml
+    # ("at 1:00am every day") in config.time_zone. They were written against
+    # the container's system clock, which is UTC; nil keeps them there so the
+    # upgrade doesn't move every daily job by 7-8 hours. Moving them to local
+    # time is its own change: drop this line and re-check each schedule.
+    config.solid_queue.time_zone = nil
+
     # Gzip JSON responses at the app layer so payload size doesn't depend on
     # the fronting nginx's gzip config. Placed outside Rack::ConditionalGet /
     # Rack::ETag so ETags are computed over the stable uncompressed body and

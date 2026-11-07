@@ -147,7 +147,7 @@ module Prism
     #
     # pkg:gem/prism#lib/prism.rb:73
     sig { params(source: String, serialized: String, freeze: T.nilable(T::Boolean)).returns(Prism::ParseResult) }
-    def load(source, serialized, freeze = T.unsafe(nil)); end
+    def load(source, serialized, freeze = false); end
 
     # Mirror the Prism.parse API by using the serialization API.
     def parse(*_arg0); end
@@ -198,7 +198,7 @@ module Prism
     #
     # pkg:gem/prism#lib/prism/parse_result.rb:904
     sig { params(locals: T::Array[Symbol], forwarding: T::Array[Symbol]).returns(Prism::Scope) }
-    def scope(locals: T.unsafe(nil), forwarding: T.unsafe(nil)); end
+    def scope(locals: [], forwarding: []); end
   end
 end
 
@@ -323,7 +323,7 @@ class Prism::AliasGlobalVariableNode < ::Prism::Node
       keyword_loc: Prism::Location
     ).returns(Prism::AliasGlobalVariableNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), new_name: T.unsafe(nil), old_name: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, new_name: self.new_name, old_name: self.old_name, keyword_loc: self.keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -472,7 +472,7 @@ class Prism::AliasMethodNode < ::Prism::Node
       keyword_loc: Prism::Location
     ).returns(Prism::AliasMethodNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), new_name: T.unsafe(nil), old_name: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, new_name: self.new_name, old_name: self.old_name, keyword_loc: self.keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -633,7 +633,7 @@ class Prism::AlternationPatternNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::AlternationPatternNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, left: self.left, right: self.right, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -780,7 +780,7 @@ class Prism::AndNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::AndNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, left: self.left, right: self.right, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -968,7 +968,7 @@ class Prism::ArgumentsNode < ::Prism::Node
       arguments: T::Array[Prism::Node]
     ).returns(Prism::ArgumentsNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), arguments: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, arguments: self.arguments); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -1129,7 +1129,7 @@ class Prism::ArrayNode < ::Prism::Node
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::ArrayNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), elements: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, elements: self.elements, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -1330,7 +1330,7 @@ class Prism::ArrayPatternNode < ::Prism::Node
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::ArrayPatternNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), constant: T.unsafe(nil), requireds: T.unsafe(nil), rest: T.unsafe(nil), posts: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, constant: self.constant, requireds: self.requireds, rest: self.rest, posts: self.posts, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -1492,7 +1492,7 @@ class Prism::AssocNode < ::Prism::Node
       operator_loc: T.nilable(Prism::Location)
     ).returns(Prism::AssocNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), key: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, key: self.key, value: self.value, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -1646,7 +1646,7 @@ class Prism::AssocSplatNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::AssocSplatNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, value: self.value, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -1775,7 +1775,7 @@ class Prism::BackReferenceReadNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::BackReferenceReadNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -1943,7 +1943,7 @@ class Prism::BeginNode < ::Prism::Node
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::BeginNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), begin_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), rescue_clause: T.unsafe(nil), else_clause: T.unsafe(nil), ensure_clause: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, begin_keyword_loc: self.begin_keyword_loc, statements: self.statements, rescue_clause: self.rescue_clause, else_clause: self.else_clause, ensure_clause: self.ensure_clause, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -2115,7 +2115,7 @@ class Prism::BlockArgumentNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::BlockArgumentNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), expression: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, expression: self.expression, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -2241,7 +2241,7 @@ class Prism::BlockLocalVariableNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::BlockLocalVariableNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -2392,7 +2392,7 @@ class Prism::BlockNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::BlockNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), parameters: T.unsafe(nil), body: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, locals: self.locals, parameters: self.parameters, body: self.body, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -2550,7 +2550,7 @@ class Prism::BlockParameterNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::BlockParameterNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -2736,7 +2736,7 @@ class Prism::BlockParametersNode < ::Prism::Node
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::BlockParametersNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), parameters: T.unsafe(nil), locals: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, parameters: self.parameters, locals: self.locals, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -2908,7 +2908,7 @@ class Prism::BreakNode < ::Prism::Node
       keyword_loc: Prism::Location
     ).returns(Prism::BreakNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), arguments: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, arguments: self.arguments, keyword_loc: self.keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -3066,7 +3066,7 @@ class Prism::CallAndWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::CallAndWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), message_loc: T.unsafe(nil), read_name: T.unsafe(nil), write_name: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, call_operator_loc: self.call_operator_loc, message_loc: self.message_loc, read_name: self.read_name, write_name: self.write_name, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -3360,7 +3360,7 @@ class Prism::CallNode < ::Prism::Node
       block: T.nilable(T.any(Prism::BlockNode, Prism::BlockArgumentNode))
     ).returns(Prism::CallNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), name: T.unsafe(nil), message_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), equal_loc: T.unsafe(nil), block: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, call_operator_loc: self.call_operator_loc, name: self.name, message_loc: self.message_loc, opening_loc: self.opening_loc, arguments: self.arguments, closing_loc: self.closing_loc, equal_loc: self.equal_loc, block: self.block); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -3675,7 +3675,7 @@ class Prism::CallOperatorWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::CallOperatorWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), message_loc: T.unsafe(nil), read_name: T.unsafe(nil), write_name: T.unsafe(nil), binary_operator: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, call_operator_loc: self.call_operator_loc, message_loc: self.message_loc, read_name: self.read_name, write_name: self.write_name, binary_operator: self.binary_operator, binary_operator_loc: self.binary_operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -3911,7 +3911,7 @@ class Prism::CallOrWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::CallOrWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), message_loc: T.unsafe(nil), read_name: T.unsafe(nil), write_name: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, call_operator_loc: self.call_operator_loc, message_loc: self.message_loc, read_name: self.read_name, write_name: self.write_name, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -4152,7 +4152,7 @@ class Prism::CallTargetNode < ::Prism::Node
       message_loc: Prism::Location
     ).returns(Prism::CallTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), name: T.unsafe(nil), message_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, call_operator_loc: self.call_operator_loc, name: self.name, message_loc: self.message_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -4323,7 +4323,7 @@ class Prism::CapturePatternNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::CapturePatternNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil), target: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, value: self.value, target: self.target, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -4506,7 +4506,7 @@ class Prism::CaseMatchNode < ::Prism::Node
       end_keyword_loc: Prism::Location
     ).returns(Prism::CaseMatchNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), predicate: T.unsafe(nil), conditions: T.unsafe(nil), else_clause: T.unsafe(nil), case_keyword_loc: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, predicate: self.predicate, conditions: self.conditions, else_clause: self.else_clause, case_keyword_loc: self.case_keyword_loc, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -4695,7 +4695,7 @@ class Prism::CaseNode < ::Prism::Node
       end_keyword_loc: Prism::Location
     ).returns(Prism::CaseNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), predicate: T.unsafe(nil), conditions: T.unsafe(nil), else_clause: T.unsafe(nil), case_keyword_loc: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, predicate: self.predicate, conditions: self.conditions, else_clause: self.else_clause, case_keyword_loc: self.case_keyword_loc, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -4889,7 +4889,7 @@ class Prism::ClassNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::ClassNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), class_keyword_loc: T.unsafe(nil), constant_path: T.unsafe(nil), inheritance_operator_loc: T.unsafe(nil), superclass: T.unsafe(nil), body: T.unsafe(nil), end_keyword_loc: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, locals: self.locals, class_keyword_loc: self.class_keyword_loc, constant_path: self.constant_path, inheritance_operator_loc: self.inheritance_operator_loc, superclass: self.superclass, body: self.body, end_keyword_loc: self.end_keyword_loc, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -5070,7 +5070,7 @@ class Prism::ClassVariableAndWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::ClassVariableAndWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -5251,7 +5251,7 @@ class Prism::ClassVariableOperatorWriteNode < ::Prism::Node
       binary_operator: Symbol
     ).returns(Prism::ClassVariableOperatorWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, binary_operator_loc: self.binary_operator_loc, value: self.value, binary_operator: self.binary_operator); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -5406,7 +5406,7 @@ class Prism::ClassVariableOrWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::ClassVariableOrWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -5547,7 +5547,7 @@ class Prism::ClassVariableReadNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::ClassVariableReadNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -5653,7 +5653,7 @@ class Prism::ClassVariableTargetNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::ClassVariableTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -5769,7 +5769,7 @@ class Prism::ClassVariableWriteNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::ClassVariableWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, value: self.value, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -6812,7 +6812,7 @@ class Prism::ConstantAndWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::ConstantAndWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -6981,7 +6981,7 @@ class Prism::ConstantOperatorWriteNode < ::Prism::Node
       binary_operator: Symbol
     ).returns(Prism::ConstantOperatorWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, binary_operator_loc: self.binary_operator_loc, value: self.value, binary_operator: self.binary_operator); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -7136,7 +7136,7 @@ class Prism::ConstantOrWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::ConstantOrWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -7289,7 +7289,7 @@ class Prism::ConstantPathAndWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::ConstantPathAndWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), target: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, target: self.target, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -7436,7 +7436,7 @@ class Prism::ConstantPathNode < ::Prism::Node
       name_loc: Prism::Location
     ).returns(Prism::ConstantPathNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), parent: T.unsafe(nil), name: T.unsafe(nil), delimiter_loc: T.unsafe(nil), name_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, parent: self.parent, name: self.name, delimiter_loc: self.delimiter_loc, name_loc: self.name_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -7651,7 +7651,7 @@ class Prism::ConstantPathOperatorWriteNode < ::Prism::Node
       binary_operator: Symbol
     ).returns(Prism::ConstantPathOperatorWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), target: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, target: self.target, binary_operator_loc: self.binary_operator_loc, value: self.value, binary_operator: self.binary_operator); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -7789,7 +7789,7 @@ class Prism::ConstantPathOrWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::ConstantPathOrWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), target: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, target: self.target, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -7936,7 +7936,7 @@ class Prism::ConstantPathTargetNode < ::Prism::Node
       name_loc: Prism::Location
     ).returns(Prism::ConstantPathTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), parent: T.unsafe(nil), name: T.unsafe(nil), delimiter_loc: T.unsafe(nil), name_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, parent: self.parent, name: self.name, delimiter_loc: self.delimiter_loc, name_loc: self.name_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -8105,7 +8105,7 @@ class Prism::ConstantPathWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::ConstantPathWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), target: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, target: self.target, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -8243,7 +8243,7 @@ class Prism::ConstantReadNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::ConstantReadNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -8362,7 +8362,7 @@ class Prism::ConstantTargetNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::ConstantTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -8491,7 +8491,7 @@ class Prism::ConstantWriteNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::ConstantWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, value: self.value, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -8684,7 +8684,7 @@ module Prism::DSL
       keyword_loc: Prism::Location
     ).returns(Prism::AliasGlobalVariableNode)
   end
-  def alias_global_variable_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), new_name: T.unsafe(nil), old_name: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def alias_global_variable_node(source: default_source, node_id: 0, location: default_location, flags: 0, new_name: global_variable_read_node(source: source), old_name: global_variable_read_node(source: source), keyword_loc: location); end
 
   # Create a new AliasMethodNode node.
   #
@@ -8700,7 +8700,7 @@ module Prism::DSL
       keyword_loc: Prism::Location
     ).returns(Prism::AliasMethodNode)
   end
-  def alias_method_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), new_name: T.unsafe(nil), old_name: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def alias_method_node(source: default_source, node_id: 0, location: default_location, flags: 0, new_name: symbol_node(source: source), old_name: symbol_node(source: source), keyword_loc: location); end
 
   # Create a new AlternationPatternNode node.
   #
@@ -8716,7 +8716,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::AlternationPatternNode)
   end
-  def alternation_pattern_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def alternation_pattern_node(source: default_source, node_id: 0, location: default_location, flags: 0, left: default_node(source, location), right: default_node(source, location), operator_loc: location); end
 
   # Create a new AndNode node.
   #
@@ -8732,7 +8732,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::AndNode)
   end
-  def and_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def and_node(source: default_source, node_id: 0, location: default_location, flags: 0, left: default_node(source, location), right: default_node(source, location), operator_loc: location); end
 
   # Create a new ArgumentsNode node.
   #
@@ -8746,7 +8746,7 @@ module Prism::DSL
       arguments: T::Array[Prism::Node]
     ).returns(Prism::ArgumentsNode)
   end
-  def arguments_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), arguments: T.unsafe(nil)); end
+  def arguments_node(source: default_source, node_id: 0, location: default_location, flags: 0, arguments: []); end
 
   # Retrieve the value of one of the ArgumentsNodeFlags flags.
   #
@@ -8768,7 +8768,7 @@ module Prism::DSL
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::ArrayNode)
   end
-  def array_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), elements: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def array_node(source: default_source, node_id: 0, location: default_location, flags: 0, elements: [], opening_loc: nil, closing_loc: nil); end
 
   # Retrieve the value of one of the ArrayNodeFlags flags.
   #
@@ -8793,7 +8793,7 @@ module Prism::DSL
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::ArrayPatternNode)
   end
-  def array_pattern_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), constant: T.unsafe(nil), requireds: T.unsafe(nil), rest: T.unsafe(nil), posts: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def array_pattern_node(source: default_source, node_id: 0, location: default_location, flags: 0, constant: nil, requireds: [], rest: nil, posts: [], opening_loc: nil, closing_loc: nil); end
 
   # Create a new AssocNode node.
   #
@@ -8809,7 +8809,7 @@ module Prism::DSL
       operator_loc: T.nilable(Prism::Location)
     ).returns(Prism::AssocNode)
   end
-  def assoc_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), key: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def assoc_node(source: default_source, node_id: 0, location: default_location, flags: 0, key: default_node(source, location), value: default_node(source, location), operator_loc: nil); end
 
   # Create a new AssocSplatNode node.
   #
@@ -8824,7 +8824,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::AssocSplatNode)
   end
-  def assoc_splat_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def assoc_splat_node(source: default_source, node_id: 0, location: default_location, flags: 0, value: nil, operator_loc: location); end
 
   # Create a new BackReferenceReadNode node.
   #
@@ -8838,7 +8838,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::BackReferenceReadNode)
   end
-  def back_reference_read_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def back_reference_read_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new BeginNode node.
   #
@@ -8857,7 +8857,7 @@ module Prism::DSL
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::BeginNode)
   end
-  def begin_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), begin_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), rescue_clause: T.unsafe(nil), else_clause: T.unsafe(nil), ensure_clause: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def begin_node(source: default_source, node_id: 0, location: default_location, flags: 0, begin_keyword_loc: nil, statements: nil, rescue_clause: nil, else_clause: nil, ensure_clause: nil, end_keyword_loc: nil); end
 
   # Create a new BlockArgumentNode node.
   #
@@ -8872,7 +8872,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::BlockArgumentNode)
   end
-  def block_argument_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), expression: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def block_argument_node(source: default_source, node_id: 0, location: default_location, flags: 0, expression: nil, operator_loc: location); end
 
   # Create a new BlockLocalVariableNode node.
   #
@@ -8886,7 +8886,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::BlockLocalVariableNode)
   end
-  def block_local_variable_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def block_local_variable_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new BlockNode node.
   #
@@ -8904,7 +8904,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::BlockNode)
   end
-  def block_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), parameters: T.unsafe(nil), body: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def block_node(source: default_source, node_id: 0, location: default_location, flags: 0, locals: [], parameters: nil, body: nil, opening_loc: location, closing_loc: location); end
 
   # Create a new BlockParameterNode node.
   #
@@ -8920,7 +8920,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::BlockParameterNode)
   end
-  def block_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def block_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: nil, name_loc: nil, operator_loc: location); end
 
   # Create a new BlockParametersNode node.
   #
@@ -8937,7 +8937,7 @@ module Prism::DSL
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::BlockParametersNode)
   end
-  def block_parameters_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), parameters: T.unsafe(nil), locals: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def block_parameters_node(source: default_source, node_id: 0, location: default_location, flags: 0, parameters: nil, locals: [], opening_loc: nil, closing_loc: nil); end
 
   # Create a new BreakNode node.
   #
@@ -8952,7 +8952,7 @@ module Prism::DSL
       keyword_loc: Prism::Location
     ).returns(Prism::BreakNode)
   end
-  def break_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), arguments: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def break_node(source: default_source, node_id: 0, location: default_location, flags: 0, arguments: nil, keyword_loc: location); end
 
   # Create a new CallAndWriteNode node.
   #
@@ -8972,7 +8972,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::CallAndWriteNode)
   end
-  def call_and_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), message_loc: T.unsafe(nil), read_name: T.unsafe(nil), write_name: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def call_and_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: nil, call_operator_loc: nil, message_loc: nil, read_name: :"", write_name: :"", operator_loc: location, value: default_node(source, location)); end
 
   # Create a new CallNode node.
   #
@@ -8994,7 +8994,7 @@ module Prism::DSL
       block: T.nilable(T.any(Prism::BlockNode, Prism::BlockArgumentNode))
     ).returns(Prism::CallNode)
   end
-  def call_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), name: T.unsafe(nil), message_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), equal_loc: T.unsafe(nil), block: T.unsafe(nil)); end
+  def call_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: nil, call_operator_loc: nil, name: :"", message_loc: nil, opening_loc: nil, arguments: nil, closing_loc: nil, equal_loc: nil, block: nil); end
 
   # Retrieve the value of one of the CallNodeFlags flags.
   #
@@ -9021,7 +9021,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::CallOperatorWriteNode)
   end
-  def call_operator_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), message_loc: T.unsafe(nil), read_name: T.unsafe(nil), write_name: T.unsafe(nil), binary_operator: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def call_operator_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: nil, call_operator_loc: nil, message_loc: nil, read_name: :"", write_name: :"", binary_operator: :"", binary_operator_loc: location, value: default_node(source, location)); end
 
   # Create a new CallOrWriteNode node.
   #
@@ -9041,7 +9041,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::CallOrWriteNode)
   end
-  def call_or_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), message_loc: T.unsafe(nil), read_name: T.unsafe(nil), write_name: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def call_or_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: nil, call_operator_loc: nil, message_loc: nil, read_name: :"", write_name: :"", operator_loc: location, value: default_node(source, location)); end
 
   # Create a new CallTargetNode node.
   #
@@ -9058,7 +9058,7 @@ module Prism::DSL
       message_loc: Prism::Location
     ).returns(Prism::CallTargetNode)
   end
-  def call_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), name: T.unsafe(nil), message_loc: T.unsafe(nil)); end
+  def call_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: default_node(source, location), call_operator_loc: location, name: :"", message_loc: location); end
 
   # Create a new CapturePatternNode node.
   #
@@ -9074,7 +9074,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::CapturePatternNode)
   end
-  def capture_pattern_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil), target: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def capture_pattern_node(source: default_source, node_id: 0, location: default_location, flags: 0, value: default_node(source, location), target: local_variable_target_node(source: source), operator_loc: location); end
 
   # Create a new CaseMatchNode node.
   #
@@ -9092,7 +9092,7 @@ module Prism::DSL
       end_keyword_loc: Prism::Location
     ).returns(Prism::CaseMatchNode)
   end
-  def case_match_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), predicate: T.unsafe(nil), conditions: T.unsafe(nil), else_clause: T.unsafe(nil), case_keyword_loc: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def case_match_node(source: default_source, node_id: 0, location: default_location, flags: 0, predicate: nil, conditions: [], else_clause: nil, case_keyword_loc: location, end_keyword_loc: location); end
 
   # Create a new CaseNode node.
   #
@@ -9110,7 +9110,7 @@ module Prism::DSL
       end_keyword_loc: Prism::Location
     ).returns(Prism::CaseNode)
   end
-  def case_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), predicate: T.unsafe(nil), conditions: T.unsafe(nil), else_clause: T.unsafe(nil), case_keyword_loc: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def case_node(source: default_source, node_id: 0, location: default_location, flags: 0, predicate: nil, conditions: [], else_clause: nil, case_keyword_loc: location, end_keyword_loc: location); end
 
   # Create a new ClassNode node.
   #
@@ -9131,7 +9131,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::ClassNode)
   end
-  def class_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), class_keyword_loc: T.unsafe(nil), constant_path: T.unsafe(nil), inheritance_operator_loc: T.unsafe(nil), superclass: T.unsafe(nil), body: T.unsafe(nil), end_keyword_loc: T.unsafe(nil), name: T.unsafe(nil)); end
+  def class_node(source: default_source, node_id: 0, location: default_location, flags: 0, locals: [], class_keyword_loc: location, constant_path: constant_read_node(source: source), inheritance_operator_loc: nil, superclass: nil, body: nil, end_keyword_loc: location, name: :""); end
 
   # Create a new ClassVariableAndWriteNode node.
   #
@@ -9148,7 +9148,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::ClassVariableAndWriteNode)
   end
-  def class_variable_and_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def class_variable_and_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new ClassVariableOperatorWriteNode node.
   #
@@ -9166,7 +9166,7 @@ module Prism::DSL
       binary_operator: Symbol
     ).returns(Prism::ClassVariableOperatorWriteNode)
   end
-  def class_variable_operator_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def class_variable_operator_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, binary_operator_loc: location, value: default_node(source, location), binary_operator: :""); end
 
   # Create a new ClassVariableOrWriteNode node.
   #
@@ -9183,7 +9183,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::ClassVariableOrWriteNode)
   end
-  def class_variable_or_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def class_variable_or_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new ClassVariableReadNode node.
   #
@@ -9197,7 +9197,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::ClassVariableReadNode)
   end
-  def class_variable_read_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def class_variable_read_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new ClassVariableTargetNode node.
   #
@@ -9211,7 +9211,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::ClassVariableTargetNode)
   end
-  def class_variable_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def class_variable_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new ClassVariableWriteNode node.
   #
@@ -9228,7 +9228,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::ClassVariableWriteNode)
   end
-  def class_variable_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def class_variable_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, value: default_node(source, location), operator_loc: location); end
 
   # Create a new ConstantAndWriteNode node.
   #
@@ -9245,7 +9245,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::ConstantAndWriteNode)
   end
-  def constant_and_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def constant_and_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new ConstantOperatorWriteNode node.
   #
@@ -9263,7 +9263,7 @@ module Prism::DSL
       binary_operator: Symbol
     ).returns(Prism::ConstantOperatorWriteNode)
   end
-  def constant_operator_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def constant_operator_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, binary_operator_loc: location, value: default_node(source, location), binary_operator: :""); end
 
   # Create a new ConstantOrWriteNode node.
   #
@@ -9280,7 +9280,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::ConstantOrWriteNode)
   end
-  def constant_or_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def constant_or_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new ConstantPathAndWriteNode node.
   #
@@ -9296,7 +9296,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::ConstantPathAndWriteNode)
   end
-  def constant_path_and_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), target: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def constant_path_and_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, target: constant_path_node(source: source), operator_loc: location, value: default_node(source, location)); end
 
   # Create a new ConstantPathNode node.
   #
@@ -9313,7 +9313,7 @@ module Prism::DSL
       name_loc: Prism::Location
     ).returns(Prism::ConstantPathNode)
   end
-  def constant_path_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), parent: T.unsafe(nil), name: T.unsafe(nil), delimiter_loc: T.unsafe(nil), name_loc: T.unsafe(nil)); end
+  def constant_path_node(source: default_source, node_id: 0, location: default_location, flags: 0, parent: nil, name: nil, delimiter_loc: location, name_loc: location); end
 
   # Create a new ConstantPathOperatorWriteNode node.
   #
@@ -9330,7 +9330,7 @@ module Prism::DSL
       binary_operator: Symbol
     ).returns(Prism::ConstantPathOperatorWriteNode)
   end
-  def constant_path_operator_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), target: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def constant_path_operator_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, target: constant_path_node(source: source), binary_operator_loc: location, value: default_node(source, location), binary_operator: :""); end
 
   # Create a new ConstantPathOrWriteNode node.
   #
@@ -9346,7 +9346,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::ConstantPathOrWriteNode)
   end
-  def constant_path_or_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), target: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def constant_path_or_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, target: constant_path_node(source: source), operator_loc: location, value: default_node(source, location)); end
 
   # Create a new ConstantPathTargetNode node.
   #
@@ -9363,7 +9363,7 @@ module Prism::DSL
       name_loc: Prism::Location
     ).returns(Prism::ConstantPathTargetNode)
   end
-  def constant_path_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), parent: T.unsafe(nil), name: T.unsafe(nil), delimiter_loc: T.unsafe(nil), name_loc: T.unsafe(nil)); end
+  def constant_path_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, parent: nil, name: nil, delimiter_loc: location, name_loc: location); end
 
   # Create a new ConstantPathWriteNode node.
   #
@@ -9379,7 +9379,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::ConstantPathWriteNode)
   end
-  def constant_path_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), target: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def constant_path_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, target: constant_path_node(source: source), operator_loc: location, value: default_node(source, location)); end
 
   # Create a new ConstantReadNode node.
   #
@@ -9393,7 +9393,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::ConstantReadNode)
   end
-  def constant_read_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def constant_read_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new ConstantTargetNode node.
   #
@@ -9407,7 +9407,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::ConstantTargetNode)
   end
-  def constant_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def constant_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new ConstantWriteNode node.
   #
@@ -9424,7 +9424,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::ConstantWriteNode)
   end
-  def constant_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def constant_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, value: default_node(source, location), operator_loc: location); end
 
   # Create a new DefNode node.
   #
@@ -9449,7 +9449,7 @@ module Prism::DSL
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::DefNode)
   end
-  def def_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), receiver: T.unsafe(nil), parameters: T.unsafe(nil), body: T.unsafe(nil), locals: T.unsafe(nil), def_keyword_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), lparen_loc: T.unsafe(nil), rparen_loc: T.unsafe(nil), equal_loc: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def def_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, receiver: nil, parameters: nil, body: nil, locals: [], def_keyword_loc: location, operator_loc: nil, lparen_loc: nil, rparen_loc: nil, equal_loc: nil, end_keyword_loc: nil); end
 
   # Create a new DefinedNode node.
   #
@@ -9466,7 +9466,7 @@ module Prism::DSL
       keyword_loc: Prism::Location
     ).returns(Prism::DefinedNode)
   end
-  def defined_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), lparen_loc: T.unsafe(nil), value: T.unsafe(nil), rparen_loc: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def defined_node(source: default_source, node_id: 0, location: default_location, flags: 0, lparen_loc: nil, value: default_node(source, location), rparen_loc: nil, keyword_loc: location); end
 
   # Create a new ElseNode node.
   #
@@ -9482,7 +9482,7 @@ module Prism::DSL
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::ElseNode)
   end
-  def else_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), else_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def else_node(source: default_source, node_id: 0, location: default_location, flags: 0, else_keyword_loc: location, statements: nil, end_keyword_loc: nil); end
 
   # Create a new EmbeddedStatementsNode node.
   #
@@ -9498,7 +9498,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::EmbeddedStatementsNode)
   end
-  def embedded_statements_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), statements: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def embedded_statements_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: location, statements: nil, closing_loc: location); end
 
   # Create a new EmbeddedVariableNode node.
   #
@@ -9513,7 +9513,7 @@ module Prism::DSL
       variable: T.any(Prism::InstanceVariableReadNode, Prism::ClassVariableReadNode, Prism::GlobalVariableReadNode, Prism::BackReferenceReadNode, Prism::NumberedReferenceReadNode)
     ).returns(Prism::EmbeddedVariableNode)
   end
-  def embedded_variable_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), operator_loc: T.unsafe(nil), variable: T.unsafe(nil)); end
+  def embedded_variable_node(source: default_source, node_id: 0, location: default_location, flags: 0, operator_loc: location, variable: instance_variable_read_node(source: source)); end
 
   # Retrieve the value of one of the EncodingFlags flags.
   #
@@ -9535,7 +9535,7 @@ module Prism::DSL
       end_keyword_loc: Prism::Location
     ).returns(Prism::EnsureNode)
   end
-  def ensure_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), ensure_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def ensure_node(source: default_source, node_id: 0, location: default_location, flags: 0, ensure_keyword_loc: location, statements: nil, end_keyword_loc: location); end
 
   # Create a new FalseNode node.
   #
@@ -9548,7 +9548,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::FalseNode)
   end
-  def false_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def false_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new FindPatternNode node.
   #
@@ -9567,7 +9567,7 @@ module Prism::DSL
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::FindPatternNode)
   end
-  def find_pattern_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), constant: T.unsafe(nil), left: T.unsafe(nil), requireds: T.unsafe(nil), right: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def find_pattern_node(source: default_source, node_id: 0, location: default_location, flags: 0, constant: nil, left: splat_node(source: source), requireds: [], right: splat_node(source: source), opening_loc: nil, closing_loc: nil); end
 
   # Create a new FlipFlopNode node.
   #
@@ -9583,7 +9583,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::FlipFlopNode)
   end
-  def flip_flop_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def flip_flop_node(source: default_source, node_id: 0, location: default_location, flags: 0, left: nil, right: nil, operator_loc: location); end
 
   # Create a new FloatNode node.
   #
@@ -9597,7 +9597,7 @@ module Prism::DSL
       value: Float
     ).returns(Prism::FloatNode)
   end
-  def float_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil)); end
+  def float_node(source: default_source, node_id: 0, location: default_location, flags: 0, value: 0.0); end
 
   # Create a new ForNode node.
   #
@@ -9617,7 +9617,7 @@ module Prism::DSL
       end_keyword_loc: Prism::Location
     ).returns(Prism::ForNode)
   end
-  def for_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), index: T.unsafe(nil), collection: T.unsafe(nil), statements: T.unsafe(nil), for_keyword_loc: T.unsafe(nil), in_keyword_loc: T.unsafe(nil), do_keyword_loc: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def for_node(source: default_source, node_id: 0, location: default_location, flags: 0, index: local_variable_target_node(source: source), collection: default_node(source, location), statements: nil, for_keyword_loc: location, in_keyword_loc: location, do_keyword_loc: nil, end_keyword_loc: location); end
 
   # Create a new ForwardingArgumentsNode node.
   #
@@ -9630,7 +9630,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::ForwardingArgumentsNode)
   end
-  def forwarding_arguments_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def forwarding_arguments_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new ForwardingParameterNode node.
   #
@@ -9643,7 +9643,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::ForwardingParameterNode)
   end
-  def forwarding_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def forwarding_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new ForwardingSuperNode node.
   #
@@ -9657,7 +9657,7 @@ module Prism::DSL
       block: T.nilable(Prism::BlockNode)
     ).returns(Prism::ForwardingSuperNode)
   end
-  def forwarding_super_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), block: T.unsafe(nil)); end
+  def forwarding_super_node(source: default_source, node_id: 0, location: default_location, flags: 0, block: nil); end
 
   # Create a new GlobalVariableAndWriteNode node.
   #
@@ -9674,7 +9674,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::GlobalVariableAndWriteNode)
   end
-  def global_variable_and_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def global_variable_and_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new GlobalVariableOperatorWriteNode node.
   #
@@ -9692,7 +9692,7 @@ module Prism::DSL
       binary_operator: Symbol
     ).returns(Prism::GlobalVariableOperatorWriteNode)
   end
-  def global_variable_operator_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def global_variable_operator_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, binary_operator_loc: location, value: default_node(source, location), binary_operator: :""); end
 
   # Create a new GlobalVariableOrWriteNode node.
   #
@@ -9709,7 +9709,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::GlobalVariableOrWriteNode)
   end
-  def global_variable_or_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def global_variable_or_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new GlobalVariableReadNode node.
   #
@@ -9723,7 +9723,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::GlobalVariableReadNode)
   end
-  def global_variable_read_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def global_variable_read_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new GlobalVariableTargetNode node.
   #
@@ -9737,7 +9737,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::GlobalVariableTargetNode)
   end
-  def global_variable_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def global_variable_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new GlobalVariableWriteNode node.
   #
@@ -9754,7 +9754,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::GlobalVariableWriteNode)
   end
-  def global_variable_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def global_variable_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, value: default_node(source, location), operator_loc: location); end
 
   # Create a new HashNode node.
   #
@@ -9770,7 +9770,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::HashNode)
   end
-  def hash_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), elements: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def hash_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: location, elements: [], closing_loc: location); end
 
   # Create a new HashPatternNode node.
   #
@@ -9788,7 +9788,7 @@ module Prism::DSL
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::HashPatternNode)
   end
-  def hash_pattern_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), constant: T.unsafe(nil), elements: T.unsafe(nil), rest: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def hash_pattern_node(source: default_source, node_id: 0, location: default_location, flags: 0, constant: nil, elements: [], rest: nil, opening_loc: nil, closing_loc: nil); end
 
   # Create a new IfNode node.
   #
@@ -9807,7 +9807,7 @@ module Prism::DSL
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::IfNode)
   end
-  def if_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), if_keyword_loc: T.unsafe(nil), predicate: T.unsafe(nil), then_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), subsequent: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def if_node(source: default_source, node_id: 0, location: default_location, flags: 0, if_keyword_loc: nil, predicate: default_node(source, location), then_keyword_loc: nil, statements: nil, subsequent: nil, end_keyword_loc: nil); end
 
   # Create a new ImaginaryNode node.
   #
@@ -9821,7 +9821,7 @@ module Prism::DSL
       numeric: T.any(Prism::FloatNode, Prism::IntegerNode, Prism::RationalNode)
     ).returns(Prism::ImaginaryNode)
   end
-  def imaginary_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), numeric: T.unsafe(nil)); end
+  def imaginary_node(source: default_source, node_id: 0, location: default_location, flags: 0, numeric: float_node(source: source)); end
 
   # Create a new ImplicitNode node.
   #
@@ -9835,7 +9835,7 @@ module Prism::DSL
       value: T.any(Prism::LocalVariableReadNode, Prism::CallNode, Prism::ConstantReadNode, Prism::LocalVariableTargetNode)
     ).returns(Prism::ImplicitNode)
   end
-  def implicit_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil)); end
+  def implicit_node(source: default_source, node_id: 0, location: default_location, flags: 0, value: local_variable_read_node(source: source)); end
 
   # Create a new ImplicitRestNode node.
   #
@@ -9848,7 +9848,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::ImplicitRestNode)
   end
-  def implicit_rest_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def implicit_rest_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new InNode node.
   #
@@ -9865,7 +9865,7 @@ module Prism::DSL
       then_loc: T.nilable(Prism::Location)
     ).returns(Prism::InNode)
   end
-  def in_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), pattern: T.unsafe(nil), statements: T.unsafe(nil), in_loc: T.unsafe(nil), then_loc: T.unsafe(nil)); end
+  def in_node(source: default_source, node_id: 0, location: default_location, flags: 0, pattern: default_node(source, location), statements: nil, in_loc: location, then_loc: nil); end
 
   # Create a new IndexAndWriteNode node.
   #
@@ -9886,7 +9886,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::IndexAndWriteNode)
   end
-  def index_and_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), block: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def index_and_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: nil, call_operator_loc: nil, opening_loc: location, arguments: nil, closing_loc: location, block: nil, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new IndexOperatorWriteNode node.
   #
@@ -9908,7 +9908,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::IndexOperatorWriteNode)
   end
-  def index_operator_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), block: T.unsafe(nil), binary_operator: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def index_operator_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: nil, call_operator_loc: nil, opening_loc: location, arguments: nil, closing_loc: location, block: nil, binary_operator: :"", binary_operator_loc: location, value: default_node(source, location)); end
 
   # Create a new IndexOrWriteNode node.
   #
@@ -9929,7 +9929,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::IndexOrWriteNode)
   end
-  def index_or_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), block: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def index_or_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: nil, call_operator_loc: nil, opening_loc: location, arguments: nil, closing_loc: location, block: nil, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new IndexTargetNode node.
   #
@@ -9947,7 +9947,7 @@ module Prism::DSL
       block: T.nilable(Prism::BlockArgumentNode)
     ).returns(Prism::IndexTargetNode)
   end
-  def index_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), block: T.unsafe(nil)); end
+  def index_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, receiver: default_node(source, location), opening_loc: location, arguments: nil, closing_loc: location, block: nil); end
 
   # Create a new InstanceVariableAndWriteNode node.
   #
@@ -9964,7 +9964,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::InstanceVariableAndWriteNode)
   end
-  def instance_variable_and_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def instance_variable_and_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new InstanceVariableOperatorWriteNode node.
   #
@@ -9982,7 +9982,7 @@ module Prism::DSL
       binary_operator: Symbol
     ).returns(Prism::InstanceVariableOperatorWriteNode)
   end
-  def instance_variable_operator_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def instance_variable_operator_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, binary_operator_loc: location, value: default_node(source, location), binary_operator: :""); end
 
   # Create a new InstanceVariableOrWriteNode node.
   #
@@ -9999,7 +9999,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::InstanceVariableOrWriteNode)
   end
-  def instance_variable_or_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def instance_variable_or_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new InstanceVariableReadNode node.
   #
@@ -10013,7 +10013,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::InstanceVariableReadNode)
   end
-  def instance_variable_read_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def instance_variable_read_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new InstanceVariableTargetNode node.
   #
@@ -10027,7 +10027,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::InstanceVariableTargetNode)
   end
-  def instance_variable_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def instance_variable_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new InstanceVariableWriteNode node.
   #
@@ -10044,7 +10044,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::InstanceVariableWriteNode)
   end
-  def instance_variable_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def instance_variable_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, value: default_node(source, location), operator_loc: location); end
 
   # Retrieve the value of one of the IntegerBaseFlags flags.
   #
@@ -10064,7 +10064,7 @@ module Prism::DSL
       value: Integer
     ).returns(Prism::IntegerNode)
   end
-  def integer_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil)); end
+  def integer_node(source: default_source, node_id: 0, location: default_location, flags: 0, value: 0); end
 
   # Create a new InterpolatedMatchLastLineNode node.
   #
@@ -10080,7 +10080,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::InterpolatedMatchLastLineNode)
   end
-  def interpolated_match_last_line_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def interpolated_match_last_line_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: location, parts: [], closing_loc: location); end
 
   # Create a new InterpolatedRegularExpressionNode node.
   #
@@ -10096,7 +10096,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::InterpolatedRegularExpressionNode)
   end
-  def interpolated_regular_expression_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def interpolated_regular_expression_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: location, parts: [], closing_loc: location); end
 
   # Create a new InterpolatedStringNode node.
   #
@@ -10112,7 +10112,7 @@ module Prism::DSL
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::InterpolatedStringNode)
   end
-  def interpolated_string_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def interpolated_string_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: nil, parts: [], closing_loc: nil); end
 
   # Retrieve the value of one of the InterpolatedStringNodeFlags flags.
   #
@@ -10134,7 +10134,7 @@ module Prism::DSL
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::InterpolatedSymbolNode)
   end
-  def interpolated_symbol_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def interpolated_symbol_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: nil, parts: [], closing_loc: nil); end
 
   # Create a new InterpolatedXStringNode node.
   #
@@ -10150,7 +10150,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::InterpolatedXStringNode)
   end
-  def interpolated_x_string_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def interpolated_x_string_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: location, parts: [], closing_loc: location); end
 
   # Create a new ItLocalVariableReadNode node.
   #
@@ -10163,7 +10163,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::ItLocalVariableReadNode)
   end
-  def it_local_variable_read_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def it_local_variable_read_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new ItParametersNode node.
   #
@@ -10176,7 +10176,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::ItParametersNode)
   end
-  def it_parameters_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def it_parameters_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new KeywordHashNode node.
   #
@@ -10190,7 +10190,7 @@ module Prism::DSL
       elements: T::Array[T.any(Prism::AssocNode, Prism::AssocSplatNode)]
     ).returns(Prism::KeywordHashNode)
   end
-  def keyword_hash_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), elements: T.unsafe(nil)); end
+  def keyword_hash_node(source: default_source, node_id: 0, location: default_location, flags: 0, elements: []); end
 
   # Retrieve the value of one of the KeywordHashNodeFlags flags.
   #
@@ -10212,7 +10212,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::KeywordRestParameterNode)
   end
-  def keyword_rest_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def keyword_rest_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: nil, name_loc: nil, operator_loc: location); end
 
   # Create a new LambdaNode node.
   #
@@ -10231,7 +10231,7 @@ module Prism::DSL
       body: T.nilable(T.any(Prism::StatementsNode, Prism::BeginNode))
     ).returns(Prism::LambdaNode)
   end
-  def lambda_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), operator_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), parameters: T.unsafe(nil), body: T.unsafe(nil)); end
+  def lambda_node(source: default_source, node_id: 0, location: default_location, flags: 0, locals: [], operator_loc: location, opening_loc: location, closing_loc: location, parameters: nil, body: nil); end
 
   # Create a new LocalVariableAndWriteNode node.
   #
@@ -10249,7 +10249,7 @@ module Prism::DSL
       depth: Integer
     ).returns(Prism::LocalVariableAndWriteNode)
   end
-  def local_variable_and_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def local_variable_and_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name_loc: location, operator_loc: location, value: default_node(source, location), name: :"", depth: 0); end
 
   # Create a new LocalVariableOperatorWriteNode node.
   #
@@ -10268,7 +10268,7 @@ module Prism::DSL
       depth: Integer
     ).returns(Prism::LocalVariableOperatorWriteNode)
   end
-  def local_variable_operator_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), name: T.unsafe(nil), binary_operator: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def local_variable_operator_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name_loc: location, binary_operator_loc: location, value: default_node(source, location), name: :"", binary_operator: :"", depth: 0); end
 
   # Create a new LocalVariableOrWriteNode node.
   #
@@ -10286,7 +10286,7 @@ module Prism::DSL
       depth: Integer
     ).returns(Prism::LocalVariableOrWriteNode)
   end
-  def local_variable_or_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def local_variable_or_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name_loc: location, operator_loc: location, value: default_node(source, location), name: :"", depth: 0); end
 
   # Create a new LocalVariableReadNode node.
   #
@@ -10301,7 +10301,7 @@ module Prism::DSL
       depth: Integer
     ).returns(Prism::LocalVariableReadNode)
   end
-  def local_variable_read_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def local_variable_read_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", depth: 0); end
 
   # Create a new LocalVariableTargetNode node.
   #
@@ -10316,7 +10316,7 @@ module Prism::DSL
       depth: Integer
     ).returns(Prism::LocalVariableTargetNode)
   end
-  def local_variable_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def local_variable_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", depth: 0); end
 
   # Create a new LocalVariableWriteNode node.
   #
@@ -10334,13 +10334,13 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::LocalVariableWriteNode)
   end
-  def local_variable_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def local_variable_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", depth: 0, name_loc: location, value: default_node(source, location), operator_loc: location); end
 
   # Create a new Location object.
   #
   # pkg:gem/prism#lib/prism/dsl.rb:75
   sig { params(source: Prism::Source, start_offset: Integer, length: Integer).returns(Prism::Location) }
-  def location(source: T.unsafe(nil), start_offset: T.unsafe(nil), length: T.unsafe(nil)); end
+  def location(source: default_source, start_offset: 0, length: 0); end
 
   # Retrieve the value of one of the LoopFlags flags.
   #
@@ -10363,7 +10363,7 @@ module Prism::DSL
       unescaped: String
     ).returns(Prism::MatchLastLineNode)
   end
-  def match_last_line_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), content_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def match_last_line_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: location, content_loc: location, closing_loc: location, unescaped: ""); end
 
   # Create a new MatchPredicateNode node.
   #
@@ -10379,7 +10379,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::MatchPredicateNode)
   end
-  def match_predicate_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil), pattern: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def match_predicate_node(source: default_source, node_id: 0, location: default_location, flags: 0, value: default_node(source, location), pattern: default_node(source, location), operator_loc: location); end
 
   # Create a new MatchRequiredNode node.
   #
@@ -10395,7 +10395,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::MatchRequiredNode)
   end
-  def match_required_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil), pattern: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def match_required_node(source: default_source, node_id: 0, location: default_location, flags: 0, value: default_node(source, location), pattern: default_node(source, location), operator_loc: location); end
 
   # Create a new MatchWriteNode node.
   #
@@ -10410,7 +10410,7 @@ module Prism::DSL
       targets: T::Array[Prism::LocalVariableTargetNode]
     ).returns(Prism::MatchWriteNode)
   end
-  def match_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), call: T.unsafe(nil), targets: T.unsafe(nil)); end
+  def match_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, call: call_node(source: source), targets: []); end
 
   # Create a new MissingNode node.
   #
@@ -10423,7 +10423,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::MissingNode)
   end
-  def missing_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def missing_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new ModuleNode node.
   #
@@ -10442,7 +10442,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::ModuleNode)
   end
-  def module_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), module_keyword_loc: T.unsafe(nil), constant_path: T.unsafe(nil), body: T.unsafe(nil), end_keyword_loc: T.unsafe(nil), name: T.unsafe(nil)); end
+  def module_node(source: default_source, node_id: 0, location: default_location, flags: 0, locals: [], module_keyword_loc: location, constant_path: constant_read_node(source: source), body: nil, end_keyword_loc: location, name: :""); end
 
   # Create a new MultiTargetNode node.
   #
@@ -10460,7 +10460,7 @@ module Prism::DSL
       rparen_loc: T.nilable(Prism::Location)
     ).returns(Prism::MultiTargetNode)
   end
-  def multi_target_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), lefts: T.unsafe(nil), rest: T.unsafe(nil), rights: T.unsafe(nil), lparen_loc: T.unsafe(nil), rparen_loc: T.unsafe(nil)); end
+  def multi_target_node(source: default_source, node_id: 0, location: default_location, flags: 0, lefts: [], rest: nil, rights: [], lparen_loc: nil, rparen_loc: nil); end
 
   # Create a new MultiWriteNode node.
   #
@@ -10480,7 +10480,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::MultiWriteNode)
   end
-  def multi_write_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), lefts: T.unsafe(nil), rest: T.unsafe(nil), rights: T.unsafe(nil), lparen_loc: T.unsafe(nil), rparen_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def multi_write_node(source: default_source, node_id: 0, location: default_location, flags: 0, lefts: [], rest: nil, rights: [], lparen_loc: nil, rparen_loc: nil, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new NextNode node.
   #
@@ -10495,7 +10495,7 @@ module Prism::DSL
       keyword_loc: Prism::Location
     ).returns(Prism::NextNode)
   end
-  def next_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), arguments: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def next_node(source: default_source, node_id: 0, location: default_location, flags: 0, arguments: nil, keyword_loc: location); end
 
   # Create a new NilNode node.
   #
@@ -10508,7 +10508,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::NilNode)
   end
-  def nil_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def nil_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new NoKeywordsParameterNode node.
   #
@@ -10523,7 +10523,7 @@ module Prism::DSL
       keyword_loc: Prism::Location
     ).returns(Prism::NoKeywordsParameterNode)
   end
-  def no_keywords_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), operator_loc: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def no_keywords_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0, operator_loc: location, keyword_loc: location); end
 
   # Create a new NumberedParametersNode node.
   #
@@ -10537,7 +10537,7 @@ module Prism::DSL
       maximum: Integer
     ).returns(Prism::NumberedParametersNode)
   end
-  def numbered_parameters_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), maximum: T.unsafe(nil)); end
+  def numbered_parameters_node(source: default_source, node_id: 0, location: default_location, flags: 0, maximum: 0); end
 
   # Create a new NumberedReferenceReadNode node.
   #
@@ -10551,7 +10551,7 @@ module Prism::DSL
       number: Integer
     ).returns(Prism::NumberedReferenceReadNode)
   end
-  def numbered_reference_read_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), number: T.unsafe(nil)); end
+  def numbered_reference_read_node(source: default_source, node_id: 0, location: default_location, flags: 0, number: 0); end
 
   # Create a new OptionalKeywordParameterNode node.
   #
@@ -10567,7 +10567,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::OptionalKeywordParameterNode)
   end
-  def optional_keyword_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def optional_keyword_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, value: default_node(source, location)); end
 
   # Create a new OptionalParameterNode node.
   #
@@ -10584,7 +10584,7 @@ module Prism::DSL
       value: Prism::Node
     ).returns(Prism::OptionalParameterNode)
   end
-  def optional_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def optional_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location, operator_loc: location, value: default_node(source, location)); end
 
   # Create a new OrNode node.
   #
@@ -10600,7 +10600,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::OrNode)
   end
-  def or_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def or_node(source: default_source, node_id: 0, location: default_location, flags: 0, left: default_node(source, location), right: default_node(source, location), operator_loc: location); end
 
   # Retrieve the value of one of the ParameterFlags flags.
   #
@@ -10626,7 +10626,7 @@ module Prism::DSL
       block: T.nilable(Prism::BlockParameterNode)
     ).returns(Prism::ParametersNode)
   end
-  def parameters_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), requireds: T.unsafe(nil), optionals: T.unsafe(nil), rest: T.unsafe(nil), posts: T.unsafe(nil), keywords: T.unsafe(nil), keyword_rest: T.unsafe(nil), block: T.unsafe(nil)); end
+  def parameters_node(source: default_source, node_id: 0, location: default_location, flags: 0, requireds: [], optionals: [], rest: nil, posts: [], keywords: [], keyword_rest: nil, block: nil); end
 
   # Create a new ParenthesesNode node.
   #
@@ -10642,7 +10642,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::ParenthesesNode)
   end
-  def parentheses_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), body: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def parentheses_node(source: default_source, node_id: 0, location: default_location, flags: 0, body: nil, opening_loc: location, closing_loc: location); end
 
   # Retrieve the value of one of the ParenthesesNodeFlags flags.
   #
@@ -10665,7 +10665,7 @@ module Prism::DSL
       rparen_loc: Prism::Location
     ).returns(Prism::PinnedExpressionNode)
   end
-  def pinned_expression_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), expression: T.unsafe(nil), operator_loc: T.unsafe(nil), lparen_loc: T.unsafe(nil), rparen_loc: T.unsafe(nil)); end
+  def pinned_expression_node(source: default_source, node_id: 0, location: default_location, flags: 0, expression: default_node(source, location), operator_loc: location, lparen_loc: location, rparen_loc: location); end
 
   # Create a new PinnedVariableNode node.
   #
@@ -10680,7 +10680,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::PinnedVariableNode)
   end
-  def pinned_variable_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), variable: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def pinned_variable_node(source: default_source, node_id: 0, location: default_location, flags: 0, variable: local_variable_read_node(source: source), operator_loc: location); end
 
   # Create a new PostExecutionNode node.
   #
@@ -10697,7 +10697,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::PostExecutionNode)
   end
-  def post_execution_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), statements: T.unsafe(nil), keyword_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def post_execution_node(source: default_source, node_id: 0, location: default_location, flags: 0, statements: nil, keyword_loc: location, opening_loc: location, closing_loc: location); end
 
   # Create a new PreExecutionNode node.
   #
@@ -10714,7 +10714,7 @@ module Prism::DSL
       closing_loc: Prism::Location
     ).returns(Prism::PreExecutionNode)
   end
-  def pre_execution_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), statements: T.unsafe(nil), keyword_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def pre_execution_node(source: default_source, node_id: 0, location: default_location, flags: 0, statements: nil, keyword_loc: location, opening_loc: location, closing_loc: location); end
 
   # Create a new ProgramNode node.
   #
@@ -10729,7 +10729,7 @@ module Prism::DSL
       statements: Prism::StatementsNode
     ).returns(Prism::ProgramNode)
   end
-  def program_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), statements: T.unsafe(nil)); end
+  def program_node(source: default_source, node_id: 0, location: default_location, flags: 0, locals: [], statements: statements_node(source: source)); end
 
   # Retrieve the value of one of the RangeFlags flags.
   #
@@ -10751,7 +10751,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::RangeNode)
   end
-  def range_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def range_node(source: default_source, node_id: 0, location: default_location, flags: 0, left: nil, right: nil, operator_loc: location); end
 
   # Create a new RationalNode node.
   #
@@ -10766,7 +10766,7 @@ module Prism::DSL
       denominator: Integer
     ).returns(Prism::RationalNode)
   end
-  def rational_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), numerator: T.unsafe(nil), denominator: T.unsafe(nil)); end
+  def rational_node(source: default_source, node_id: 0, location: default_location, flags: 0, numerator: 0, denominator: 0); end
 
   # Create a new RedoNode node.
   #
@@ -10779,7 +10779,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::RedoNode)
   end
-  def redo_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def redo_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Retrieve the value of one of the RegularExpressionFlags flags.
   #
@@ -10802,7 +10802,7 @@ module Prism::DSL
       unescaped: String
     ).returns(Prism::RegularExpressionNode)
   end
-  def regular_expression_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), content_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def regular_expression_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: location, content_loc: location, closing_loc: location, unescaped: ""); end
 
   # Create a new RequiredKeywordParameterNode node.
   #
@@ -10817,7 +10817,7 @@ module Prism::DSL
       name_loc: Prism::Location
     ).returns(Prism::RequiredKeywordParameterNode)
   end
-  def required_keyword_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil)); end
+  def required_keyword_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :"", name_loc: location); end
 
   # Create a new RequiredParameterNode node.
   #
@@ -10831,7 +10831,7 @@ module Prism::DSL
       name: Symbol
     ).returns(Prism::RequiredParameterNode)
   end
-  def required_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def required_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: :""); end
 
   # Create a new RescueModifierNode node.
   #
@@ -10847,7 +10847,7 @@ module Prism::DSL
       rescue_expression: Prism::Node
     ).returns(Prism::RescueModifierNode)
   end
-  def rescue_modifier_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), expression: T.unsafe(nil), keyword_loc: T.unsafe(nil), rescue_expression: T.unsafe(nil)); end
+  def rescue_modifier_node(source: default_source, node_id: 0, location: default_location, flags: 0, expression: default_node(source, location), keyword_loc: location, rescue_expression: default_node(source, location)); end
 
   # Create a new RescueNode node.
   #
@@ -10867,7 +10867,7 @@ module Prism::DSL
       subsequent: T.nilable(Prism::RescueNode)
     ).returns(Prism::RescueNode)
   end
-  def rescue_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), exceptions: T.unsafe(nil), operator_loc: T.unsafe(nil), reference: T.unsafe(nil), then_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), subsequent: T.unsafe(nil)); end
+  def rescue_node(source: default_source, node_id: 0, location: default_location, flags: 0, keyword_loc: location, exceptions: [], operator_loc: nil, reference: nil, then_keyword_loc: nil, statements: nil, subsequent: nil); end
 
   # Create a new RestParameterNode node.
   #
@@ -10883,7 +10883,7 @@ module Prism::DSL
       operator_loc: Prism::Location
     ).returns(Prism::RestParameterNode)
   end
-  def rest_parameter_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def rest_parameter_node(source: default_source, node_id: 0, location: default_location, flags: 0, name: nil, name_loc: nil, operator_loc: location); end
 
   # Create a new RetryNode node.
   #
@@ -10896,7 +10896,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::RetryNode)
   end
-  def retry_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def retry_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new ReturnNode node.
   #
@@ -10911,7 +10911,7 @@ module Prism::DSL
       arguments: T.nilable(Prism::ArgumentsNode)
     ).returns(Prism::ReturnNode)
   end
-  def return_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), arguments: T.unsafe(nil)); end
+  def return_node(source: default_source, node_id: 0, location: default_location, flags: 0, keyword_loc: location, arguments: nil); end
 
   # Create a new SelfNode node.
   #
@@ -10924,7 +10924,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::SelfNode)
   end
-  def self_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def self_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new ShareableConstantNode node.
   #
@@ -10938,7 +10938,7 @@ module Prism::DSL
       write: T.any(Prism::ConstantWriteNode, Prism::ConstantAndWriteNode, Prism::ConstantOrWriteNode, Prism::ConstantOperatorWriteNode, Prism::ConstantPathWriteNode, Prism::ConstantPathAndWriteNode, Prism::ConstantPathOrWriteNode, Prism::ConstantPathOperatorWriteNode)
     ).returns(Prism::ShareableConstantNode)
   end
-  def shareable_constant_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), write: T.unsafe(nil)); end
+  def shareable_constant_node(source: default_source, node_id: 0, location: default_location, flags: 0, write: constant_write_node(source: source)); end
 
   # Retrieve the value of one of the ShareableConstantNodeFlags flags.
   #
@@ -10963,7 +10963,7 @@ module Prism::DSL
       end_keyword_loc: Prism::Location
     ).returns(Prism::SingletonClassNode)
   end
-  def singleton_class_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), class_keyword_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), expression: T.unsafe(nil), body: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def singleton_class_node(source: default_source, node_id: 0, location: default_location, flags: 0, locals: [], class_keyword_loc: location, operator_loc: location, expression: default_node(source, location), body: nil, end_keyword_loc: location); end
 
   # Create a new Source object.
   #
@@ -10982,7 +10982,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::SourceEncodingNode)
   end
-  def source_encoding_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def source_encoding_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new SourceFileNode node.
   #
@@ -10996,7 +10996,7 @@ module Prism::DSL
       filepath: String
     ).returns(Prism::SourceFileNode)
   end
-  def source_file_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), filepath: T.unsafe(nil)); end
+  def source_file_node(source: default_source, node_id: 0, location: default_location, flags: 0, filepath: ""); end
 
   # Create a new SourceLineNode node.
   #
@@ -11009,7 +11009,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::SourceLineNode)
   end
-  def source_line_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def source_line_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new SplatNode node.
   #
@@ -11024,7 +11024,7 @@ module Prism::DSL
       expression: T.nilable(Prism::Node)
     ).returns(Prism::SplatNode)
   end
-  def splat_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), operator_loc: T.unsafe(nil), expression: T.unsafe(nil)); end
+  def splat_node(source: default_source, node_id: 0, location: default_location, flags: 0, operator_loc: location, expression: nil); end
 
   # Create a new StatementsNode node.
   #
@@ -11038,7 +11038,7 @@ module Prism::DSL
       body: T::Array[Prism::Node]
     ).returns(Prism::StatementsNode)
   end
-  def statements_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), body: T.unsafe(nil)); end
+  def statements_node(source: default_source, node_id: 0, location: default_location, flags: 0, body: []); end
 
   # Retrieve the value of one of the StringFlags flags.
   #
@@ -11061,7 +11061,7 @@ module Prism::DSL
       unescaped: String
     ).returns(Prism::StringNode)
   end
-  def string_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), content_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def string_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: nil, content_loc: location, closing_loc: nil, unescaped: ""); end
 
   # Create a new SuperNode node.
   #
@@ -11079,7 +11079,7 @@ module Prism::DSL
       block: T.nilable(T.any(Prism::BlockNode, Prism::BlockArgumentNode))
     ).returns(Prism::SuperNode)
   end
-  def super_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), lparen_loc: T.unsafe(nil), arguments: T.unsafe(nil), rparen_loc: T.unsafe(nil), block: T.unsafe(nil)); end
+  def super_node(source: default_source, node_id: 0, location: default_location, flags: 0, keyword_loc: location, lparen_loc: nil, arguments: nil, rparen_loc: nil, block: nil); end
 
   # Retrieve the value of one of the SymbolFlags flags.
   #
@@ -11102,7 +11102,7 @@ module Prism::DSL
       unescaped: String
     ).returns(Prism::SymbolNode)
   end
-  def symbol_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), value_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def symbol_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: nil, value_loc: nil, closing_loc: nil, unescaped: ""); end
 
   # Create a new TrueNode node.
   #
@@ -11115,7 +11115,7 @@ module Prism::DSL
       flags: Integer
     ).returns(Prism::TrueNode)
   end
-  def true_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def true_node(source: default_source, node_id: 0, location: default_location, flags: 0); end
 
   # Create a new UndefNode node.
   #
@@ -11130,7 +11130,7 @@ module Prism::DSL
       keyword_loc: Prism::Location
     ).returns(Prism::UndefNode)
   end
-  def undef_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), names: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def undef_node(source: default_source, node_id: 0, location: default_location, flags: 0, names: [], keyword_loc: location); end
 
   # Create a new UnlessNode node.
   #
@@ -11149,7 +11149,7 @@ module Prism::DSL
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::UnlessNode)
   end
-  def unless_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), predicate: T.unsafe(nil), then_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), else_clause: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def unless_node(source: default_source, node_id: 0, location: default_location, flags: 0, keyword_loc: location, predicate: default_node(source, location), then_keyword_loc: nil, statements: nil, else_clause: nil, end_keyword_loc: nil); end
 
   # Create a new UntilNode node.
   #
@@ -11167,7 +11167,7 @@ module Prism::DSL
       statements: T.nilable(Prism::StatementsNode)
     ).returns(Prism::UntilNode)
   end
-  def until_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), do_keyword_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), predicate: T.unsafe(nil), statements: T.unsafe(nil)); end
+  def until_node(source: default_source, node_id: 0, location: default_location, flags: 0, keyword_loc: location, do_keyword_loc: nil, closing_loc: nil, predicate: default_node(source, location), statements: nil); end
 
   # Create a new WhenNode node.
   #
@@ -11184,7 +11184,7 @@ module Prism::DSL
       statements: T.nilable(Prism::StatementsNode)
     ).returns(Prism::WhenNode)
   end
-  def when_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), conditions: T.unsafe(nil), then_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil)); end
+  def when_node(source: default_source, node_id: 0, location: default_location, flags: 0, keyword_loc: location, conditions: [], then_keyword_loc: nil, statements: nil); end
 
   # Create a new WhileNode node.
   #
@@ -11202,7 +11202,7 @@ module Prism::DSL
       statements: T.nilable(Prism::StatementsNode)
     ).returns(Prism::WhileNode)
   end
-  def while_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), do_keyword_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), predicate: T.unsafe(nil), statements: T.unsafe(nil)); end
+  def while_node(source: default_source, node_id: 0, location: default_location, flags: 0, keyword_loc: location, do_keyword_loc: nil, closing_loc: nil, predicate: default_node(source, location), statements: nil); end
 
   # Create a new XStringNode node.
   #
@@ -11219,7 +11219,7 @@ module Prism::DSL
       unescaped: String
     ).returns(Prism::XStringNode)
   end
-  def x_string_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), content_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def x_string_node(source: default_source, node_id: 0, location: default_location, flags: 0, opening_loc: location, content_loc: location, closing_loc: location, unescaped: ""); end
 
   # Create a new YieldNode node.
   #
@@ -11236,7 +11236,7 @@ module Prism::DSL
       rparen_loc: T.nilable(Prism::Location)
     ).returns(Prism::YieldNode)
   end
-  def yield_node(source: T.unsafe(nil), node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), lparen_loc: T.unsafe(nil), arguments: T.unsafe(nil), rparen_loc: T.unsafe(nil)); end
+  def yield_node(source: default_source, node_id: 0, location: default_location, flags: 0, keyword_loc: location, lparen_loc: nil, arguments: nil, rparen_loc: nil); end
 
   private
 
@@ -11353,7 +11353,7 @@ class Prism::DefNode < ::Prism::Node
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::DefNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), receiver: T.unsafe(nil), parameters: T.unsafe(nil), body: T.unsafe(nil), locals: T.unsafe(nil), def_keyword_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), lparen_loc: T.unsafe(nil), rparen_loc: T.unsafe(nil), equal_loc: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, receiver: self.receiver, parameters: self.parameters, body: self.body, locals: self.locals, def_keyword_loc: self.def_keyword_loc, operator_loc: self.operator_loc, lparen_loc: self.lparen_loc, rparen_loc: self.rparen_loc, equal_loc: self.equal_loc, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -11607,7 +11607,7 @@ class Prism::DefinedNode < ::Prism::Node
       keyword_loc: Prism::Location
     ).returns(Prism::DefinedNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), lparen_loc: T.unsafe(nil), value: T.unsafe(nil), rparen_loc: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, lparen_loc: self.lparen_loc, value: self.value, rparen_loc: self.rparen_loc, keyword_loc: self.keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -14720,7 +14720,7 @@ class Prism::ElseNode < ::Prism::Node
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::ElseNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), else_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, else_keyword_loc: self.else_keyword_loc, statements: self.statements, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -14900,7 +14900,7 @@ class Prism::EmbeddedStatementsNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::EmbeddedStatementsNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), statements: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, statements: self.statements, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -15036,7 +15036,7 @@ class Prism::EmbeddedVariableNode < ::Prism::Node
       variable: T.any(Prism::InstanceVariableReadNode, Prism::ClassVariableReadNode, Prism::GlobalVariableReadNode, Prism::BackReferenceReadNode, Prism::NumberedReferenceReadNode)
     ).returns(Prism::EmbeddedVariableNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), operator_loc: T.unsafe(nil), variable: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, operator_loc: self.operator_loc, variable: self.variable); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -15189,7 +15189,7 @@ class Prism::EnsureNode < ::Prism::Node
       end_keyword_loc: Prism::Location
     ).returns(Prism::EnsureNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), ensure_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, ensure_keyword_loc: self.ensure_keyword_loc, statements: self.statements, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -15320,7 +15320,7 @@ class Prism::FalseNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:7229
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::FalseNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -15470,7 +15470,7 @@ class Prism::FindPatternNode < ::Prism::Node
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::FindPatternNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), constant: T.unsafe(nil), left: T.unsafe(nil), requireds: T.unsafe(nil), right: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, constant: self.constant, left: self.left, requireds: self.requireds, right: self.right, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -15644,7 +15644,7 @@ class Prism::FlipFlopNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::FlipFlopNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, left: self.left, right: self.right, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -15769,7 +15769,7 @@ class Prism::FloatNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:7617
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer, value: Float).returns(Prism::FloatNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -15900,7 +15900,7 @@ class Prism::ForNode < ::Prism::Node
       end_keyword_loc: Prism::Location
     ).returns(Prism::ForNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), index: T.unsafe(nil), collection: T.unsafe(nil), statements: T.unsafe(nil), for_keyword_loc: T.unsafe(nil), in_keyword_loc: T.unsafe(nil), do_keyword_loc: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, index: self.index, collection: self.collection, statements: self.statements, for_keyword_loc: self.for_keyword_loc, in_keyword_loc: self.in_keyword_loc, do_keyword_loc: self.do_keyword_loc, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -16097,7 +16097,7 @@ class Prism::ForwardingArgumentsNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:7902
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::ForwardingArgumentsNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -16187,7 +16187,7 @@ class Prism::ForwardingParameterNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:7977
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::ForwardingParameterNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -16302,7 +16302,7 @@ class Prism::ForwardingSuperNode < ::Prism::Node
       block: T.nilable(Prism::BlockNode)
     ).returns(Prism::ForwardingSuperNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), block: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, block: self.block); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -16412,7 +16412,7 @@ class Prism::GlobalVariableAndWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::GlobalVariableAndWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -16581,7 +16581,7 @@ class Prism::GlobalVariableOperatorWriteNode < ::Prism::Node
       binary_operator: Symbol
     ).returns(Prism::GlobalVariableOperatorWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, binary_operator_loc: self.binary_operator_loc, value: self.value, binary_operator: self.binary_operator); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -16736,7 +16736,7 @@ class Prism::GlobalVariableOrWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::GlobalVariableOrWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -16877,7 +16877,7 @@ class Prism::GlobalVariableReadNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::GlobalVariableReadNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -16983,7 +16983,7 @@ class Prism::GlobalVariableTargetNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::GlobalVariableTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -17099,7 +17099,7 @@ class Prism::GlobalVariableWriteNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::GlobalVariableWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, value: self.value, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -17280,7 +17280,7 @@ class Prism::HashNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::HashNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), elements: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, elements: self.elements, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -17470,7 +17470,7 @@ class Prism::HashPatternNode < ::Prism::Node
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::HashPatternNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), constant: T.unsafe(nil), elements: T.unsafe(nil), rest: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, constant: self.constant, elements: self.elements, rest: self.rest, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -17658,7 +17658,7 @@ class Prism::IfNode < ::Prism::Node
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::IfNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), if_keyword_loc: T.unsafe(nil), predicate: T.unsafe(nil), then_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), subsequent: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, if_keyword_loc: self.if_keyword_loc, predicate: self.predicate, then_keyword_loc: self.then_keyword_loc, statements: self.statements, subsequent: self.subsequent, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -17883,7 +17883,7 @@ class Prism::ImaginaryNode < ::Prism::Node
       numeric: T.any(Prism::FloatNode, Prism::IntegerNode, Prism::RationalNode)
     ).returns(Prism::ImaginaryNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), numeric: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, numeric: self.numeric); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -18005,7 +18005,7 @@ class Prism::ImplicitNode < ::Prism::Node
       value: T.any(Prism::LocalVariableReadNode, Prism::CallNode, Prism::ConstantReadNode, Prism::LocalVariableTargetNode)
     ).returns(Prism::ImplicitNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -18111,7 +18111,7 @@ class Prism::ImplicitRestNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:9518
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::ImplicitRestNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -18221,7 +18221,7 @@ class Prism::InNode < ::Prism::Node
       then_loc: T.nilable(Prism::Location)
     ).returns(Prism::InNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), pattern: T.unsafe(nil), statements: T.unsafe(nil), in_loc: T.unsafe(nil), then_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, pattern: self.pattern, statements: self.statements, in_loc: self.in_loc, then_loc: self.then_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -18429,7 +18429,7 @@ class Prism::IndexAndWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::IndexAndWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), block: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, call_operator_loc: self.call_operator_loc, opening_loc: self.opening_loc, arguments: self.arguments, closing_loc: self.closing_loc, block: self.block, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -18681,7 +18681,7 @@ class Prism::IndexOperatorWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::IndexOperatorWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), block: T.unsafe(nil), binary_operator: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, call_operator_loc: self.call_operator_loc, opening_loc: self.opening_loc, arguments: self.arguments, closing_loc: self.closing_loc, block: self.block, binary_operator: self.binary_operator, binary_operator_loc: self.binary_operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -18919,7 +18919,7 @@ class Prism::IndexOrWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::IndexOrWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), call_operator_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), block: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, call_operator_loc: self.call_operator_loc, opening_loc: self.opening_loc, arguments: self.arguments, closing_loc: self.closing_loc, block: self.block, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -19147,7 +19147,7 @@ class Prism::IndexTargetNode < ::Prism::Node
       block: T.nilable(Prism::BlockArgumentNode)
     ).returns(Prism::IndexTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), receiver: T.unsafe(nil), opening_loc: T.unsafe(nil), arguments: T.unsafe(nil), closing_loc: T.unsafe(nil), block: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, receiver: self.receiver, opening_loc: self.opening_loc, arguments: self.arguments, closing_loc: self.closing_loc, block: self.block); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -19265,7 +19265,7 @@ class Prism::InspectVisitor < ::Prism::Visitor
   #
   # pkg:gem/prism#lib/prism/inspect_visitor.rb:38
   sig { params(indent: String).void }
-  def initialize(indent = T.unsafe(nil)); end
+  def initialize(indent = ""); end
 
   # The list of commands that we need to execute in order to compose the
   # final string.
@@ -20142,7 +20142,7 @@ class Prism::InstanceVariableAndWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::InstanceVariableAndWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -20311,7 +20311,7 @@ class Prism::InstanceVariableOperatorWriteNode < ::Prism::Node
       binary_operator: Symbol
     ).returns(Prism::InstanceVariableOperatorWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), binary_operator: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, binary_operator_loc: self.binary_operator_loc, value: self.value, binary_operator: self.binary_operator); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -20466,7 +20466,7 @@ class Prism::InstanceVariableOrWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::InstanceVariableOrWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -20607,7 +20607,7 @@ class Prism::InstanceVariableReadNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::InstanceVariableReadNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -20713,7 +20713,7 @@ class Prism::InstanceVariableTargetNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::InstanceVariableTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -20829,7 +20829,7 @@ class Prism::InstanceVariableWriteNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::InstanceVariableWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, value: self.value, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -21022,7 +21022,7 @@ class Prism::IntegerNode < ::Prism::Node
       value: Integer
     ).returns(Prism::IntegerNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, value: self.value); end
 
   # def decimal?: () -> bool
   #
@@ -21174,7 +21174,7 @@ class Prism::InterpolatedMatchLastLineNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::InterpolatedMatchLastLineNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, parts: self.parts, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -21398,7 +21398,7 @@ class Prism::InterpolatedRegularExpressionNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::InterpolatedRegularExpressionNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, parts: self.parts, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -21616,7 +21616,7 @@ class Prism::InterpolatedStringNode < ::Prism::Node
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::InterpolatedStringNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, parts: self.parts, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -21797,7 +21797,7 @@ class Prism::InterpolatedSymbolNode < ::Prism::Node
       closing_loc: T.nilable(Prism::Location)
     ).returns(Prism::InterpolatedSymbolNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, parts: self.parts, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -21952,7 +21952,7 @@ class Prism::InterpolatedXStringNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::InterpolatedXStringNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), parts: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, parts: self.parts, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -22077,7 +22077,7 @@ class Prism::ItLocalVariableReadNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:12032
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::ItLocalVariableReadNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -22166,7 +22166,7 @@ class Prism::ItParametersNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:12106
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::ItParametersNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -22270,7 +22270,7 @@ class Prism::KeywordHashNode < ::Prism::Node
       elements: T::Array[T.any(Prism::AssocNode, Prism::AssocSplatNode)]
     ).returns(Prism::KeywordHashNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), elements: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, elements: self.elements); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -22401,7 +22401,7 @@ class Prism::KeywordRestParameterNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::KeywordRestParameterNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -22575,7 +22575,7 @@ class Prism::LambdaNode < ::Prism::Node
       body: T.nilable(T.any(Prism::StatementsNode, Prism::BeginNode))
     ).returns(Prism::LambdaNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), operator_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), parameters: T.unsafe(nil), body: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, locals: self.locals, operator_loc: self.operator_loc, opening_loc: self.opening_loc, closing_loc: self.closing_loc, parameters: self.parameters, body: self.body); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -22981,7 +22981,7 @@ class Prism::LocalVariableAndWriteNode < ::Prism::Node
       depth: Integer
     ).returns(Prism::LocalVariableAndWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value, name: self.name, depth: self.depth); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -23158,7 +23158,7 @@ class Prism::LocalVariableOperatorWriteNode < ::Prism::Node
       depth: Integer
     ).returns(Prism::LocalVariableOperatorWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name_loc: T.unsafe(nil), binary_operator_loc: T.unsafe(nil), value: T.unsafe(nil), name: T.unsafe(nil), binary_operator: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name_loc: self.name_loc, binary_operator_loc: self.binary_operator_loc, value: self.value, name: self.name, binary_operator: self.binary_operator, depth: self.depth); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -23321,7 +23321,7 @@ class Prism::LocalVariableOrWriteNode < ::Prism::Node
       depth: Integer
     ).returns(Prism::LocalVariableOrWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value, name: self.name, depth: self.depth); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -23478,7 +23478,7 @@ class Prism::LocalVariableReadNode < ::Prism::Node
       depth: Integer
     ).returns(Prism::LocalVariableReadNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, depth: self.depth); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -23613,7 +23613,7 @@ class Prism::LocalVariableTargetNode < ::Prism::Node
       depth: Integer
     ).returns(Prism::LocalVariableTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, depth: self.depth); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -23737,7 +23737,7 @@ class Prism::LocalVariableWriteNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::LocalVariableWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), depth: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, depth: self.depth, name_loc: self.name_loc, value: self.value, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -23939,7 +23939,7 @@ class Prism::Location
   #
   # pkg:gem/prism#lib/prism/parse_result.rb:343
   sig { params(source: Prism::Source, start_offset: Integer, length: Integer).returns(Prism::Location) }
-  def copy(source: T.unsafe(nil), start_offset: T.unsafe(nil), length: T.unsafe(nil)); end
+  def copy(source: self.source, start_offset: self.start_offset, length: self.length); end
 
   # Implement the hash pattern matching interface for Location.
   #
@@ -23966,13 +23966,13 @@ class Prism::Location
   #
   # pkg:gem/prism#lib/prism/parse_result.rb:469
   sig { params(encoding: Encoding).returns(Integer) }
-  def end_code_units_column(encoding = T.unsafe(nil)); end
+  def end_code_units_column(encoding = Encoding::UTF_16LE); end
 
   # The offset from the start of the file in code units of the given encoding.
   #
   # pkg:gem/prism#lib/prism/parse_result.rb:405
   sig { params(encoding: Encoding).returns(Integer) }
-  def end_code_units_offset(encoding = T.unsafe(nil)); end
+  def end_code_units_offset(encoding = Encoding::UTF_16LE); end
 
   # The column number in bytes where this location ends from the start of the
   # line.
@@ -24070,13 +24070,13 @@ class Prism::Location
   #
   # pkg:gem/prism#lib/prism/parse_result.rb:445
   sig { params(encoding: Encoding).returns(Integer) }
-  def start_code_units_column(encoding = T.unsafe(nil)); end
+  def start_code_units_column(encoding = Encoding::UTF_16LE); end
 
   # The offset from the start of the file in code units of the given encoding.
   #
   # pkg:gem/prism#lib/prism/parse_result.rb:383
   sig { params(encoding: Encoding).returns(Integer) }
-  def start_code_units_offset(encoding = T.unsafe(nil)); end
+  def start_code_units_offset(encoding = Encoding::UTF_16LE); end
 
   # The column number in bytes where this location starts from the start of
   # the line.
@@ -24284,7 +24284,7 @@ class Prism::MatchLastLineNode < ::Prism::Node
       unescaped: String
     ).returns(Prism::MatchLastLineNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), content_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, content_loc: self.content_loc, closing_loc: self.closing_loc, unescaped: self.unescaped); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -24491,7 +24491,7 @@ class Prism::MatchPredicateNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::MatchPredicateNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil), pattern: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, value: self.value, pattern: self.pattern, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -24629,7 +24629,7 @@ class Prism::MatchRequiredNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::MatchRequiredNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), value: T.unsafe(nil), pattern: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, value: self.value, pattern: self.pattern, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -24819,7 +24819,7 @@ class Prism::MatchWriteNode < ::Prism::Node
       targets: T::Array[Prism::LocalVariableTargetNode]
     ).returns(Prism::MatchWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), call: T.unsafe(nil), targets: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, call: self.call, targets: self.targets); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -24911,7 +24911,7 @@ class Prism::MissingNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:13799
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::MissingNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -25037,7 +25037,7 @@ class Prism::ModuleNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::ModuleNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), module_keyword_loc: T.unsafe(nil), constant_path: T.unsafe(nil), body: T.unsafe(nil), end_keyword_loc: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, locals: self.locals, module_keyword_loc: self.module_keyword_loc, constant_path: self.constant_path, body: self.body, end_keyword_loc: self.end_keyword_loc, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -25202,7 +25202,7 @@ class Prism::MultiTargetNode < ::Prism::Node
       rparen_loc: T.nilable(Prism::Location)
     ).returns(Prism::MultiTargetNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), lefts: T.unsafe(nil), rest: T.unsafe(nil), rights: T.unsafe(nil), lparen_loc: T.unsafe(nil), rparen_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, lefts: self.lefts, rest: self.rest, rights: self.rights, lparen_loc: self.lparen_loc, rparen_loc: self.rparen_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -25406,7 +25406,7 @@ class Prism::MultiWriteNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::MultiWriteNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), lefts: T.unsafe(nil), rest: T.unsafe(nil), rights: T.unsafe(nil), lparen_loc: T.unsafe(nil), rparen_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, lefts: self.lefts, rest: self.rest, rights: self.rights, lparen_loc: self.lparen_loc, rparen_loc: self.rparen_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -26398,7 +26398,7 @@ class Prism::NextNode < ::Prism::Node
       keyword_loc: Prism::Location
     ).returns(Prism::NextNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), arguments: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, arguments: self.arguments, keyword_loc: self.keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -26505,7 +26505,7 @@ class Prism::NilNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:14513
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::NilNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -26612,7 +26612,7 @@ class Prism::NoKeywordsParameterNode < ::Prism::Node
       keyword_loc: Prism::Location
     ).returns(Prism::NoKeywordsParameterNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), operator_loc: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, operator_loc: self.operator_loc, keyword_loc: self.keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -27092,7 +27092,7 @@ class Prism::NumberedParametersNode < ::Prism::Node
       maximum: Integer
     ).returns(Prism::NumberedParametersNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), maximum: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, maximum: self.maximum); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -27202,7 +27202,7 @@ class Prism::NumberedReferenceReadNode < ::Prism::Node
       number: Integer
     ).returns(Prism::NumberedReferenceReadNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), number: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, number: self.number); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -27323,7 +27323,7 @@ class Prism::OptionalKeywordParameterNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::OptionalKeywordParameterNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -27464,7 +27464,7 @@ class Prism::OptionalParameterNode < ::Prism::Node
       value: Prism::Node
     ).returns(Prism::OptionalParameterNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), value: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc, value: self.value); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -27620,7 +27620,7 @@ class Prism::OrNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::OrNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, left: self.left, right: self.right, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -28036,7 +28036,7 @@ class Prism::ParametersNode < ::Prism::Node
       block: T.nilable(Prism::BlockParameterNode)
     ).returns(Prism::ParametersNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), requireds: T.unsafe(nil), optionals: T.unsafe(nil), rest: T.unsafe(nil), posts: T.unsafe(nil), keywords: T.unsafe(nil), keyword_rest: T.unsafe(nil), block: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, requireds: self.requireds, optionals: self.optionals, rest: self.rest, posts: self.posts, keywords: self.keywords, keyword_rest: self.keyword_rest, block: self.block); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -28208,7 +28208,7 @@ class Prism::ParenthesesNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::ParenthesesNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), body: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, body: self.body, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -28862,7 +28862,7 @@ class Prism::PinnedExpressionNode < ::Prism::Node
       rparen_loc: Prism::Location
     ).returns(Prism::PinnedExpressionNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), expression: T.unsafe(nil), operator_loc: T.unsafe(nil), lparen_loc: T.unsafe(nil), rparen_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, expression: self.expression, operator_loc: self.operator_loc, lparen_loc: self.lparen_loc, rparen_loc: self.rparen_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -29040,7 +29040,7 @@ class Prism::PinnedVariableNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::PinnedVariableNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), variable: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, variable: self.variable, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -29194,7 +29194,7 @@ class Prism::PostExecutionNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::PostExecutionNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), statements: T.unsafe(nil), keyword_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, statements: self.statements, keyword_loc: self.keyword_loc, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -29364,7 +29364,7 @@ class Prism::PreExecutionNode < ::Prism::Node
       closing_loc: Prism::Location
     ).returns(Prism::PreExecutionNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), statements: T.unsafe(nil), keyword_loc: T.unsafe(nil), opening_loc: T.unsafe(nil), closing_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, statements: self.statements, keyword_loc: self.keyword_loc, opening_loc: self.opening_loc, closing_loc: self.closing_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -29515,7 +29515,7 @@ class Prism::ProgramNode < ::Prism::Node
       statements: Prism::StatementsNode
     ).returns(Prism::ProgramNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), statements: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, locals: self.locals, statements: self.statements); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -29648,7 +29648,7 @@ class Prism::RangeNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::RangeNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), left: T.unsafe(nil), right: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, left: self.left, right: self.right, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -29809,7 +29809,7 @@ class Prism::RationalNode < ::Prism::Node
       denominator: Integer
     ).returns(Prism::RationalNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), numerator: T.unsafe(nil), denominator: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, numerator: self.numerator, denominator: self.denominator); end
 
   # def decimal?: () -> bool
   #
@@ -29944,7 +29944,7 @@ class Prism::RedoNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:16343
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::RedoNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -30272,7 +30272,7 @@ class Prism::RegularExpressionNode < ::Prism::Node
       unescaped: String
     ).returns(Prism::RegularExpressionNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), content_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, content_loc: self.content_loc, closing_loc: self.closing_loc, unescaped: self.unescaped); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -30996,7 +30996,7 @@ class Prism::RequiredKeywordParameterNode < ::Prism::Node
       name_loc: Prism::Location
     ).returns(Prism::RequiredKeywordParameterNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -31117,7 +31117,7 @@ class Prism::RequiredParameterNode < ::Prism::Node
       name: Symbol
     ).returns(Prism::RequiredParameterNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -31237,7 +31237,7 @@ class Prism::RescueModifierNode < ::Prism::Node
       rescue_expression: Prism::Node
     ).returns(Prism::RescueModifierNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), expression: T.unsafe(nil), keyword_loc: T.unsafe(nil), rescue_expression: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, expression: self.expression, keyword_loc: self.keyword_loc, rescue_expression: self.rescue_expression); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -31397,7 +31397,7 @@ class Prism::RescueNode < ::Prism::Node
       subsequent: T.nilable(Prism::RescueNode)
     ).returns(Prism::RescueNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), exceptions: T.unsafe(nil), operator_loc: T.unsafe(nil), reference: T.unsafe(nil), then_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), subsequent: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, keyword_loc: self.keyword_loc, exceptions: self.exceptions, operator_loc: self.operator_loc, reference: self.reference, then_keyword_loc: self.then_keyword_loc, statements: self.statements, subsequent: self.subsequent); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -31586,7 +31586,7 @@ class Prism::RestParameterNode < ::Prism::Node
       operator_loc: Prism::Location
     ).returns(Prism::RestParameterNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), name: T.unsafe(nil), name_loc: T.unsafe(nil), operator_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, name: self.name, name_loc: self.name_loc, operator_loc: self.operator_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -31813,7 +31813,7 @@ class Prism::RetryNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:17213
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::RetryNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -31925,7 +31925,7 @@ class Prism::ReturnNode < ::Prism::Node
       arguments: T.nilable(Prism::ArgumentsNode)
     ).returns(Prism::ReturnNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), arguments: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, keyword_loc: self.keyword_loc, arguments: self.arguments); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -32061,7 +32061,7 @@ class Prism::SelfNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:17389
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::SelfNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -32348,7 +32348,7 @@ class Prism::ShareableConstantNode < ::Prism::Node
       write: T.any(Prism::ConstantWriteNode, Prism::ConstantAndWriteNode, Prism::ConstantOrWriteNode, Prism::ConstantOperatorWriteNode, Prism::ConstantPathWriteNode, Prism::ConstantPathAndWriteNode, Prism::ConstantPathOrWriteNode, Prism::ConstantPathOperatorWriteNode)
     ).returns(Prism::ShareableConstantNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), write: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, write: self.write); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -32526,7 +32526,7 @@ class Prism::SingletonClassNode < ::Prism::Node
       end_keyword_loc: Prism::Location
     ).returns(Prism::SingletonClassNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), locals: T.unsafe(nil), class_keyword_loc: T.unsafe(nil), operator_loc: T.unsafe(nil), expression: T.unsafe(nil), body: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, locals: self.locals, class_keyword_loc: self.class_keyword_loc, operator_loc: self.operator_loc, expression: self.expression, body: self.body, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -32632,7 +32632,7 @@ class Prism::Source
   #
   # pkg:gem/prism#lib/prism/parse_result.rb:46
   sig { params(source: String, start_line: Integer, offsets: T::Array[Integer]).void }
-  def initialize(source, start_line = T.unsafe(nil), offsets = T.unsafe(nil)); end
+  def initialize(source, start_line = 1, offsets = []); end
 
   # Converts the line number and column in bytes to a byte offset.
   #
@@ -32833,7 +32833,7 @@ class Prism::SourceEncodingNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:17715
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::SourceEncodingNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -32937,7 +32937,7 @@ class Prism::SourceFileNode < ::Prism::Node
       filepath: String
     ).returns(Prism::SourceFileNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), filepath: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, filepath: self.filepath); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -33056,7 +33056,7 @@ class Prism::SourceLineNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:17889
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::SourceLineNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -33162,7 +33162,7 @@ class Prism::SplatNode < ::Prism::Node
       expression: T.nilable(Prism::Node)
     ).returns(Prism::SplatNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), operator_loc: T.unsafe(nil), expression: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, operator_loc: self.operator_loc, expression: self.expression); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -33296,7 +33296,7 @@ class Prism::StatementsNode < ::Prism::Node
       body: T::Array[Prism::Node]
     ).returns(Prism::StatementsNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), body: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, body: self.body); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -33459,7 +33459,7 @@ class Prism::StringNode < ::Prism::Node
       unescaped: String
     ).returns(Prism::StringNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), content_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, content_loc: self.content_loc, closing_loc: self.closing_loc, unescaped: self.unescaped); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -33705,7 +33705,7 @@ class Prism::SuperNode < ::Prism::Node
       block: T.nilable(T.any(Prism::BlockNode, Prism::BlockArgumentNode))
     ).returns(Prism::SuperNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), lparen_loc: T.unsafe(nil), arguments: T.unsafe(nil), rparen_loc: T.unsafe(nil), block: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, keyword_loc: self.keyword_loc, lparen_loc: self.lparen_loc, arguments: self.arguments, rparen_loc: self.rparen_loc, block: self.block); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -33904,7 +33904,7 @@ class Prism::SymbolNode < ::Prism::Node
       unescaped: String
     ).returns(Prism::SymbolNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), value_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, value_loc: self.value_loc, closing_loc: self.closing_loc, unescaped: self.unescaped); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -37518,7 +37518,8 @@ class Prism::Translation::Ripper < ::Prism::Compiler
     #             [:bodystmt, [[:var_ref, [:@kw, "nil", [1, 9]]]], nil, nil, nil]]]]
     #
     # pkg:gem/prism#lib/prism/translation/ripper.rb:393
-    def sexp(src, filename = T.unsafe(nil), lineno = T.unsafe(nil), raise_errors: T.unsafe(nil)); end
+    sig { params(source: String, filename: String, lineno: Integer, raise_errors: T.untyped).returns(T.untyped) }
+    def sexp(source, filename = "-", lineno = 1, raise_errors: false); end
 
     # Parses +src+ and create S-exp tree.
     # This method is mainly for developer use.
@@ -37544,7 +37545,8 @@ class Prism::Translation::Ripper < ::Prism::Compiler
     #               nil]]]]
     #
     # pkg:gem/prism#lib/prism/translation/ripper.rb:428
-    def sexp_raw(src, filename = T.unsafe(nil), lineno = T.unsafe(nil), raise_errors: T.unsafe(nil)); end
+    sig { params(source: String, filename: String, lineno: Integer, raise_errors: T.untyped).returns(T.untyped) }
+    def sexp_raw(source, filename = "-", lineno = 1, raise_errors: false); end
 
     # Tokenizes the Ruby program and returns an array of strings.
     # The +filename+ and +lineno+ arguments are mostly ignored, since the
@@ -39946,7 +39948,7 @@ class Prism::TrueNode < ::Prism::Node
   #
   # pkg:gem/prism#lib/prism/node.rb:18666
   sig { params(node_id: Integer, location: Prism::Location, flags: Integer).returns(Prism::TrueNode) }
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -40052,7 +40054,7 @@ class Prism::UndefNode < ::Prism::Node
       keyword_loc: Prism::Location
     ).returns(Prism::UndefNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), names: T.unsafe(nil), keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, names: self.names, keyword_loc: self.keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -40199,7 +40201,7 @@ class Prism::UnlessNode < ::Prism::Node
       end_keyword_loc: T.nilable(Prism::Location)
     ).returns(Prism::UnlessNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), predicate: T.unsafe(nil), then_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil), else_clause: T.unsafe(nil), end_keyword_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, keyword_loc: self.keyword_loc, predicate: self.predicate, then_keyword_loc: self.then_keyword_loc, statements: self.statements, else_clause: self.else_clause, end_keyword_loc: self.end_keyword_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -40432,7 +40434,7 @@ class Prism::UntilNode < ::Prism::Node
       statements: T.nilable(Prism::StatementsNode)
     ).returns(Prism::UntilNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), do_keyword_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), predicate: T.unsafe(nil), statements: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, keyword_loc: self.keyword_loc, do_keyword_loc: self.do_keyword_loc, closing_loc: self.closing_loc, predicate: self.predicate, statements: self.statements); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -41538,7 +41540,7 @@ class Prism::WhenNode < ::Prism::Node
       statements: T.nilable(Prism::StatementsNode)
     ).returns(Prism::WhenNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), conditions: T.unsafe(nil), then_keyword_loc: T.unsafe(nil), statements: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, keyword_loc: self.keyword_loc, conditions: self.conditions, then_keyword_loc: self.then_keyword_loc, statements: self.statements); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -41713,7 +41715,7 @@ class Prism::WhileNode < ::Prism::Node
       statements: T.nilable(Prism::StatementsNode)
     ).returns(Prism::WhileNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), do_keyword_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), predicate: T.unsafe(nil), statements: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, keyword_loc: self.keyword_loc, do_keyword_loc: self.do_keyword_loc, closing_loc: self.closing_loc, predicate: self.predicate, statements: self.statements); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -41906,7 +41908,7 @@ class Prism::XStringNode < ::Prism::Node
       unescaped: String
     ).returns(Prism::XStringNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), opening_loc: T.unsafe(nil), content_loc: T.unsafe(nil), closing_loc: T.unsafe(nil), unescaped: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, opening_loc: self.opening_loc, content_loc: self.content_loc, closing_loc: self.closing_loc, unescaped: self.unescaped); end
 
   # def deconstruct: () -> Array[Node?]
   #
@@ -42080,7 +42082,7 @@ class Prism::YieldNode < ::Prism::Node
       rparen_loc: T.nilable(Prism::Location)
     ).returns(Prism::YieldNode)
   end
-  def copy(node_id: T.unsafe(nil), location: T.unsafe(nil), flags: T.unsafe(nil), keyword_loc: T.unsafe(nil), lparen_loc: T.unsafe(nil), arguments: T.unsafe(nil), rparen_loc: T.unsafe(nil)); end
+  def copy(node_id: self.node_id, location: self.location, flags: self.flags, keyword_loc: self.keyword_loc, lparen_loc: self.lparen_loc, arguments: self.arguments, rparen_loc: self.rparen_loc); end
 
   # def deconstruct: () -> Array[Node?]
   #

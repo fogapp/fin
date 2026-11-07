@@ -34,7 +34,7 @@ module CashTransactions
 
     sig { params(params: T.untyped).void }
     def initialize(params)
-      @params = T.let(params, T.untyped)
+      @params = params
     end
 
     sig { params(scope: T.untyped, only: T.nilable(T::Array[Symbol])).returns(T.untyped) }

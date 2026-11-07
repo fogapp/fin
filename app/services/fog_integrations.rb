@@ -41,14 +41,12 @@ module FogIntegrations
     const :secret, String
   end
 
-  FINANCE = T.let(
-    Offer.new(
+  FINANCE = Offer.new(
       id: "finance", title: "Finances",
       blurb: "This app can read the household's accounts, transactions, budget, cashflow and net worth " \
              "in Fin, as the person who approves it, and change nothing.",
       secret: "FIN_API_TOKEN"
-    ).freeze, Offer
-  )
+    ).freeze
   OFFERS = T.let({ FINANCE.id => FINANCE }.freeze, T::Hash[String, Offer])
 
   # A fog app name (fog's apps.nameRe).

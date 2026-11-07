@@ -67,6 +67,8 @@ Sorbet/ForbidTAnyWithNil: # new in 0.11.0
   Enabled: true
 Sorbet/Refinement: # new in 0.8.6
   Enabled: true
+Sorbet/RedundantTLetForLiteral: # new in 0.13.0
+  Enabled: false
 
 Sorbet/ForbidUntypedStructProps:
   Enabled: false

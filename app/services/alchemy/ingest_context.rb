@@ -12,7 +12,7 @@ module Alchemy
 
     sig { params(wallet: AlchemyWallet).void }
     def initialize(wallet:)
-      @wallet          = T.let(wallet, AlchemyWallet)
+      @wallet          = wallet
       @types           = T.let({}, T::Hash[Symbol, TransactionType])
       @securities      = T.let({}, T::Hash[[ String, String ], Security])
       @prices          = T.let({}, T::Hash[[ String, Date ], T.nilable(BigDecimal)])

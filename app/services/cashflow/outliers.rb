@@ -32,7 +32,7 @@ module Cashflow
 
     sig { params(spend_scope: T.untyped).void }
     def initialize(spend_scope:)
-      @spend_scope = T.let(spend_scope, T.untyped)
+      @spend_scope = spend_scope
     end
 
     # Flagged rows within `range` as

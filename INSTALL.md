@@ -307,7 +307,7 @@ with different keys is refused at preflight (see Backups below).
 | `FOG_API_URL` | unset | fog's API, injected by fog. With `FOG_API_TOKEN` it turns on publishing to fog's event stream and fog-only sign-in (see ACCESS.md) |
 | `OIDC_ISSUER`, `OIDC_CLIENT_ID`, `OIDC_CLIENT_SECRET` | unset | Sign in with fog, or any OpenID provider (see ACCESS.md). fog injects them from `fog.yaml`. Unset means `/login` offers passkeys only |
 | `FLARE_DSN` | unset | Error reporting through the vendored `flare` client. Inert without it |
-| `LUCID_URL`, `LUCID_API_KEY` | unset | Metrics, traces, profiles, logs and browser analytics to Lucid, an observability app that runs on fog. On fog, connecting Lucid's `monitoring` offer on Fin's Integrations tab sets both. Inert without both |
+| `GLASS_URL`, `GLASS_API_KEY` | unset | Metrics, traces, profiles, logs and browser analytics to Glass, an observability app that runs on fog. On fog, connecting Glass's `monitoring` offer on Fin's Integrations tab sets both. Inert without both |
 | `OFFICE_URL`, `OFFICE_API_TOKEN` | unset | Instance-wide fallback for the Office integration (SETUP.md). On fog, Office's `documents` offer sets both |
 | `SOLID_QUEUE_IN_PUMA` | unset | Run the job supervisor inside the web process instead of a separate worker |
 

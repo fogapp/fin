@@ -28,15 +28,15 @@ module Tax
     end
     def initialize(tax_year:, filing_status:, wages:, other_ordinary: 0, ltcg_qd: 0,
                    iso_spread: 0, itemizing: false, salt_paid: 0, itemized_other: 0)
-      @tax_year       = T.let(tax_year, Integer)
-      @filing_status  = T.let(filing_status, FilingStatus)
-      @wages          = T.let(wages, T.untyped)
-      @other_ordinary = T.let(other_ordinary, T.untyped)
-      @ltcg_qd        = T.let(ltcg_qd, T.untyped)
-      @iso_spread     = T.let(iso_spread, T.untyped)
-      @itemizing      = T.let(itemizing, T::Boolean)
-      @salt_paid      = T.let(salt_paid, T.untyped)
-      @itemized_other = T.let(itemized_other, T.untyped)
+      @tax_year       = tax_year
+      @filing_status  = filing_status
+      @wages          = wages
+      @other_ordinary = other_ordinary
+      @ltcg_qd        = ltcg_qd
+      @iso_spread     = iso_spread
+      @itemizing      = itemizing
+      @salt_paid      = salt_paid
+      @itemized_other = itemized_other
       @federal        = T.let(nil, T.nilable(T::Hash[Symbol, Float]))
       @california     = T.let(nil, T.nilable(T::Hash[Symbol, Float]))
     end

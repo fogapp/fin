@@ -10,7 +10,7 @@ module Api
 
       sig { params(params: T.untyped).void }
       def initialize(params: {})
-        @params = T.let(params, T.untyped)
+        @params = params
       end
 
       # ISO date param or nil; malformed input raises Date::Error, which the

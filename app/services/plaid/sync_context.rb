@@ -37,10 +37,10 @@ module Plaid
              first_sync: T::Boolean).void
     end
     def initialize(plaid_item:, client:, only_account:, first_sync:)
-      @plaid_item   = T.let(plaid_item, ::PlaidItem)
-      @client       = T.let(client, T.untyped)
-      @only_account = T.let(only_account, T.nilable(::PlaidAccount))
-      @first_sync   = T.let(first_sync, T::Boolean)
+      @plaid_item   = plaid_item
+      @client       = client
+      @only_account = only_account
+      @first_sync   = first_sync
       @pa_by_plaid_id = T.let(nil, T.untyped)
     end
 

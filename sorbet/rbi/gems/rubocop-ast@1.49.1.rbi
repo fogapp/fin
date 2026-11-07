@@ -5548,6 +5548,9 @@ RuboCop::AST::NodePattern::Sets::SET_TO_I_TO_F_TO_C_TO_R = T.let(T.unsafe(nil), 
 RuboCop::AST::NodePattern::Sets::SET_TRUE_FALSE = T.let(T.unsafe(nil), Set)
 
 # pkg:gem/rubocop-ast#lib/rubocop/ast/node_pattern/sets.rb:10
+RuboCop::AST::NodePattern::Sets::SET_TYPE_MEMBER_TYPE_TEMPLATE = T.let(T.unsafe(nil), Set)
+
+# pkg:gem/rubocop-ast#lib/rubocop/ast/node_pattern/sets.rb:10
 RuboCop::AST::NodePattern::Sets::SET_ZERO_POSITIVE_NEGATIVE = T.let(T.unsafe(nil), Set)
 
 # pkg:gem/rubocop-ast#lib/rubocop/ast/node_pattern/sets.rb:10

@@ -17,9 +17,9 @@ module Positions
 
     sig { params(prefix: String, household_id: String, as_of: Date).void }
     def initialize(prefix:, household_id:, as_of: Date.current)
-      @prefix       = T.let(prefix, String)
-      @household_id = T.let(household_id, String)
-      @as_of        = T.let(as_of, Date)
+      @prefix       = prefix
+      @household_id = household_id
+      @as_of        = as_of
       @seen         = T.let(Set.new, T::Set[String])
     end
 

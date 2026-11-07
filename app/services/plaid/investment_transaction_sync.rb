@@ -42,7 +42,7 @@ module Plaid
     # last_synced_at for the current run.
     sig { params(context: SyncContext).void }
     def initialize(context)
-      @context       = T.let(context, SyncContext)
+      @context       = context
       @skipped_types = T.let(Hash.new(0), T::Hash[String, Integer])
 
       # Plaid investments is a date-window API and transactions post with a

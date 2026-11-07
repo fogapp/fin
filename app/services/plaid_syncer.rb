@@ -16,8 +16,8 @@ class PlaidSyncer
 
   sig { params(plaid_item: PlaidItem, only_account: T.nilable(PlaidAccount)).void }
   def initialize(plaid_item, only_account: nil)
-    @plaid_item   = T.let(plaid_item, PlaidItem)
-    @only_account = T.let(only_account, T.nilable(PlaidAccount))
+    @plaid_item   = plaid_item
+    @only_account = only_account
     @client       = T.let(PlaidClient.new, T.untyped)
     # True when the item had no cursor at sync start (first sync after a
     # link or reconnect) — gates the content-based dedup adoption path.

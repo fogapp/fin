@@ -19,7 +19,7 @@ module Workflows
 
     sig { params(run: WorkflowRun).void }
     def initialize(run)
-      @run = T.let(run, WorkflowRun)
+      @run = run
       @workflow = T.let(T.must(run.workflow), Workflow)
     end
 

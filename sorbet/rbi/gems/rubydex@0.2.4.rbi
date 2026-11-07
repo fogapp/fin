@@ -137,7 +137,7 @@ class Rubydex::Declaration
     private
 
     # pkg:gem/rubydex#lib/rubydex.rb:11
-    def new(*args); end
+    def new(*_arg0); end
   end
 end
 
@@ -175,7 +175,7 @@ class Rubydex::Definition
     private
 
     # pkg:gem/rubydex#lib/rubydex.rb:11
-    def new(*args); end
+    def new(*_arg0); end
   end
 end
 
@@ -236,7 +236,7 @@ class Rubydex::Document
     private
 
     # pkg:gem/rubydex#lib/rubydex.rb:11
-    def new(*args); end
+    def new(*_arg0); end
   end
 end
 
@@ -275,7 +275,7 @@ class Rubydex::GlobalVariableDefinition < ::Rubydex::Definition; end
 class Rubydex::Graph
   # pkg:gem/rubydex#lib/rubydex/graph.rb:24
   sig { params(workspace_path: T.nilable(String)).void }
-  def initialize(workspace_path: T.unsafe(nil)); end
+  def initialize(workspace_path: nil); end
 
   # pkg:gem/rubydex#lib/rubydex.rb:11
   sig { params(fully_qualified_name: String).returns(T.nilable(Rubydex::Declaration)) }
@@ -634,7 +634,7 @@ class Rubydex::Reference
     private
 
     # pkg:gem/rubydex#lib/rubydex.rb:11
-    def new(*args); end
+    def new(*_arg0); end
   end
 end
 

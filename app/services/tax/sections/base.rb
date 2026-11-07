@@ -10,7 +10,7 @@ module Tax
 
       sig { params(context: Context).void }
       def initialize(context:)
-        @context = T.let(context, Context)
+        @context = context
       end
     end
   end

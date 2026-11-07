@@ -23,9 +23,9 @@ module Equity
 
     sig { params(grant: EquityGrant, profile: TaxProfile, share_price: BigDecimal).void }
     def initialize(grant:, profile:, share_price:)
-      @grant       = T.let(grant, EquityGrant)
-      @profile     = T.let(profile, TaxProfile)
-      @share_price = T.let(share_price, BigDecimal)
+      @grant       = grant
+      @profile     = profile
+      @share_price = share_price
       @tax_year    = T.let(profile.tax_year, Integer)
       @pairs       = T.let({}, T::Hash[T.untyped, Tax::JurisdictionPair])
     end

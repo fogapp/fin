@@ -15,7 +15,7 @@ class RecalculatePositionService
 
   sig { params(transaction: InvestmentTransaction).void }
   def initialize(transaction:)
-    @txn      = T.let(transaction, InvestmentTransaction)
+    @txn      = transaction
     @security = T.let(transaction.security, T.nilable(Security))
     @account  = T.let(T.must(transaction.account), Account)
   end

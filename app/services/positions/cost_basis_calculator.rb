@@ -19,7 +19,7 @@ module Positions
 
     sig { params(security_ids: T::Array[T.untyped]).void }
     def initialize(security_ids)
-      @security_ids = T.let(security_ids, T::Array[T.untyped])
+      @security_ids = security_ids
     end
 
     # {security_id => {bought_quantity:, bought_cost:}}

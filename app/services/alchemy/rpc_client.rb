@@ -19,7 +19,7 @@ module Alchemy
       key = api_key.presence || AlchemyConfiguration.current.api_key.presence || ENV["ALCHEMY_API_KEY"]
       raise ArgumentError, "Alchemy API key not configured" if key.blank?
 
-      @network = T.let(network, String)
+      @network = network
       @api_key = T.let(key, String)
     end
 

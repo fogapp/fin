@@ -37,7 +37,7 @@ module Positions
 
     sig { params(security_ids: T::Array[T.untyped]).void }
     def initialize(security_ids)
-      @security_ids = T.let(security_ids, T::Array[T.untyped])
+      @security_ids = security_ids
       @lot_totals   = T.let(::InvestmentLot.totals_by_security(security_ids), T::Hash[T.untyped, T::Hash[Symbol, Float]])
       @calculator   = T.let(nil, T.nilable(CostBasisCalculator))
     end

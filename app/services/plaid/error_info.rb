@@ -37,7 +37,7 @@ module Plaid
 
     sig { params(body: T.nilable(T::Hash[String, T.untyped])).void }
     def initialize(body)
-      @body = T.let(body, T.nilable(T::Hash[String, T.untyped]))
+      @body = body
     end
 
     # False when the body wasn't a JSON object (a gateway page, a timeout).

@@ -32,11 +32,11 @@ module Tax
     def initialize(tax_year:, filing_status:, wages:, other_ordinary: 0, ltcg_qd: 0,
                    itemizing: false, salt_paid: 0, itemized_other: 0, iso_spread: 0)
       @params         = T.let(Parameters.federal(tax_year), T::Hash[Symbol, T.untyped])
-      @filing_status  = T.let(filing_status, FilingStatus)
+      @filing_status  = filing_status
       @wages          = T.let(to_d(wages), BigDecimal)
       @other_ordinary = T.let(to_d(other_ordinary), BigDecimal)
       @ltcg_qd        = T.let(to_d(ltcg_qd), BigDecimal)
-      @itemizing      = T.let(itemizing, T::Boolean)
+      @itemizing      = itemizing
       @salt_paid      = T.let(to_d(salt_paid), BigDecimal)
       @itemized_other = T.let(to_d(itemized_other), BigDecimal)
       @iso_spread     = T.let(to_d(iso_spread), BigDecimal)

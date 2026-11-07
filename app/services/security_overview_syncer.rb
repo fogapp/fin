@@ -5,7 +5,7 @@ class SecurityOverviewSyncer
 
   sig { params(security: Security).void }
   def initialize(security)
-    @security = T.let(security, Security)
+    @security = security
     @client   = T.let(AlphaVantage::Client.new, T.untyped)
   end
 

@@ -16,7 +16,7 @@ module Alchemy
 
     sig { params(household_id: String).void }
     def initialize(household_id)
-      @household_id = T.let(household_id, String)
+      @household_id = household_id
     end
 
     # After settings are saved. `was_configured` / `was_txn_enabled` are

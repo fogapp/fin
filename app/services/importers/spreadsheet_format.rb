@@ -77,7 +77,7 @@ module Importers
     # Spreadsheets store a date as days since 1899-12-30, and Office's
     # read_sheet hands back that raw number for a date-formatted cell. The
     # window keeps a stray amount from reading as a date: 1990 to 2100.
-    SERIAL_EPOCH = T.let(Date.new(1899, 12, 30), Date)
+    SERIAL_EPOCH = Date.new(1899, 12, 30)
     SERIAL_RANGE = T.let(32_874..73_051, T::Range[Integer])
 
     sig { params(header: T.untyped).returns(String) }

@@ -19,7 +19,7 @@ module Office
 
       sig { params(params: T::Hash[Symbol, T.untyped]).void }
       def initialize(params)
-        @params = T.let(params, T::Hash[Symbol, T.untyped])
+        @params = params
       end
 
       sig { returns(Grid) }

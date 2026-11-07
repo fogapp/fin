@@ -27,9 +27,9 @@ module Activity
     # household to file the timeline row under.
     report_exception(exception, source: source, event: event, severity: severity) if exception
     # Every sync, workflow and backup outcome passes through here, so one
-    # counter charts them all in Lucid. source and event are closed
+    # counter charts them all in Glass. source and event are closed
     # vocabularies (a few dozen each); never a household or user id.
-    Lucid.increment("activity.recorded", tags: { source: source, event: event, severity: severity.serialize })
+    Glass.increment("activity.recorded", tags: { source: source, event: event, severity: severity.serialize })
     household_id ||= Current.household&.id || subject.try(:household_id)
     return nil if household_id.nil?
 

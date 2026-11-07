@@ -100,7 +100,7 @@ module FogBackup
       summary = "Restored from artifact created #{manifest.created_at} (#{manifest.git_sha&.first(12)})"
       summary += " — moved from #{move.from} to #{move.to}" if move
       summary += " — without its original secrets: saved credentials need entering again and linked institutions linking again" if forgotten.any?
-      Lucid.event("Backup restored", tags: { moved: move ? "true" : "false" })
+      Glass.event("Backup restored", tags: { moved: move ? "true" : "false" })
       Household.find_each do |household|
         Activity.record(source: "fog", event: "backup.restore.completed", summary: summary, household_id: household.id)
       end

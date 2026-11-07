@@ -19,7 +19,7 @@ module Recurring
 
     sig { params(series_ids: T::Array[T.untyped]).void }
     def initialize(series_ids)
-      @series_ids = T.let(series_ids, T::Array[T.untyped])
+      @series_ids = series_ids
     end
 
     sig { returns(T::Hash[T.untyped, T::Array[RecurringOccurrence]]) }

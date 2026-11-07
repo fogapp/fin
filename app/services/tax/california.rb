@@ -26,7 +26,7 @@ module Tax
     end
     def initialize(tax_year:, filing_status:, wages:, other_ordinary: 0, ltcg_qd: 0, iso_spread: 0)
       @params        = T.let(Parameters.california(tax_year), T::Hash[Symbol, T.untyped])
-      @filing_status = T.let(filing_status, FilingStatus)
+      @filing_status = filing_status
       @wages         = T.let(to_d(wages), BigDecimal)
       @other_ordinary = T.let(to_d(other_ordinary), BigDecimal)
       @ltcg_qd       = T.let(to_d(ltcg_qd), BigDecimal)

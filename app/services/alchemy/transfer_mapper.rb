@@ -43,9 +43,9 @@ module Alchemy
       ).void
     end
     def initialize(wallet:, network:, transfer:, context: nil)
-      @wallet   = T.let(wallet, AlchemyWallet)
-      @network  = T.let(network, String)
-      @transfer = T.let(transfer, T::Hash[Symbol, T.untyped])
+      @wallet   = wallet
+      @network  = network
+      @transfer = transfer
       @context  = T.let(context || IngestContext.new(wallet: wallet), IngestContext)
     end
 

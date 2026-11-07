@@ -10,7 +10,7 @@ module Plaid
 
     sig { params(context: SyncContext).void }
     def initialize(context)
-      @context = T.let(context, SyncContext)
+      @context = context
     end
 
     sig { params(result: ::PlaidSyncer::Result).void }

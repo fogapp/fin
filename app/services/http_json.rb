@@ -96,7 +96,7 @@ module HttpJson
     end
     Response.new(raw: raw)
   rescue *NETWORK_ERRORS => e
-    Lucid.increment("upstream.failures", tags: { upstream: label, reason: "network" })
+    Glass.increment("upstream.failures", tags: { upstream: label, reason: "network" })
     raise error, network_message ? network_message.call(e) : "#{label} request failed (#{e.class}): #{e.message}"
   end
 
@@ -124,7 +124,7 @@ module HttpJson
                                     open_timeout: open_timeout, read_timeout: read_timeout)
 
     unless response.success?
-      Lucid.increment("upstream.failures", tags: { upstream: label, reason: response.code })
+      Glass.increment("upstream.failures", tags: { upstream: label, reason: response.code })
       message = "#{label} #{response.code}: #{detail&.call(response).presence || response.body.strip[0, 200]}"
       raise rate_limit_error, message if rate_limit_error && response.code == "429"
       raise auth_error, message if auth_error && %w[401 403].include?(response.code)

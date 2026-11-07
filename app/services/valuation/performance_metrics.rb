@@ -18,8 +18,8 @@ module Valuation
     sig { params(values: T::Hash[Date, Float], flows: T::Hash[Date, Float]).void }
     def initialize(values:, flows: {})
       @dates  = T.let(values.keys.sort, T::Array[Date])
-      @values = T.let(values, T::Hash[Date, Float])
-      @flows  = T.let(flows, T::Hash[Date, Float])
+      @values = values
+      @flows  = flows
     end
 
     sig { returns(T.nilable(Float)) }

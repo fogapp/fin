@@ -34,8 +34,8 @@ signin:
 # The wants: offers from other fog apps that Fin is built to use, suggested
 # first on its own tab. Office's `documents` sets OFFICE_URL and
 # OFFICE_API_TOKEN, which OfficeConfiguration falls back to when nothing is
-# saved in Settings › Integrations; Lucid's `monitoring` sets LUCID_URL and
-# LUCID_API_KEY, which the vendored lucid gem reads at boot. Both are
+# saved in Settings › Integrations; Glass's `monitoring` sets GLASS_URL and
+# GLASS_API_KEY, which the vendored glass gem reads at boot. Both are
 # optional: Fin runs the same without them.
 integrations:
   offers:
@@ -51,4 +51,4 @@ integrations:
         - Read cashflow and net worth
   wants:
     - offer: office/documents
-    - offer: lucid/monitoring
+    - offer: glass/monitoring

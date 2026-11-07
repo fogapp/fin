@@ -22,7 +22,7 @@ class ProduceBackupJob < ApplicationJob
     FogBackup::Staging.write_status(job_id, "running", progress: "starting")
     message = FogBackup::Producer.new(job_id: job_id).call
     FogBackup::Staging.write_status(job_id, "completed", progress: message)
-    Lucid.event("Backup produced", tags: { mode: "fog" })
+    Glass.event("Backup produced", tags: { mode: "fog" })
   rescue StandardError => e
     FogBackup::Staging.write_status(job_id, "failed", error: "#{e.class}: #{e.message}".truncate(1000))
     Activity.record(

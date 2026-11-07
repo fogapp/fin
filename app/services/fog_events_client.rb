@@ -43,7 +43,7 @@ class FogEventsClient
                                 open_timeout: TIMEOUT_SECONDS, read_timeout: TIMEOUT_SECONDS)
     return if response.code == "202"
 
-    Lucid.increment("upstream.failures", tags: { upstream: "fog events", reason: response.code })
+    Glass.increment("upstream.failures", tags: { upstream: "fog events", reason: response.code })
     raise Error, "fog answered #{response.code} to an event"
   end
 end

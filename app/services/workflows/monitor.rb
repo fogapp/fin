@@ -14,7 +14,7 @@ module Workflows
 
     sig { params(workflow: Workflow).void }
     def initialize(workflow)
-      @workflow = T.let(workflow, Workflow)
+      @workflow = workflow
     end
 
     sig { returns(T.nilable(String)) }

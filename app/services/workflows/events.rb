@@ -15,7 +15,7 @@ module Workflows
     # this — a plain Hash mutated without synchronization corrupts under
     # concurrent rehash. Entries are immutable once stored; a racing refresh
     # just wastes one query and last-writer-wins.
-    CACHE = T.let(Concurrent::Map.new, Concurrent::Map)
+    CACHE = Concurrent::Map.new
 
     # Runs the block with event publishing disabled. Used by reverts: writing
     # back old values must not re-trigger the very workflow being reverted.

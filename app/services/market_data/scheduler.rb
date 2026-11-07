@@ -23,7 +23,7 @@ module MarketData
     sig { params(budgets: T::Hash[Provider, Integer], pace: T::Boolean).void }
     def initialize(budgets: DEFAULT_BUDGETS, pace: true)
       @budgets = T.let(budgets.dup, T::Hash[Provider, Integer])
-      @pace    = T.let(pace, T::Boolean)
+      @pace    = pace
     end
 
     # One instrument through its pinned provider: a full history the first

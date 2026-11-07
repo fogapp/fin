@@ -31,7 +31,7 @@ module Importers
     sig { params(csv: String, account: T.untyped).void }
     def initialize(csv:, account: nil)
       @csv     = T.let(csv.dup.force_encoding("UTF-8").delete_prefix("﻿"), String)
-      @account = T.let(account, T.untyped)
+      @account = account
       @parse_error = T.let(nil, T.nilable(String))
     end
 
