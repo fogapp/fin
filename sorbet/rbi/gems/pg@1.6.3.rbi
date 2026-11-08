@@ -7,15 +7,6 @@
 
 # The top-level PG namespace.
 # -*- ruby -*-
-# -*- ruby -*-
-# -*- ruby -*-
-# -*- ruby -*-
-# -*- ruby -*-
-# -*- ruby -*-
-# -*- ruby -*-
-# -*- ruby -*-
-# -*- ruby -*-
-# -*- ruby -*-
 #
 # pkg:gem/pg#lib/pg.rb:6
 module PG

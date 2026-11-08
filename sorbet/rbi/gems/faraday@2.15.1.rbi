@@ -569,10 +569,10 @@ class Faraday::Connection
   def initialize(url = T.unsafe(nil), options = T.unsafe(nil)); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:120
-  def adapter(*_arg0, **_arg1, &_arg2); end
+  def adapter(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:120
-  def app(*_arg0, **_arg1, &_arg2); end
+  def app(*, **, &); end
 
   # Build an absolute URL based on url_prefix.
   #
@@ -682,10 +682,10 @@ class Faraday::Connection
   def headers=(hash); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:349
-  def host(*_arg0, **_arg1, &_arg2); end
+  def host(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:349
-  def host=(*_arg0, **_arg1, &_arg2); end
+  def host=(*, **, &); end
 
   # Sets up the parallel manager to make a set of requests.
   #
@@ -749,7 +749,7 @@ class Faraday::Connection
   def patch(url = T.unsafe(nil), body = T.unsafe(nil), headers = T.unsafe(nil), &block); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:350
-  def path_prefix(*_arg0, **_arg1, &_arg2); end
+  def path_prefix(*, **, &); end
 
   # Sets the path prefix and ensures that it always has a leading
   # slash.
@@ -762,10 +762,10 @@ class Faraday::Connection
   def path_prefix=(value); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:349
-  def port(*_arg0, **_arg1, &_arg2); end
+  def port(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:349
-  def port=(*_arg0, **_arg1, &_arg2); end
+  def port=(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:278
   def post(url = T.unsafe(nil), body = T.unsafe(nil), headers = T.unsafe(nil), &block); end
@@ -792,10 +792,10 @@ class Faraday::Connection
   def put(url = T.unsafe(nil), body = T.unsafe(nil), headers = T.unsafe(nil), &block); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:120
-  def request(*_arg0, **_arg1, &_arg2); end
+  def request(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:120
-  def response(*_arg0, **_arg1, &_arg2); end
+  def response(*, **, &); end
 
   # Builds and runs the Faraday::Request.
   #
@@ -811,10 +811,10 @@ class Faraday::Connection
   def run_request(method, url, body, headers); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:349
-  def scheme(*_arg0, **_arg1, &_arg2); end
+  def scheme(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:349
-  def scheme=(*_arg0, **_arg1, &_arg2); end
+  def scheme=(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:382
   def set_basic_auth(user, password); end
@@ -863,7 +863,7 @@ class Faraday::Connection
   def url_prefix=(url, encoder = T.unsafe(nil)); end
 
   # pkg:gem/faraday#lib/faraday/connection.rb:120
-  def use(*_arg0, **_arg1, &_arg2); end
+  def use(*, **, &); end
 
   # Yields username and password extracted from a URI if they both exist.
   #
@@ -1179,7 +1179,7 @@ class Faraday::Env < ::Faraday::Options
   def params=(_); end
 
   # pkg:gem/faraday#lib/faraday/options/env.rb:74
-  def params_encoder(*_arg0, **_arg1, &_arg2); end
+  def params_encoder(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/env.rb:145
   def parse_body?; end
@@ -1410,7 +1410,7 @@ module Faraday::FlatParamsEncoder
     def encode(params); end
 
     # pkg:gem/faraday#lib/faraday/encoders/flat_params_encoder.rb:10
-    def escape(*_arg0, **_arg1, &_arg2); end
+    def escape(*, **, &); end
 
     # pkg:gem/faraday#lib/faraday/encoders/flat_params_encoder.rb:100
     def sort_params; end
@@ -1419,7 +1419,7 @@ module Faraday::FlatParamsEncoder
     def sort_params=(_arg0); end
 
     # pkg:gem/faraday#lib/faraday/encoders/flat_params_encoder.rb:10
-    def unescape(*_arg0, **_arg1, &_arg2); end
+    def unescape(*, **, &); end
   end
 end
 
@@ -1446,22 +1446,22 @@ class Faraday::Logging::Formatter
   def initialize(logger:, options:); end
 
   # pkg:gem/faraday#lib/faraday/logging/formatter.rb:23
-  def debug(*_arg0, **_arg1, &_arg2); end
+  def debug(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/logging/formatter.rb:23
-  def error(*_arg0, **_arg1, &_arg2); end
+  def error(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/logging/formatter.rb:41
   def exception(exc); end
 
   # pkg:gem/faraday#lib/faraday/logging/formatter.rb:23
-  def fatal(*_arg0, **_arg1, &_arg2); end
+  def fatal(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/logging/formatter.rb:52
   def filter(filter_word, filter_replacement); end
 
   # pkg:gem/faraday#lib/faraday/logging/formatter.rb:23
-  def info(*_arg0, **_arg1, &_arg2); end
+  def info(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/logging/formatter.rb:25
   def request(env); end
@@ -1470,7 +1470,7 @@ class Faraday::Logging::Formatter
   def response(env); end
 
   # pkg:gem/faraday#lib/faraday/logging/formatter.rb:23
-  def warn(*_arg0, **_arg1, &_arg2); end
+  def warn(*, **, &); end
 
   private
 
@@ -1646,7 +1646,7 @@ module Faraday::NestedParamsEncoder
     def array_indices=(_arg0); end
 
     # pkg:gem/faraday#lib/faraday/encoders/nested_params_encoder.rb:182
-    def escape(*_arg0, **_arg1, &_arg2); end
+    def escape(*, **, &); end
 
     # pkg:gem/faraday#lib/faraday/encoders/nested_params_encoder.rb:178
     def param_depth_limit; end
@@ -1661,7 +1661,7 @@ module Faraday::NestedParamsEncoder
     def sort_params=(_arg0); end
 
     # pkg:gem/faraday#lib/faraday/encoders/nested_params_encoder.rb:182
-    def unescape(*_arg0, **_arg1, &_arg2); end
+    def unescape(*, **, &); end
   end
 end
 
@@ -1839,10 +1839,10 @@ class Faraday::ProxyOptions < ::Faraday::Options
   extend ::Forwardable
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:20
-  def host(*_arg0, **_arg1, &_arg2); end
+  def host(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:20
-  def host=(*_arg0, **_arg1, &_arg2); end
+  def host=(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:17
   def password; end
@@ -1851,22 +1851,22 @@ class Faraday::ProxyOptions < ::Faraday::Options
   def password=(_); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:20
-  def path(*_arg0, **_arg1, &_arg2); end
+  def path(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:20
-  def path=(*_arg0, **_arg1, &_arg2); end
+  def path=(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:20
-  def port(*_arg0, **_arg1, &_arg2); end
+  def port(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:20
-  def port=(*_arg0, **_arg1, &_arg2); end
+  def port=(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:20
-  def scheme(*_arg0, **_arg1, &_arg2); end
+  def scheme(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:20
-  def scheme=(*_arg0, **_arg1, &_arg2); end
+  def scheme=(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/options/proxy_options.rb:17
   def uri; end
@@ -1981,13 +1981,13 @@ class Faraday::RackBuilder
   # methods to push onto the various positions in the stack:
   #
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:128
-  def insert(index, *_arg1, **_arg2, &_arg3); end
+  def insert(index, *, **, &); end
 
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:137
-  def insert_after(index, *_arg1, **_arg2, &_arg3); end
+  def insert_after(index, *, **, &); end
 
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:135
-  def insert_before(index, *_arg1, **_arg2, &_arg3); end
+  def insert_before(index, *, **, &); end
 
   # Locks the middleware stack to ensure no further modifications are made.
   #
@@ -1998,19 +1998,19 @@ class Faraday::RackBuilder
   def locked?; end
 
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:110
-  def request(key, *_arg1, **_arg2, &_arg3); end
+  def request(key, *, **, &); end
 
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:114
-  def response(*_arg0, **_arg1, &_arg2); end
+  def response(*, **, &); end
 
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:142
-  def swap(index, *_arg1, **_arg2, &_arg3); end
+  def swap(index, *, **, &); end
 
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:180
   def to_app; end
 
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:100
-  def use(klass, *_arg1, **_arg2, &_arg3); end
+  def use(klass, *, **, &); end
 
   private
 
@@ -2030,7 +2030,7 @@ class Faraday::RackBuilder
   def raise_if_locked; end
 
   # pkg:gem/faraday#lib/faraday/rack_builder.rb:237
-  def use_symbol(mod, key, *_arg2, **_arg3, &_arg4); end
+  def use_symbol(mod, key, *, **, &); end
 end
 
 # borrowed from ActiveSupport::Dependencies::Reference &
@@ -2523,7 +2523,7 @@ class Faraday::Response
   def initialize(env = T.unsafe(nil)); end
 
   # pkg:gem/faraday#lib/faraday/response.rb:30
-  def [](*_arg0, **_arg1, &_arg2); end
+  def [](*, **, &); end
 
   # Expand the env with more properties, without overriding existing ones.
   # Useful for applying request params after restoring a marshalled Response.
@@ -3070,7 +3070,7 @@ class Faraday::Utils::Headers < ::Hash
   def dig(key, *rest); end
 
   # pkg:gem/faraday#lib/faraday/utils/headers.rb:65
-  def fetch(key, *_arg1, **_arg2, &_arg3); end
+  def fetch(key, *, **, &); end
 
   # pkg:gem/faraday#lib/faraday/utils/headers.rb:95
   def filter!; end

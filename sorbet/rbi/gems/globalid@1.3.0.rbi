@@ -18,13 +18,13 @@ class GlobalID
   def ==(other); end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:46
-  def app(*_arg0, **_arg1, &_arg2); end
+  def app(*, **, &); end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:80
-  def as_json(*_arg0); end
+  def as_json(*); end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:46
-  def deconstruct_keys(*_arg0, **_arg1, &_arg2); end
+  def deconstruct_keys(*, **, &); end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:70
   def eql?(other); end
@@ -39,19 +39,19 @@ class GlobalID
   def model_class; end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:46
-  def model_id(*_arg0, **_arg1, &_arg2); end
+  def model_id(*, **, &); end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:46
-  def model_name(*_arg0, **_arg1, &_arg2); end
+  def model_name(*, **, &); end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:46
-  def params(*_arg0, **_arg1, &_arg2); end
+  def params(*, **, &); end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:76
   def to_param; end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:46
-  def to_s(*_arg0, **_arg1, &_arg2); end
+  def to_s(*, **, &); end
 
   # pkg:gem/globalid#lib/global_id/global_id.rb:45
   def uri; end
@@ -408,10 +408,10 @@ class GlobalID::Verifier < ::ActiveSupport::MessageVerifier
   private
 
   # pkg:gem/globalid#lib/global_id/verifier.rb:10
-  def decode(data, **_arg1); end
+  def decode(data, **); end
 
   # pkg:gem/globalid#lib/global_id/verifier.rb:6
-  def encode(data, **_arg1); end
+  def encode(data, **); end
 end
 
 # pkg:gem/globalid#lib/global_id/signed_global_id.rb:4

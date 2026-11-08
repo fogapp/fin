@@ -9,10 +9,6 @@
 #
 # Should be up to date with the latest spec:
 # https://tools.ietf.org/html/rfc7519
-# JSON Web Token implementation
-#
-# Should be up to date with the latest spec:
-# https://tools.ietf.org/html/rfc7519
 #
 # pkg:gem/jwt#lib/jwt/version.rb:7
 module JWT
@@ -1541,13 +1537,13 @@ class JWT::EncodedToken::ClaimsContext
   def initialize(token); end
 
   # pkg:gem/jwt#lib/jwt/encoded_token/claims_context.rb:12
-  def header(*args, **_arg1, &block); end
+  def header(*, **, &); end
 
   # pkg:gem/jwt#lib/jwt/encoded_token/claims_context.rb:18
   def payload; end
 
   # pkg:gem/jwt#lib/jwt/encoded_token/claims_context.rb:12
-  def unverified_payload(*args, **_arg1, &block); end
+  def unverified_payload(*, **, &); end
 end
 
 # pkg:gem/jwt#lib/jwt/encoded_token.rb:17
@@ -1789,10 +1785,10 @@ class JWT::JWA::None
   def initialize; end
 
   # pkg:gem/jwt#lib/jwt/jwa/none.rb:13
-  def sign(*_arg0); end
+  def sign(*); end
 
   # pkg:gem/jwt#lib/jwt/jwa/none.rb:17
-  def verify(*_arg0); end
+  def verify(*); end
 end
 
 # Implementation of the RSASSA-PSS family of algorithms
@@ -1863,7 +1859,7 @@ module JWT::JWA::SigningAlgorithm
   def alg; end
 
   # pkg:gem/jwt#lib/jwt/jwa/signing_algorithm.rb:25
-  def header(*_arg0); end
+  def header(*); end
 
   # pkg:gem/jwt#lib/jwt/jwa/signing_algorithm.rb:41
   def raise_sign_error!(message); end
@@ -1872,13 +1868,13 @@ module JWT::JWA::SigningAlgorithm
   def raise_verify_error!(message); end
 
   # pkg:gem/jwt#lib/jwt/jwa/signing_algorithm.rb:29
-  def sign(*_arg0); end
+  def sign(*); end
 
   # pkg:gem/jwt#lib/jwt/jwa/signing_algorithm.rb:21
   def valid_alg?(alg_to_check); end
 
   # pkg:gem/jwt#lib/jwt/jwa/signing_algorithm.rb:33
-  def verify(*_arg0); end
+  def verify(*); end
 
   class << self
     # pkg:gem/jwt#lib/jwt/jwa/signing_algorithm.rb:15
@@ -1902,10 +1898,10 @@ module JWT::JWA::Unsupported
 
   class << self
     # pkg:gem/jwt#lib/jwt/jwa/unsupported.rb:10
-    def sign(*_arg0); end
+    def sign(*); end
 
     # pkg:gem/jwt#lib/jwt/jwa/unsupported.rb:14
-    def verify(*_arg0); end
+    def verify(*); end
   end
 end
 
@@ -2341,13 +2337,13 @@ class JWT::JWK::Set
   def add(key); end
 
   # pkg:gem/jwt#lib/jwt/jwk/set.rb:37
-  def delete(*args, **_arg1, &block); end
+  def delete(*, **, &); end
 
   # pkg:gem/jwt#lib/jwt/jwk/set.rb:37
-  def dig(*args, **_arg1, &block); end
+  def dig(*, **, &); end
 
   # pkg:gem/jwt#lib/jwt/jwk/set.rb:37
-  def each(*args, **_arg1, &block); end
+  def each(*, **, &); end
 
   # pkg:gem/jwt#lib/jwt/jwk/set.rb:73
   def eql?(other); end
@@ -2362,7 +2358,7 @@ class JWT::JWK::Set
   def keys; end
 
   # pkg:gem/jwt#lib/jwt/jwk/set.rb:75
-  def length(*args, **_arg1, &block); end
+  def length(*, **, &); end
 
   # pkg:gem/jwt#lib/jwt/jwk/set.rb:55
   def merge(enum); end
@@ -2374,7 +2370,7 @@ class JWT::JWK::Set
   def select!(&block); end
 
   # pkg:gem/jwt#lib/jwt/jwk/set.rb:37
-  def size(*args, **_arg1, &block); end
+  def size(*, **, &); end
 
   # pkg:gem/jwt#lib/jwt/jwk/set.rb:60
   def union(enum); end

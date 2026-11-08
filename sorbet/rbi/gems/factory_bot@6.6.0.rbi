@@ -50,7 +50,7 @@ module FactoryBot
     def definition_file_paths=(_arg0); end
 
     # pkg:gem/factory_bot#lib/factory_bot.rb:107
-    def factories(*_arg0, **_arg1, &_arg2); end
+    def factories(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/find_definitions.rb:12
     def find_definitions; end
@@ -67,16 +67,16 @@ module FactoryBot
     def lint(*args); end
 
     # pkg:gem/factory_bot#lib/factory_bot.rb:107
-    def register_strategy(strategy_name, strategy_class, &_arg2); end
+    def register_strategy(strategy_name, strategy_class, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/reload.rb:2
     def reload; end
 
     # pkg:gem/factory_bot#lib/factory_bot.rb:107
-    def rewind_sequence(*_arg0, **_arg1, &_arg2); end
+    def rewind_sequence(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot.rb:107
-    def rewind_sequences(&_arg0); end
+    def rewind_sequences(&); end
 
     # pkg:gem/factory_bot#lib/factory_bot.rb:57
     def sequence_setting_timeout; end
@@ -85,10 +85,10 @@ module FactoryBot
     def sequence_setting_timeout=(val); end
 
     # pkg:gem/factory_bot#lib/factory_bot.rb:107
-    def set_sequence(*_arg0, **_arg1, &_arg2); end
+    def set_sequence(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot.rb:107
-    def strategy_by_name(name, &_arg1); end
+    def strategy_by_name(name, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot.rb:51
     def use_parent_strategy; end
@@ -386,22 +386,22 @@ class FactoryBot::Configuration
   def initialize; end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:26
-  def after(*_arg0, **_arg1, &_arg2); end
+  def after(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:26
-  def before(*_arg0, **_arg1, &_arg2); end
+  def before(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:26
-  def callback(*_arg0, **_arg1, &_arg2); end
+  def callback(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:4
   def callback_names; end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:26
-  def callbacks(*_arg0, **_arg1, &_arg2); end
+  def callbacks(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:26
-  def constructor(*_arg0, **_arg1, &_arg2); end
+  def constructor(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:4
   def factories; end
@@ -416,13 +416,13 @@ class FactoryBot::Configuration
   def sequences; end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:26
-  def skip_create(*_arg0, **_arg1, &_arg2); end
+  def skip_create(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:4
   def strategies; end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:26
-  def to_create(*_arg0, **_arg1, &_arg2); end
+  def to_create(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/configuration.rb:4
   def traits; end
@@ -561,10 +561,10 @@ class FactoryBot::Decorator < ::BasicObject
   def initialize(component); end
 
   # pkg:gem/factory_bot#lib/factory_bot/decorator.rb:9
-  def method_missing(*_arg0, **_arg1, &_arg2); end
+  def method_missing(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/decorator.rb:13
-  def send(*_arg0, **_arg1, &_arg2); end
+  def send(*, **, &); end
 
   private
 
@@ -601,7 +601,7 @@ class FactoryBot::Decorator::InvocationTracker < ::FactoryBot::Decorator
   def __invoked_methods__; end
 
   # pkg:gem/factory_bot#lib/factory_bot/decorator/invocation_tracker.rb:9
-  def method_missing(name, *args, **_arg2, &block); end
+  def method_missing(name, *args, **, &block); end
 end
 
 # pkg:gem/factory_bot#lib/factory_bot/decorator/new_constructor.rb:3
@@ -610,7 +610,7 @@ class FactoryBot::Decorator::NewConstructor < ::FactoryBot::Decorator
   def initialize(component, build_class); end
 
   # pkg:gem/factory_bot#lib/factory_bot/decorator/new_constructor.rb:9
-  def new(*_arg0, **_arg1, &_arg2); end
+  def new(*, **, &); end
 end
 
 # @api private
@@ -651,7 +651,7 @@ class FactoryBot::Definition
   def declarations; end
 
   # pkg:gem/factory_bot#lib/factory_bot/definition.rb:23
-  def declare_attribute(*_arg0, **_arg1, &_arg2); end
+  def declare_attribute(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/definition.rb:107
   def define_constructor(&block); end
@@ -731,13 +731,13 @@ end
 # pkg:gem/factory_bot#lib/factory_bot/definition_hierarchy.rb:2
 class FactoryBot::DefinitionHierarchy
   # pkg:gem/factory_bot#lib/factory_bot/definition_hierarchy.rb:3
-  def callbacks(*_arg0, **_arg1, &_arg2); end
+  def callbacks(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/definition_hierarchy.rb:3
-  def constructor(*_arg0, **_arg1, &_arg2); end
+  def constructor(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/definition_hierarchy.rb:3
-  def to_create(*_arg0, **_arg1, &_arg2); end
+  def to_create(*, **, &); end
 
   class << self
     # pkg:gem/factory_bot#lib/factory_bot/definition_hierarchy.rb:5
@@ -776,7 +776,7 @@ class FactoryBot::DefinitionProxy
   def add_attribute(name, &block); end
 
   # pkg:gem/factory_bot#lib/factory_bot/definition_proxy.rb:22
-  def after(*_arg0, **_arg1, &_arg2); end
+  def after(*, **, &); end
 
   # Adds an attribute that builds an association. The associated instance will
   # be built using the same build strategy as the parent instance.
@@ -806,10 +806,10 @@ class FactoryBot::DefinitionProxy
   def association(name, *options); end
 
   # pkg:gem/factory_bot#lib/factory_bot/definition_proxy.rb:22
-  def before(*_arg0, **_arg1, &_arg2); end
+  def before(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/definition_proxy.rb:22
-  def callback(*_arg0, **_arg1, &_arg2); end
+  def callback(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/definition_proxy.rb:24
   def child_factories; end
@@ -1005,13 +1005,13 @@ class FactoryBot::Evaluation
   def create(result_instance); end
 
   # pkg:gem/factory_bot#lib/factory_bot/evaluation.rb:10
-  def hash(*_arg0, **_arg1, &_arg2); end
+  def hash(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/evaluation.rb:19
   def notify(name, result_instance); end
 
   # pkg:gem/factory_bot#lib/factory_bot/evaluation.rb:10
-  def object(*_arg0, **_arg1, &_arg2); end
+  def object(*, **, &); end
 end
 
 # @api private
@@ -1046,7 +1046,7 @@ class FactoryBot::Evaluator
   def instance=(_arg0); end
 
   # pkg:gem/factory_bot#lib/factory_bot/evaluator.rb:37
-  def method_missing(method_name, *_arg1, **_arg2, &_arg3); end
+  def method_missing(method_name, *, **, &); end
 
   private
 
@@ -1098,10 +1098,10 @@ class FactoryBot::Factory
   def initialize(name, options = T.unsafe(nil)); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def add_callback(*_arg0, **_arg1, &_arg2); end
+  def add_callback(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def append_traits(*_arg0, **_arg1, &_arg2); end
+  def append_traits(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:58
   def associations; end
@@ -1113,19 +1113,19 @@ class FactoryBot::Factory
   def compile; end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def constructor(*_arg0, **_arg1, &_arg2); end
+  def constructor(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def declare_attribute(*_arg0, **_arg1, &_arg2); end
+  def declare_attribute(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def define_trait(*_arg0, **_arg1, &_arg2); end
+  def define_trait(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def defined_traits(*_arg0, **_arg1, &_arg2); end
+  def defined_traits(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def defined_traits_names(*_arg0, **_arg1, &_arg2); end
+  def defined_traits_names(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:7
   def definition; end
@@ -1134,7 +1134,7 @@ class FactoryBot::Factory
   def human_names; end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def inherit_traits(*_arg0, **_arg1, &_arg2); end
+  def inherit_traits(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:7
   def name; end
@@ -1172,7 +1172,7 @@ class FactoryBot::Factory
   def run(build_strategy, overrides, &block); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:20
-  def to_create(*_arg0, **_arg1, &_arg2); end
+  def to_create(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/factory.rb:101
   def with_traits(traits); end
@@ -1236,31 +1236,31 @@ end
 module FactoryBot::Internal
   class << self
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def after(*_arg0, **_arg1, &_arg2); end
+    def after(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def before(*_arg0, **_arg1, &_arg2); end
+    def before(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def callbacks(*_arg0, **_arg1, &_arg2); end
+    def callbacks(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:19
     def configuration; end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def constructor(*_arg0, **_arg1, &_arg2); end
+    def constructor(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def factories(*_arg0, **_arg1, &_arg2); end
+    def factories(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:86
     def factory_by_name(name); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def initialize_with(*_arg0, **_arg1, &_arg2); end
+    def initialize_with(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def inline_sequences(*_arg0, **_arg1, &_arg2); end
+    def inline_sequences(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:99
     def register_default_strategies; end
@@ -1296,33 +1296,33 @@ module FactoryBot::Internal
     def sequence_by_name(name); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def sequences(*_arg0, **_arg1, &_arg2); end
+    def sequences(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:72
     def set_sequence(*uri_parts, value); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def skip_create(*_arg0, **_arg1, &_arg2); end
+    def skip_create(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def strategies(*_arg0, **_arg1, &_arg2); end
+    def strategies(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:95
     def strategy_by_name(name); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def to_create(*_arg0, **_arg1, &_arg2); end
+    def to_create(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:43
     def trait_by_name(name, klass); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:5
-    def traits(*_arg0, **_arg1, &_arg2); end
+    def traits(*, **, &); end
 
     private
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:109
-    def build_uri(*_arg0, **_arg1, &_arg2); end
+    def build_uri(*, **, &); end
 
     # pkg:gem/factory_bot#lib/factory_bot/internal.rb:113
     def fail_argument_count(received, expected); end
@@ -1420,10 +1420,10 @@ class FactoryBot::NullFactory
   def initialize; end
 
   # pkg:gem/factory_bot#lib/factory_bot/null_factory.rb:10
-  def attributes(*_arg0, **_arg1, &_arg2); end
+  def attributes(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/null_factory.rb:10
-  def callbacks(*_arg0, **_arg1, &_arg2); end
+  def callbacks(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/null_factory.rb:16
   def class_name; end
@@ -1432,10 +1432,10 @@ class FactoryBot::NullFactory
   def compile; end
 
   # pkg:gem/factory_bot#lib/factory_bot/null_factory.rb:10
-  def constructor(*_arg0, **_arg1, &_arg2); end
+  def constructor(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/null_factory.rb:10
-  def defined_traits(*_arg0, **_arg1, &_arg2); end
+  def defined_traits(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/null_factory.rb:4
   def definition; end
@@ -1447,7 +1447,7 @@ class FactoryBot::NullFactory
   def hierarchy_class; end
 
   # pkg:gem/factory_bot#lib/factory_bot/null_factory.rb:10
-  def to_create(*_arg0, **_arg1, &_arg2); end
+  def to_create(*, **, &); end
 end
 
 # @api private
@@ -1774,28 +1774,28 @@ end
 # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:14
 class FactoryBot::Syntax::Default::DSL
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:40
-  def after(*_arg0, **_arg1, &_arg2); end
+  def after(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:40
-  def before(*_arg0, **_arg1, &_arg2); end
+  def before(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:40
-  def callback(*_arg0, **_arg1, &_arg2); end
+  def callback(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:15
   def factory(name, options = T.unsafe(nil), &block); end
 
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:40
-  def initialize_with(*_arg0, **_arg1, &_arg2); end
+  def initialize_with(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:28
-  def sequence(name, *_arg1, **_arg2, &_arg3); end
+  def sequence(name, *, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:40
-  def skip_create(*_arg0, **_arg1, &_arg2); end
+  def skip_create(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:40
-  def to_create(*_arg0, **_arg1, &_arg2); end
+  def to_create(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/syntax/default.rb:32
   def trait(name, &block); end
@@ -1962,31 +1962,31 @@ class FactoryBot::Trait
   def ==(other); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
-  def add_callback(*_arg0, **_arg1, &_arg2); end
+  def add_callback(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
-  def attributes(*_arg0, **_arg1, &_arg2); end
+  def attributes(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
-  def callbacks(*_arg0, **_arg1, &_arg2); end
+  def callbacks(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:22
   def clone; end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
-  def constructor(*_arg0, **_arg1, &_arg2); end
+  def constructor(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
-  def declare_attribute(*_arg0, **_arg1, &_arg2); end
+  def declare_attribute(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
-  def define_trait(*_arg0, **_arg1, &_arg2); end
+  def define_trait(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:4
   def definition; end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
-  def klass(*_arg0, **_arg1, &_arg2); end
+  def klass(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
   def klass=(arg); end
@@ -1998,7 +1998,7 @@ class FactoryBot::Trait
   def names; end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:6
-  def to_create(*_arg0, **_arg1, &_arg2); end
+  def to_create(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/trait.rb:4
   def uid; end
@@ -2031,31 +2031,31 @@ class FactoryBot::UriManager
   def initialize(*endpoints, paths: T.unsafe(nil)); end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:6
-  def any?(*_arg0, **_arg1, &_arg2); end
+  def any?(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:7
-  def build_uri(*_arg0, **_arg1, &_arg2); end
+  def build_uri(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:6
-  def each?(*_arg0, **_arg1, &_arg2); end
+  def each?(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:6
-  def empty?(*_arg0, **_arg1, &_arg2); end
+  def empty?(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:4
   def endpoints; end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:6
-  def first(*_arg0, **_arg1, &_arg2); end
+  def first(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:6
-  def include?(*_arg0, **_arg1, &_arg2); end
+  def include?(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:4
   def paths; end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:6
-  def size(*_arg0, **_arg1, &_arg2); end
+  def size(*, **, &); end
 
   # pkg:gem/factory_bot#lib/factory_bot/uri_manager.rb:47
   def to_a; end

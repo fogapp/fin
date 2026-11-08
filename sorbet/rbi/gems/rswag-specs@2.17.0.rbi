@@ -164,7 +164,7 @@ class Rswag::Specs::ExtendedSchema < ::JSON::Schema::Draft4
   def initialize; end
 
   # pkg:gem/rswag-specs#lib/rswag/specs/extended_schema.rb:14
-  def validate(current_schema, data, *_arg2); end
+  def validate(current_schema, data, *); end
 end
 
 # pkg:gem/rswag-specs#lib/rswag/specs/request_factory.rb:287

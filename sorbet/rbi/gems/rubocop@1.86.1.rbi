@@ -49,204 +49,6 @@ end
 # https://github.com/standardrb/standard/blob/main/LICENSE.txt
 #
 #
-# This code is based on https://github.com/standardrb/standard.
-#
-# Copyright (c) 2023 Test Double, Inc.
-#
-# The MIT License (MIT)
-#
-# https://github.com/standardrb/standard/blob/main/LICENSE.txt
-#
-#
-# This code is based on https://github.com/standardrb/standard.
-#
-# Copyright (c) 2023 Test Double, Inc.
-#
-# The MIT License (MIT)
-#
-# https://github.com/standardrb/standard/blob/main/LICENSE.txt
-#
-#
-# This code is based on https://github.com/standardrb/standard.
-#
-# Copyright (c) 2023 Test Double, Inc.
-#
-# The MIT License (MIT)
-#
-# https://github.com/standardrb/standard/blob/main/LICENSE.txt
-#
-#
-# This code is based on https://github.com/standardrb/standard.
-#
-# Copyright (c) 2023 Test Double, Inc.
-#
-# The MIT License (MIT)
-#
-# https://github.com/standardrb/standard/blob/main/LICENSE.txt
-#
-#
-# This code is based on https://github.com/standardrb/standard.
-#
-# Copyright (c) 2023 Test Double, Inc.
-#
-# The MIT License (MIT)
-#
-# https://github.com/standardrb/standard/blob/main/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
-# This code is based on https://github.com/fohte/rubocop-daemon.
-#
-# Copyright (c) 2018 Hayato Kawai
-#
-# The MIT License (MIT)
-#
-# https://github.com/fohte/rubocop-daemon/blob/master/LICENSE.txt
-#
-#
 # This code is based on https://github.com/fohte/rubocop-daemon.
 #
 # Copyright (c) 2018 Hayato Kawai
@@ -869,7 +671,7 @@ class RuboCop::CommentConfig
   def comment_only_line?(line_number); end
 
   # pkg:gem/rubocop#lib/rubocop/comment_config.rb:32
-  def config(*_arg0, **_arg1, &_arg2); end
+  def config(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/comment_config.rb:52
   def cop_disabled_line_ranges; end
@@ -887,7 +689,7 @@ class RuboCop::CommentConfig
   def processed_source; end
 
   # pkg:gem/rubocop#lib/rubocop/comment_config.rb:32
-  def registry(*_arg0, **_arg1, &_arg2); end
+  def registry(*, **, &); end
 
   private
 
@@ -1078,10 +880,10 @@ class RuboCop::Config
   def initialize(hash = T.unsafe(nil), loaded_path = T.unsafe(nil)); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def [](*_arg0, **_arg1, &_arg2); end
+  def [](*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def []=(*_arg0, **_arg1, &_arg2); end
+  def []=(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:212
   def active_support_extensions_enabled?; end
@@ -1119,28 +921,28 @@ class RuboCop::Config
   def cop_enabled?(name); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def delete(*_arg0, **_arg1, &_arg2); end
+  def delete(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:139
   def deprecation_check; end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def dig(*_arg0, **_arg1, &_arg2); end
+  def dig(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:204
   def disabled_new_cops?; end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def each(*_arg0, **_arg1, &_arg2); end
+  def each(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def each_key(*_arg0, **_arg1, &_arg2); end
+  def each_key(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:208
   def enabled_new_cops?; end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def fetch(*_arg0, **_arg1, &_arg2); end
+  def fetch(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:259
   def file_to_exclude?(file); end
@@ -1197,10 +999,10 @@ class RuboCop::Config
   def internal?; end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def key?(*_arg0, **_arg1, &_arg2); end
+  def key?(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def keys(*_arg0, **_arg1, &_arg2); end
+  def keys(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:81
   def loaded_features; end
@@ -1215,10 +1017,10 @@ class RuboCop::Config
   def make_excludes_absolute; end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def map(*_arg0, **_arg1, &_arg2); end
+  def map(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def merge(*_arg0, **_arg1, &_arg2); end
+  def merge(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:291
   def parser_engine; end
@@ -1242,7 +1044,7 @@ class RuboCop::Config
   def possibly_include_hidden?; end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def replace(*_arg0, **_arg1, &_arg2); end
+  def replace(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:105
   def signature; end
@@ -1257,22 +1059,22 @@ class RuboCop::Config
   def target_rails_version; end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:99
-  def target_ruby_version(*_arg0, **_arg1, &_arg2); end
+  def target_ruby_version(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def to_h(*_arg0, **_arg1, &_arg2); end
+  def to_h(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def to_hash(*_arg0, **_arg1, &_arg2); end
+  def to_hash(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:101
   def to_s; end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:97
-  def transform_values(*_arg0, **_arg1, &_arg2); end
+  def transform_values(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:99
-  def validate(*_arg0, **_arg1, &_arg2); end
+  def validate(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config.rb:92
   def validate_after_resolution; end
@@ -2102,10 +1904,10 @@ class RuboCop::ConfigValidator
   def initialize(config); end
 
   # pkg:gem/rubocop#lib/rubocop/config_validator.rb:26
-  def for_all_cops(*_arg0, **_arg1, &_arg2); end
+  def for_all_cops(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config_validator.rb:26
-  def smart_loaded_path(*_arg0, **_arg1, &_arg2); end
+  def smart_loaded_path(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/config_validator.rb:65
   def target_ruby_version; end
@@ -27110,6 +26912,9 @@ class RuboCop::Cop::Lint::Void < ::RuboCop::Cop::Base
   include ::RuboCop::Cop::RangeHelp
   extend ::RuboCop::Cop::AutoCorrector
 
+  # pkg:gem/rubocop#lib/rubocop/cop/lint/void.rb:119
+  def check_expression(expr); end
+
   # pkg:gem/rubocop#lib/rubocop/cop/lint/void.rb:98
   def on_begin(node); end
 
@@ -27156,9 +26961,6 @@ class RuboCop::Cop::Lint::Void < ::RuboCop::Cop::Base
 
   # pkg:gem/rubocop#lib/rubocop/cop/lint/void.rb:232
   def check_ensure(node); end
-
-  # pkg:gem/rubocop#lib/rubocop/cop/lint/void.rb:119
-  def check_expression(expr); end
 
   # pkg:gem/rubocop#lib/rubocop/cop/lint/void.rb:137
   def check_if_expression(if_node); end
@@ -43068,10 +42870,10 @@ class RuboCop::Cop::Style::MagicCommentFormat::CommentRange
   def directives; end
 
   # pkg:gem/rubocop#lib/rubocop/cop/style/magic_comment_format.rb:116
-  def loc(*_arg0, **_arg1, &_arg2); end
+  def loc(*, **, &); end
 
   # pkg:gem/rubocop#lib/rubocop/cop/style/magic_comment_format.rb:116
-  def text(*_arg0, **_arg1, &_arg2); end
+  def text(*, **, &); end
 
   # A magic comment can contain one value (normal style) or
   # multiple directives (emacs style)
@@ -59117,7 +58919,7 @@ end
 # pkg:gem/rubocop#lib/rubocop/ext/regexp_node.rb:6
 module RuboCop::Ext::RegexpNode
   # pkg:gem/rubocop#lib/rubocop/ext/regexp_node.rb:18
-  def assign_properties(*_arg0); end
+  def assign_properties(*); end
 
   # pkg:gem/rubocop#lib/rubocop/ext/regexp_node.rb:31
   def each_capture(named: T.unsafe(nil)); end

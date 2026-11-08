@@ -357,7 +357,7 @@ module Psych
     # See load for options.
     #
     # pkg:gem/psych#lib/psych.rb:716
-    def load_file(path, *args, **_arg2); end
+    def load_file(path, *args, **); end
 
     # Load multiple documents given in +yaml+.  Returns the parsed documents
     # as a list.  If a block is given, each document will be converted to Ruby
@@ -644,7 +644,7 @@ module Psych
     # safe_load_file method.
     #
     # pkg:gem/psych#lib/psych.rb:694
-    def unsafe_load_file(path, *args, **_arg2); end
+    def unsafe_load_file(path, *args, **); end
   end
 end
 

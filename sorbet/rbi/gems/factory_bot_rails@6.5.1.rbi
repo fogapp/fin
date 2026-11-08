@@ -89,7 +89,7 @@ end
 # pkg:gem/factory_bot_rails#lib/factory_bot_rails/generators/null_generator.rb:3
 class FactoryBotRails::Generators::NullGenerator
   # pkg:gem/factory_bot_rails#lib/factory_bot_rails/generators/null_generator.rb:4
-  def initialize(*_arg0); end
+  def initialize(*); end
 
   # pkg:gem/factory_bot_rails#lib/factory_bot_rails/generators/null_generator.rb:7
   def run; end

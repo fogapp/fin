@@ -275,7 +275,7 @@ module JSONSchemer::Draft201909::Vocab::Applicator; end
 # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:38
 class JSONSchemer::Draft201909::Vocab::Applicator::AdditionalItems < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:39
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:43
   def parse; end
@@ -287,7 +287,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:6
 class JSONSchemer::Draft201909::Vocab::Applicator::Items < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:7
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:11
   def parse; end
@@ -299,7 +299,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:61
 class JSONSchemer::Draft201909::Vocab::Applicator::UnevaluatedItems < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:62
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft201909/vocab/applicator.rb:66
   def parse; end
@@ -414,10 +414,10 @@ module JSONSchemer::Draft202012::Vocab::Applicator; end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:297
 class JSONSchemer::Draft202012::Vocab::Applicator::AdditionalProperties < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:298
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:302
-  def false_schema_error(formatted_instance_location:, **_arg1); end
+  def false_schema_error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:306
   def parse; end
@@ -429,7 +429,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:6
 class JSONSchemer::Draft202012::Vocab::Applicator::AllOf < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:7
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:11
   def parse; end
@@ -441,7 +441,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:25
 class JSONSchemer::Draft202012::Vocab::Applicator::AnyOf < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:26
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:30
   def parse; end
@@ -453,7 +453,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:191
 class JSONSchemer::Draft202012::Vocab::Applicator::Contains < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:192
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:196
   def parse; end
@@ -465,7 +465,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:349
 class JSONSchemer::Draft202012::Vocab::Applicator::Dependencies < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:350
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:354
   def parse; end
@@ -477,7 +477,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:122
 class JSONSchemer::Draft202012::Vocab::Applicator::DependentSchemas < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:123
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:127
   def parse; end
@@ -489,7 +489,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:106
 class JSONSchemer::Draft202012::Vocab::Applicator::Else < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:107
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:111
   def parse; end
@@ -510,7 +510,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:168
 class JSONSchemer::Draft202012::Vocab::Applicator::Items < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:169
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:173
   def parse; end
@@ -522,7 +522,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:64
 class JSONSchemer::Draft202012::Vocab::Applicator::Not < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:65
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:69
   def parse; end
@@ -534,7 +534,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:44
 class JSONSchemer::Draft202012::Vocab::Applicator::OneOf < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:45
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:49
   def parse; end
@@ -546,7 +546,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:266
 class JSONSchemer::Draft202012::Vocab::Applicator::PatternProperties < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:267
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:271
   def parse; end
@@ -558,7 +558,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:146
 class JSONSchemer::Draft202012::Vocab::Applicator::PrefixItems < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:147
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:151
   def parse; end
@@ -570,7 +570,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:218
 class JSONSchemer::Draft202012::Vocab::Applicator::Properties < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:219
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:223
   def parse; end
@@ -582,7 +582,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:329
 class JSONSchemer::Draft202012::Vocab::Applicator::PropertyNames < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:330
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:334
   def parse; end
@@ -594,7 +594,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:90
 class JSONSchemer::Draft202012::Vocab::Applicator::Then < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:91
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/applicator.rb:95
   def parse; end
@@ -754,7 +754,7 @@ module JSONSchemer::Draft202012::Vocab::FormatAnnotation; end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/format_annotation.rb:6
 class JSONSchemer::Draft202012::Vocab::FormatAnnotation::Format < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/format_annotation.rb:7
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/format_annotation.rb:11
   def parse; end
@@ -769,7 +769,7 @@ module JSONSchemer::Draft202012::Vocab::FormatAssertion; end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/format_assertion.rb:6
 class JSONSchemer::Draft202012::Vocab::FormatAssertion::Format < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/format_assertion.rb:7
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/format_assertion.rb:11
   def parse; end
@@ -789,7 +789,7 @@ module JSONSchemer::Draft202012::Vocab::MetaData; end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/meta_data.rb:6
 class JSONSchemer::Draft202012::Vocab::MetaData::ReadOnly < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/meta_data.rb:7
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/meta_data.rb:11
   def validate(instance, instance_location, keyword_location, context); end
@@ -798,7 +798,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/meta_data.rb:17
 class JSONSchemer::Draft202012::Vocab::MetaData::WriteOnly < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/meta_data.rb:18
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/meta_data.rb:22
   def validate(instance, instance_location, keyword_location, context); end
@@ -815,10 +815,10 @@ module JSONSchemer::Draft202012::Vocab::Unevaluated; end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/unevaluated.rb:6
 class JSONSchemer::Draft202012::Vocab::Unevaluated::UnevaluatedItems < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/unevaluated.rb:7
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/unevaluated.rb:11
-  def false_schema_error(formatted_instance_location:, **_arg1); end
+  def false_schema_error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/unevaluated.rb:15
   def parse; end
@@ -835,10 +835,10 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/unevaluated.rb:54
 class JSONSchemer::Draft202012::Vocab::Unevaluated::UnevaluatedProperties < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/unevaluated.rb:55
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/unevaluated.rb:59
-  def false_schema_error(formatted_instance_location:, **_arg1); end
+  def false_schema_error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/unevaluated.rb:63
   def parse; end
@@ -863,7 +863,7 @@ module JSONSchemer::Draft202012::Vocab::Validation; end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:75
 class JSONSchemer::Draft202012::Vocab::Validation::Const < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:76
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:80
   def validate(instance, instance_location, keyword_location, _context); end
@@ -872,7 +872,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:268
 class JSONSchemer::Draft202012::Vocab::Validation::DependentRequired < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:269
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:273
   def validate(instance, instance_location, keyword_location, _context); end
@@ -881,7 +881,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:65
 class JSONSchemer::Draft202012::Vocab::Validation::Enum < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:66
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:70
   def validate(instance, instance_location, keyword_location, _context); end
@@ -890,7 +890,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:105
 class JSONSchemer::Draft202012::Vocab::Validation::ExclusiveMaximum < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:106
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:110
   def validate(instance, instance_location, keyword_location, _context); end
@@ -899,7 +899,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:125
 class JSONSchemer::Draft202012::Vocab::Validation::ExclusiveMinimum < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:126
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:130
   def validate(instance, instance_location, keyword_location, _context); end
@@ -908,7 +908,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:199
 class JSONSchemer::Draft202012::Vocab::Validation::MaxContains < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:200
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:204
   def validate(instance, instance_location, keyword_location, context); end
@@ -917,7 +917,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:169
 class JSONSchemer::Draft202012::Vocab::Validation::MaxItems < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:170
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:174
   def validate(instance, instance_location, keyword_location, _context); end
@@ -926,7 +926,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:135
 class JSONSchemer::Draft202012::Vocab::Validation::MaxLength < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:136
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:140
   def validate(instance, instance_location, keyword_location, _context); end
@@ -935,7 +935,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:223
 class JSONSchemer::Draft202012::Vocab::Validation::MaxProperties < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:224
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:228
   def validate(instance, instance_location, keyword_location, _context); end
@@ -944,7 +944,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:95
 class JSONSchemer::Draft202012::Vocab::Validation::Maximum < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:96
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:100
   def validate(instance, instance_location, keyword_location, _context); end
@@ -953,7 +953,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:211
 class JSONSchemer::Draft202012::Vocab::Validation::MinContains < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:212
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:216
   def validate(instance, instance_location, keyword_location, context); end
@@ -962,7 +962,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:179
 class JSONSchemer::Draft202012::Vocab::Validation::MinItems < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:180
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:184
   def validate(instance, instance_location, keyword_location, _context); end
@@ -971,7 +971,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:145
 class JSONSchemer::Draft202012::Vocab::Validation::MinLength < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:146
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:150
   def validate(instance, instance_location, keyword_location, _context); end
@@ -980,7 +980,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:233
 class JSONSchemer::Draft202012::Vocab::Validation::MinProperties < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:234
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:238
   def validate(instance, instance_location, keyword_location, _context); end
@@ -989,7 +989,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:115
 class JSONSchemer::Draft202012::Vocab::Validation::Minimum < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:116
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:120
   def validate(instance, instance_location, keyword_location, _context); end
@@ -998,7 +998,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:85
 class JSONSchemer::Draft202012::Vocab::Validation::MultipleOf < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:86
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:90
   def validate(instance, instance_location, keyword_location, _context); end
@@ -1007,7 +1007,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:155
 class JSONSchemer::Draft202012::Vocab::Validation::Pattern < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:156
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:160
   def parse; end
@@ -1019,7 +1019,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:243
 class JSONSchemer::Draft202012::Vocab::Validation::Required < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:244
-  def error(formatted_instance_location:, details:, **_arg2); end
+  def error(formatted_instance_location:, details:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:248
   def validate(instance, instance_location, keyword_location, context); end
@@ -1028,7 +1028,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:6
 class JSONSchemer::Draft202012::Vocab::Validation::Type < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:11
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:32
   def validate(instance, instance_location, keyword_location, _context); end
@@ -1047,7 +1047,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:189
 class JSONSchemer::Draft202012::Vocab::Validation::UniqueItems < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:190
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft202012/vocab/validation.rb:194
   def validate(instance, instance_location, keyword_location, _context); end
@@ -1083,7 +1083,7 @@ module JSONSchemer::Draft4::Vocab::Validation; end
 # pkg:gem/json_schemer#lib/json_schemer/draft4/vocab/validation.rb:12
 class JSONSchemer::Draft4::Vocab::Validation::ExclusiveMaximum < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft4/vocab/validation.rb:13
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft4/vocab/validation.rb:17
   def validate(instance, instance_location, keyword_location, _context); end
@@ -1092,7 +1092,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft4/vocab/validation.rb:24
 class JSONSchemer::Draft4::Vocab::Validation::ExclusiveMinimum < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft4/vocab/validation.rb:25
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft4/vocab/validation.rb:29
   def validate(instance, instance_location, keyword_location, _context); end
@@ -1160,7 +1160,7 @@ module JSONSchemer::Draft7::Vocab::Validation; end
 # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:12
 class JSONSchemer::Draft7::Vocab::Validation::AdditionalItems < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:13
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:17
   def parse; end
@@ -1172,7 +1172,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:38
 class JSONSchemer::Draft7::Vocab::Validation::ContentEncoding < ::JSONSchemer::Draft202012::Vocab::Content::ContentEncoding
   # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:39
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:43
   def validate(instance, instance_location, keyword_location, _context); end
@@ -1181,7 +1181,7 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:52
 class JSONSchemer::Draft7::Vocab::Validation::ContentMediaType < ::JSONSchemer::Draft202012::Vocab::Content::ContentMediaType
   # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:53
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/draft7/vocab/validation.rb:57
   def validate(instance, instance_location, keyword_location, context); end
@@ -1978,13 +1978,13 @@ end
 # pkg:gem/json_schemer#lib/json_schemer/openapi31/vocab/base.rb:24
 class JSONSchemer::OpenAPI31::Vocab::Base::AnyOf < ::JSONSchemer::Draft202012::Vocab::Applicator::AnyOf
   # pkg:gem/json_schemer#lib/json_schemer/openapi31/vocab/base.rb:25
-  def validate(*_arg0); end
+  def validate(*); end
 end
 
 # pkg:gem/json_schemer#lib/json_schemer/openapi31/vocab/base.rb:36
 class JSONSchemer::OpenAPI31::Vocab::Base::Discriminator < ::JSONSchemer::Keyword
   # pkg:gem/json_schemer#lib/json_schemer/openapi31/vocab/base.rb:42
-  def error(formatted_instance_location:, **_arg1); end
+  def error(formatted_instance_location:, **); end
 
   # pkg:gem/json_schemer#lib/json_schemer/openapi31/vocab/base.rb:46
   def mapping; end
@@ -2010,7 +2010,7 @@ JSONSchemer::OpenAPI31::Vocab::Base::Discriminator::FIXED_FIELD_REGEX = T.let(T.
 # pkg:gem/json_schemer#lib/json_schemer/openapi31/vocab/base.rb:30
 class JSONSchemer::OpenAPI31::Vocab::Base::OneOf < ::JSONSchemer::Draft202012::Vocab::Applicator::OneOf
   # pkg:gem/json_schemer#lib/json_schemer/openapi31/vocab/base.rb:31
-  def validate(*_arg0); end
+  def validate(*); end
 end
 
 # pkg:gem/json_schemer#lib/json_schemer/output.rb:3
@@ -2219,7 +2219,7 @@ class JSONSchemer::Schema
   def absolute_keyword_location; end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:48
-  def after_property_validation(*_arg0, **_arg1, &_arg2); end
+  def after_property_validation(*, **, &); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:46
   def base_uri; end
@@ -2228,7 +2228,7 @@ class JSONSchemer::Schema
   def base_uri=(_arg0); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:48
-  def before_property_validation(*_arg0, **_arg1, &_arg2); end
+  def before_property_validation(*, **, &); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:223
   def bundle; end
@@ -2237,13 +2237,13 @@ class JSONSchemer::Schema
   def configuration; end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:48
-  def content_encodings(*_arg0, **_arg1, &_arg2); end
+  def content_encodings(*, **, &); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:48
-  def content_media_types(*_arg0, **_arg1, &_arg2); end
+  def content_media_types(*, **, &); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:49
-  def custom_keywords(*_arg0, **_arg1, &_arg2); end
+  def custom_keywords(*, **, &); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:331
   def defs_keyword; end
@@ -2267,16 +2267,16 @@ class JSONSchemer::Schema
   def fetch_format(format, *args, &block); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:48
-  def format(*_arg0, **_arg1, &_arg2); end
+  def format(*, **, &); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:48
-  def formats(*_arg0, **_arg1, &_arg2); end
+  def formats(*, **, &); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:327
   def id_keyword; end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:48
-  def insert_property_defaults(*_arg0, **_arg1, &_arg2); end
+  def insert_property_defaults(*, **, &); end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:362
   def inspect; end
@@ -2348,7 +2348,7 @@ class JSONSchemer::Schema
   def value; end
 
   # pkg:gem/json_schemer#lib/json_schemer/schema.rb:48
-  def vocabulary(*_arg0, **_arg1, &_arg2); end
+  def vocabulary(*, **, &); end
 
   private
 

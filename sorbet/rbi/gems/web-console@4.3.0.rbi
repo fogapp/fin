@@ -427,7 +427,7 @@ class WebConsole::View < ::ActionView::Base
   # Helps to keep the Rails logs clean during errors.
   #
   # pkg:gem/web-console#lib/web_console/view.rb:41
-  def render(*_arg0); end
+  def render(*); end
 
   # Render inlined string to be used inside of JavaScript code.
   #

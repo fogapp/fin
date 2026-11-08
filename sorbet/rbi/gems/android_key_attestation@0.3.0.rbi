@@ -257,28 +257,28 @@ class AndroidKeyAttestation::Statement
   def attestation_certificate; end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:17
-  def attestation_security_level(*args, **_arg1, &block); end
+  def attestation_security_level(*, **, &); end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:17
-  def attestation_version(*args, **_arg1, &block); end
+  def attestation_version(*, **, &); end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:46
   def key_description; end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:17
-  def keymaster_security_level(*args, **_arg1, &block); end
+  def keymaster_security_level(*, **, &); end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:17
-  def keymaster_version(*args, **_arg1, &block); end
+  def keymaster_version(*, **, &); end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:17
-  def software_enforced(*args, **_arg1, &block); end
+  def software_enforced(*, **, &); end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:17
-  def tee_enforced(*args, **_arg1, &block); end
+  def tee_enforced(*, **, &); end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:17
-  def unique_id(*args, **_arg1, &block); end
+  def unique_id(*, **, &); end
 
   # pkg:gem/android_key_attestation#lib/android_key_attestation/statement.rb:37
   def verify_certificate_chain(root_certificates: T.unsafe(nil), time: T.unsafe(nil)); end

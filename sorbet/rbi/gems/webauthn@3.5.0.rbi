@@ -59,10 +59,10 @@ class WebAuthn::AttestationObject
   def initialize(authenticator_data:, attestation_statement:); end
 
   # pkg:gem/webauthn#lib/webauthn/attestation_object.rb:44
-  def aaguid(*_arg0, **_arg1, &_arg2); end
+  def aaguid(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/attestation_object.rb:45
-  def attestation_certificate_key_id(*_arg0, **_arg1, &_arg2); end
+  def attestation_certificate_key_id(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/attestation_object.rb:28
   def attestation_statement; end
@@ -71,7 +71,7 @@ class WebAuthn::AttestationObject
   def authenticator_data; end
 
   # pkg:gem/webauthn#lib/webauthn/attestation_object.rb:44
-  def credential(*_arg0, **_arg1, &_arg2); end
+  def credential(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/attestation_object.rb:28
   def relying_party; end
@@ -538,19 +538,19 @@ class WebAuthn::AuthenticatorAttestationResponse < ::WebAuthn::AuthenticatorResp
   def initialize(attestation_object:, transports: T.unsafe(nil), **options); end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:60
-  def aaguid(*_arg0, **_arg1, &_arg2); end
+  def aaguid(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:69
-  def attestation_certificate_key(*_arg0, **_arg1, &_arg2); end
+  def attestation_certificate_key(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:60
-  def attestation_certificate_key_id(*_arg0, **_arg1, &_arg2); end
+  def attestation_certificate_key_id(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:56
   def attestation_object; end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:60
-  def attestation_statement(*_arg0, **_arg1, &_arg2); end
+  def attestation_statement(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:34
   def attestation_trust_path; end
@@ -559,10 +559,10 @@ class WebAuthn::AuthenticatorAttestationResponse < ::WebAuthn::AuthenticatorResp
   def attestation_type; end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:60
-  def authenticator_data(*_arg0, **_arg1, &_arg2); end
+  def authenticator_data(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:60
-  def credential(*_arg0, **_arg1, &_arg2); end
+  def credential(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/authenticator_attestation_response.rb:34
   def transports; end
@@ -876,64 +876,64 @@ class WebAuthn::Configuration
   def initialize; end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def acceptable_attestation_types(*_arg0, **_arg1, &_arg2); end
+  def acceptable_attestation_types(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def acceptable_attestation_types=(*_arg0, **_arg1, &_arg2); end
+  def acceptable_attestation_types=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def algorithms(*_arg0, **_arg1, &_arg2); end
+  def algorithms(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def algorithms=(*_arg0, **_arg1, &_arg2); end
+  def algorithms=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def allowed_origins(*_arg0, **_arg1, &_arg2); end
+  def allowed_origins(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def allowed_origins=(*_arg0, **_arg1, &_arg2); end
+  def allowed_origins=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def allowed_top_origins(*_arg0, **_arg1, &_arg2); end
+  def allowed_top_origins(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def allowed_top_origins=(*_arg0, **_arg1, &_arg2); end
+  def allowed_top_origins=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def attestation_root_certificates_finders(*_arg0, **_arg1, &_arg2); end
+  def attestation_root_certificates_finders(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def attestation_root_certificates_finders=(*_arg0, **_arg1, &_arg2); end
+  def attestation_root_certificates_finders=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def credential_options_timeout(*_arg0, **_arg1, &_arg2); end
+  def credential_options_timeout(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def credential_options_timeout=(*_arg0, **_arg1, &_arg2); end
+  def credential_options_timeout=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def encoder(*_arg0, **_arg1, &_arg2); end
+  def encoder(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def encoder=(*_arg0, **_arg1, &_arg2); end
+  def encoder=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def encoding(*_arg0, **_arg1, &_arg2); end
+  def encoding(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def encoding=(*_arg0, **_arg1, &_arg2); end
+  def encoding=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def legacy_u2f_appid(*_arg0, **_arg1, &_arg2); end
+  def legacy_u2f_appid(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def legacy_u2f_appid=(*_arg0, **_arg1, &_arg2); end
+  def legacy_u2f_appid=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def origin(*_arg0, **_arg1, &_arg2); end
+  def origin(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def origin=(*_arg0, **_arg1, &_arg2); end
+  def origin=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:46
   def relying_party; end
@@ -951,22 +951,22 @@ class WebAuthn::Configuration
   def rp_name=(name); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def silent_authentication(*_arg0, **_arg1, &_arg2); end
+  def silent_authentication(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def silent_authentication=(*_arg0, **_arg1, &_arg2); end
+  def silent_authentication=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def verify_attestation_statement(*_arg0, **_arg1, &_arg2); end
+  def verify_attestation_statement(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def verify_attestation_statement=(*_arg0, **_arg1, &_arg2); end
+  def verify_attestation_statement=(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def verify_cross_origin(*_arg0, **_arg1, &_arg2); end
+  def verify_cross_origin(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/configuration.rb:18
-  def verify_cross_origin=(*_arg0, **_arg1, &_arg2); end
+  def verify_cross_origin=(*, **, &); end
 end
 
 # pkg:gem/webauthn#lib/webauthn/credential.rb:9
@@ -1122,10 +1122,10 @@ class WebAuthn::Encoder
   def initialize(encoding = T.unsafe(nil)); end
 
   # pkg:gem/webauthn#lib/webauthn/encoder.rb:12
-  def decode(*_arg0, **_arg1, &_arg2); end
+  def decode(*, **, &); end
 
   # pkg:gem/webauthn#lib/webauthn/encoder.rb:12
-  def encode(*_arg0, **_arg1, &_arg2); end
+  def encode(*, **, &); end
 end
 
 # https://www.w3.org/TR/webauthn-2/#base64url-encoding
@@ -1182,7 +1182,7 @@ module WebAuthn::JSONSerializer
   # Argument wildcard for Ruby on Rails controller automatic object JSON serialization
   #
   # pkg:gem/webauthn#lib/webauthn/json_serializer.rb:6
-  def as_json(*_arg0); end
+  def as_json(*); end
 
   private
 

@@ -503,7 +503,7 @@ module OpenSSL::Buffering
   # Creates an instance of OpenSSL's buffering IO module.
   #
   # pkg:gem/openssl#lib/openssl/buffering.rb:59
-  def initialize(*_arg0); end
+  def initialize(*); end
 
   # Writes _s_ to the stream.  _s_ will be converted to a String using
   # +.to_s+ method.

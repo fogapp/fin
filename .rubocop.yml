@@ -69,6 +69,12 @@ Sorbet/Refinement: # new in 0.8.6
   Enabled: true
 Sorbet/RedundantTLetForLiteral: # new in 0.13.0
   Enabled: false
+Sorbet/SetterReturnType: # new in 0.14.0
+  Enabled: true
+Sorbet/StructPropName: # new in 0.15.0
+  Enabled: true
+Sorbet/ForbidTBindInAssignment: # new in 0.15.0
+  Enabled: true
 
 Sorbet/ForbidUntypedStructProps:
   Enabled: false

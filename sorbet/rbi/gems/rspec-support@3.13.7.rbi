@@ -146,12 +146,10 @@ module RSpec::Support
     def thread_local_data; end
 
     # @api private
-    # @api private
     #
     # pkg:gem/rspec-support#lib/rspec/support.rb:140
     def warning_notifier; end
 
-    # @api private
     # @api private
     #
     # pkg:gem/rspec-support#lib/rspec/support.rb:133
@@ -1262,13 +1260,13 @@ module RSpec::Support::WithKeywordsWhenNeeded
   # this is used. Works around a warning in Ruby 2.7
   #
   # pkg:gem/rspec-support#lib/rspec/support/with_keywords_when_needed.rb:17
-  def class_exec(klass, *args, **_arg2, &block); end
+  def class_exec(klass, *args, **, &block); end
 
   class << self
     # Remove this in RSpec 4 in favour of explicitly passed in kwargs where
     # this is used. Works around a warning in Ruby 2.7
     #
     # pkg:gem/rspec-support#lib/rspec/support/with_keywords_when_needed.rb:17
-    def class_exec(klass, *args, **_arg2, &block); end
+    def class_exec(klass, *args, **, &block); end
   end
 end

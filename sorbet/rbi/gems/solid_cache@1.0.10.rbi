@@ -200,12 +200,12 @@ class SolidCache::Entry < ::SolidCache::Record
     def clear_truncate; end
     def delete_by_key(*keys); end
     def id_range; end
-    def in_key_hash_range(*args, **_arg1); end
-    def largest_byte_sizes(*args, **_arg1); end
+    def in_key_hash_range(*args, **); end
+    def largest_byte_sizes(*args, **); end
     def lock_and_write(key, &block); end
     def read(key); end
     def read_multi(keys); end
-    def up_to_byte_size(*args, **_arg1); end
+    def up_to_byte_size(*args, **); end
     def write(key, value); end
     def write_multi(payloads); end
 
@@ -288,7 +288,7 @@ end
 class SolidCache::Entry::Size::MovingAverageEstimate
   def initialize(samples:); end
 
-  def exact?(*_arg0, **_arg1, &_arg2); end
+  def exact?(*, **, &); end
   def samples; end
   def size; end
 
@@ -449,7 +449,7 @@ module SolidCache::Store::Api
   def delete_multi_entries(entries, **options); end
 
   # pkg:gem/solid_cache#lib/solid_cache/store/api.rb:136
-  def deserialize_entry(payload, **_arg1); end
+  def deserialize_entry(payload, **); end
 
   # pkg:gem/solid_cache#lib/solid_cache/store/api.rb:140
   def normalize_key(key, options); end

@@ -9209,10 +9209,10 @@ class MCP::Skill::Frontmatter::BoundedTreeBuilder < ::Psych::TreeBuilder
   def end_sequence; end
 
   # pkg:gem/mcp#lib/mcp/skill/frontmatter.rb:95
-  def start_mapping(*_arg0); end
+  def start_mapping(*); end
 
   # pkg:gem/mcp#lib/mcp/skill/frontmatter.rb:90
-  def start_sequence(*_arg0); end
+  def start_sequence(*); end
 
   private
 

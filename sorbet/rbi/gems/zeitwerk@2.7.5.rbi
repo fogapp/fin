@@ -1062,7 +1062,7 @@ class Zeitwerk::Registry::Loaders
   def clear; end
 
   # pkg:gem/zeitwerk#lib/zeitwerk/registry/loaders.rb:9
-  def each(&_arg0); end
+  def each(&); end
 
   # pkg:gem/zeitwerk#lib/zeitwerk/registry/loaders.rb:14
   def register(loader); end

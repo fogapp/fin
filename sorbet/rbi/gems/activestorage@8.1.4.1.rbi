@@ -987,16 +987,16 @@ class ActiveStorage::Attached::Many < ::ActiveStorage::Attached
   def blobs; end
 
   # pkg:gem/activestorage#lib/active_storage/attached/many.rb:25
-  def detach(*_arg0, **_arg1, &_arg2); end
+  def detach(*, **, &); end
 
   # pkg:gem/activestorage#lib/active_storage/attached/many.rb:27
-  def method_missing(method, *_arg1, **_arg2, &_arg3); end
+  def method_missing(method, *, **, &); end
 
   # pkg:gem/activestorage#lib/active_storage/attached/many.rb:13
-  def purge(*_arg0, **_arg1, &_arg2); end
+  def purge(*, **, &); end
 
   # pkg:gem/activestorage#lib/active_storage/attached/many.rb:19
-  def purge_later(*_arg0, **_arg1, &_arg2); end
+  def purge_later(*, **, &); end
 
   private
 
@@ -1033,12 +1033,12 @@ module ActiveStorage::Attached::Model
   def changed_for_autosave?; end
 
   # pkg:gem/activestorage#lib/active_storage/attached/model.rb:297
-  def reload(*_arg0); end
+  def reload(*); end
 
   private
 
   # pkg:gem/activestorage#lib/active_storage/attached/model.rb:291
-  def initialize_dup(*_arg0); end
+  def initialize_dup(*); end
 
   class << self
     # pkg:gem/activestorage#lib/active_storage/attached/model.rb:263
@@ -1117,16 +1117,16 @@ class ActiveStorage::Attached::One < ::ActiveStorage::Attached
   def blank?; end
 
   # pkg:gem/activestorage#lib/active_storage/attached/one.rb:25
-  def detach(*_arg0, **_arg1, &_arg2); end
+  def detach(*, **, &); end
 
   # pkg:gem/activestorage#lib/active_storage/attached/one.rb:27
-  def method_missing(method, *_arg1, **_arg2, &_arg3); end
+  def method_missing(method, *, **, &); end
 
   # pkg:gem/activestorage#lib/active_storage/attached/one.rb:13
-  def purge(*_arg0, **_arg1, &_arg2); end
+  def purge(*, **, &); end
 
   # pkg:gem/activestorage#lib/active_storage/attached/one.rb:19
-  def purge_later(*_arg0, **_arg1, &_arg2); end
+  def purge_later(*, **, &); end
 
   private
 
@@ -1152,12 +1152,12 @@ class ActiveStorage::Attachment < ::ActiveStorage::Record
   def _run_update_callbacks(&block); end
   def autosave_associated_records_for_blob(*args); end
   def autosave_associated_records_for_record(*args); end
-  def method_missing(method, *_arg1, **_arg2, &_arg3); end
+  def method_missing(method, *, **, &); end
   def preview(transformations); end
   def purge; end
   def purge_later; end
   def representation(transformations); end
-  def signed_id(*_arg0, **_arg1, &_arg2); end
+  def signed_id(*, **, &); end
   def validate_associated_records_for_blob(*args); end
   def variant(transformations); end
 
@@ -1173,7 +1173,7 @@ class ActiveStorage::Attachment < ::ActiveStorage::Record
   def transformations_by_name(transformations); end
 
   class << self
-    def with_all_variant_records(*args, **_arg1); end
+    def with_all_variant_records(*args, **); end
 
     private
 
@@ -1311,8 +1311,8 @@ class ActiveStorage::Blob < ::ActiveStorage::Record
     def services=(value); end
     def services?; end
     def signed_id_verifier; end
-    def unattached(*args, **_arg1); end
-    def with_attached_preview_image(*args, **_arg1); end
+    def unattached(*args, **); end
+    def with_attached_preview_image(*args, **); end
 
     private
 
@@ -1584,7 +1584,7 @@ class ActiveStorage::Filename
   def initialize(filename); end
 
   def <=>(other); end
-  def as_json(*_arg0); end
+  def as_json(*); end
   def base; end
   def extension; end
   def extension_with_delimiter; end
@@ -1829,9 +1829,9 @@ class ActiveStorage::Preview
   def initialize(blob, variation_or_variation_key); end
 
   def blob; end
-  def content_type(*_arg0, **_arg1, &_arg2); end
+  def content_type(*, **, &); end
   def download(&block); end
-  def filename(*_arg0, **_arg1, &_arg2); end
+  def filename(*, **, &); end
   def image; end
   def key; end
   def processed; end
@@ -2321,10 +2321,10 @@ class ActiveStorage::Service
   def instrument(operation, payload = T.unsafe(nil), &block); end
 
   # pkg:gem/activestorage#lib/active_storage/service.rb:156
-  def private_url(key, expires_in:, filename:, disposition:, content_type:, **_arg5); end
+  def private_url(key, expires_in:, filename:, disposition:, content_type:, **); end
 
   # pkg:gem/activestorage#lib/active_storage/service.rb:160
-  def public_url(key, **_arg1); end
+  def public_url(key, **); end
 
   # pkg:gem/activestorage#lib/active_storage/service.rb:174
   def service_name; end
@@ -2579,14 +2579,14 @@ class ActiveStorage::Variant
   def initialize(blob, variation_or_variation_key); end
 
   def blob; end
-  def content_type(*_arg0, **_arg1, &_arg2); end
+  def content_type(*, **, &); end
   def destroy; end
   def download(&block); end
   def filename; end
   def image; end
   def key; end
   def processed; end
-  def service(*_arg0, **_arg1, &_arg2); end
+  def service(*, **, &); end
   def url(expires_in: T.unsafe(nil), disposition: T.unsafe(nil)); end
   def variation; end
 
@@ -2610,7 +2610,7 @@ class ActiveStorage::VariantRecord < ::ActiveStorage::Record
   def autosave_associated_records_for_image_blob(*args); end
 
   class << self
-    def with_attached_image(*args, **_arg1); end
+    def with_attached_image(*args, **); end
 
     private
 
@@ -2663,15 +2663,15 @@ class ActiveStorage::VariantWithRecord
   def initialize(blob, variation); end
 
   def blob; end
-  def content_type(*_arg0, **_arg1, &_arg2); end
+  def content_type(*, **, &); end
   def destroy; end
-  def download(*_arg0, **_arg1, &_arg2); end
+  def download(*, **, &); end
   def filename; end
   def image; end
-  def key(*_arg0, **_arg1, &_arg2); end
+  def key(*, **, &); end
   def processed; end
-  def service(*_arg0, **_arg1, &_arg2); end
-  def url(*_arg0, **_arg1, &_arg2); end
+  def service(*, **, &); end
+  def url(*, **, &); end
   def variation; end
 
   private

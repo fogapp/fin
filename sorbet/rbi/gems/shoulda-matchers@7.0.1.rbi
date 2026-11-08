@@ -1066,7 +1066,7 @@ class Shoulda::Matchers::ActionController::FlashStore
   def controller=(_arg0); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/flash_store.rb:38
-  def empty?(*_arg0, **_arg1, &_arg2); end
+  def empty?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/flash_store.rb:29
   def has_key?(key); end
@@ -1597,25 +1597,25 @@ class Shoulda::Matchers::ActionController::SetFlashMatcher
   def [](key); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_flash_matcher.rb:158
-  def description(*args, **_arg1, &block); end
+  def description(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_flash_matcher.rb:158
-  def failure_message(*args, **_arg1, &block); end
+  def failure_message(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_flash_matcher.rb:163
-  def failure_message_for_should(*args, **_arg1, &block); end
+  def failure_message_for_should(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_flash_matcher.rb:166
-  def failure_message_for_should_not(*args, **_arg1, &block); end
+  def failure_message_for_should_not(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_flash_matcher.rb:158
-  def failure_message_when_negated(*args, **_arg1, &block); end
+  def failure_message_when_negated(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_flash_matcher.rb:185
   def in_context(context); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_flash_matcher.rb:158
-  def matches?(*args, **_arg1, &block); end
+  def matches?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_flash_matcher.rb:175
   def now; end
@@ -1656,25 +1656,25 @@ class Shoulda::Matchers::ActionController::SetSessionMatcher
   def [](key); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_session_matcher.rb:125
-  def description(*args, **_arg1, &block); end
+  def description(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_session_matcher.rb:125
-  def failure_message(*args, **_arg1, &block); end
+  def failure_message(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_session_matcher.rb:130
-  def failure_message_for_should(*args, **_arg1, &block); end
+  def failure_message_for_should(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_session_matcher.rb:133
-  def failure_message_for_should_not(*args, **_arg1, &block); end
+  def failure_message_for_should_not(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_session_matcher.rb:125
-  def failure_message_when_negated(*args, **_arg1, &block); end
+  def failure_message_when_negated(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_session_matcher.rb:142
   def in_context(context); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_session_matcher.rb:125
-  def matches?(*args, **_arg1, &block); end
+  def matches?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/action_controller/set_session_matcher.rb:152
   def to(expected_value = T.unsafe(nil), &block); end
@@ -4217,7 +4217,7 @@ class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSetterAndValid
   def initialize(allow_value_matcher, attribute_name, value); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:11
-  def after_setting_value_callback(*args, **_arg1, &block); end
+  def after_setting_value_callback(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:30
   def attribute_setter; end
@@ -4226,22 +4226,22 @@ class Shoulda::Matchers::ActiveModel::AllowValueMatcher::AttributeSetterAndValid
   def attribute_setter_description; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:11
-  def attribute_to_check_message_against(*args, **_arg1, &block); end
+  def attribute_to_check_message_against(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:11
-  def context(*args, **_arg1, &block); end
+  def context(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:11
-  def expected_message(*args, **_arg1, &block); end
+  def expected_message(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:11
-  def expects_strict?(*args, **_arg1, &block); end
+  def expects_strict?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:11
-  def ignore_interference_by_writer(*args, **_arg1, &block); end
+  def ignore_interference_by_writer(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:11
-  def instance(*args, **_arg1, &block); end
+  def instance(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/allow_value_matcher/attribute_setter_and_validator.rb:45
   def validator; end
@@ -4349,10 +4349,10 @@ class Shoulda::Matchers::ActiveModel::ComparisonMatcher < ::Shoulda::Matchers::A
   def expects_custom_validation_message?; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/comparison_matcher.rb:35
-  def failure_message(*_arg0, **_arg1, &_arg2); end
+  def failure_message(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/comparison_matcher.rb:35
-  def failure_message_when_negated(*_arg0, **_arg1, &_arg2); end
+  def failure_message_when_negated(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/comparison_matcher.rb:61
   def for(attribute); end
@@ -4438,31 +4438,31 @@ class Shoulda::Matchers::ActiveModel::DisallowValueMatcher
   def initialize(value); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def _after_setting_value(*args, **_arg1, &block); end
+  def _after_setting_value(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def attribute_changed_value_message=(*args, **_arg1, &block); end
+  def attribute_changed_value_message=(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def attribute_to_set(*args, **_arg1, &block); end
+  def attribute_to_set(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def description(*args, **_arg1, &block); end
+  def description(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:35
   def does_not_match?(subject); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def expects_strict?(*args, **_arg1, &block); end
+  def expects_strict?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:64
   def failure_message; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def failure_message_preface(*args, **_arg1, &block); end
+  def failure_message_preface(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def failure_message_preface=(*args, **_arg1, &block); end
+  def failure_message_preface=(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:68
   def failure_message_when_negated; end
@@ -4471,34 +4471,34 @@ class Shoulda::Matchers::ActiveModel::DisallowValueMatcher
   def for(attribute); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def ignore_interference_by_writer(*args, **_arg1, &block); end
+  def ignore_interference_by_writer(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:59
   def ignoring_interference_by_writer(value = T.unsafe(nil)); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def last_attribute_setter_used(*args, **_arg1, &block); end
+  def last_attribute_setter_used(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def last_value_set(*args, **_arg1, &block); end
+  def last_value_set(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:31
   def matches?(subject); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def model(*args, **_arg1, &block); end
+  def model(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:44
   def on(context); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def simple_description(*args, **_arg1, &block); end
+  def simple_description(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:54
   def strict(strict = T.unsafe(nil)); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:10
-  def values_to_preset=(*args, **_arg1, &block); end
+  def values_to_preset=(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/disallow_value_matcher.rb:49
   def with_message(message, options = T.unsafe(nil)); end
@@ -4636,37 +4636,37 @@ class Shoulda::Matchers::ActiveModel::NumericalityMatchers::NumericTypeMatcher
   def diff_to_compare; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def does_not_match?(*args, **_arg1, &block); end
+  def does_not_match?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def expects_custom_validation_message?(*args, **_arg1, &block); end
+  def expects_custom_validation_message?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def expects_strict?(*args, **_arg1, &block); end
+  def expects_strict?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def failure_message(*args, **_arg1, &block); end
+  def failure_message(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def failure_message_when_negated(*args, **_arg1, &block); end
+  def failure_message_when_negated(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def ignore_interference_by_writer(*args, **_arg1, &block); end
+  def ignore_interference_by_writer(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def ignoring_interference_by_writer(*args, **_arg1, &block); end
+  def ignoring_interference_by_writer(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def matches?(*args, **_arg1, &block); end
+  def matches?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def on(*args, **_arg1, &block); end
+  def on(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def strict(*args, **_arg1, &block); end
+  def strict(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/numeric_type_matcher.rb:11
-  def with_message(*args, **_arg1, &block); end
+  def with_message(*, **, &); end
 
   protected
 
@@ -4743,7 +4743,7 @@ class Shoulda::Matchers::ActiveModel::NumericalityMatchers::RangeMatcher < ::Sho
   def initialize(numericality_matcher, attribute, range); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/range_matcher.rb:11
-  def failure_message(*_arg0, **_arg1, &_arg2); end
+  def failure_message(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/numericality_matchers/range_matcher.rb:24
   def matches?(subject); end
@@ -4888,7 +4888,7 @@ end
 # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/qualifiers/ignoring_interference_by_writer.rb:6
 module Shoulda::Matchers::ActiveModel::Qualifiers::IgnoringInterferenceByWriter
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/qualifiers/ignoring_interference_by_writer.rb:9
-  def initialize(*_arg0); end
+  def initialize(*); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_model/qualifiers/ignoring_interference_by_writer.rb:7
   def ignore_interference_by_writer; end
@@ -8682,7 +8682,7 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatcher
   def initialize(macro, name); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1393
-  def associated_class(*_arg0, **_arg1, &_arg2); end
+  def associated_class(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1474
   def autosave(autosave); end
@@ -8724,7 +8724,7 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatcher
   def matches?(subject); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1393
-  def model_class(*_arg0, **_arg1, &_arg2); end
+  def model_class(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1396
   def name; end
@@ -8742,10 +8742,10 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatcher
   def order(order); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1393
-  def polymorphic?(*_arg0, **_arg1, &_arg2); end
+  def polymorphic?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1393
-  def reflection(*_arg0, **_arg1, &_arg2); end
+  def reflection(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1509
   def required(required = T.unsafe(nil)); end
@@ -8760,7 +8760,7 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatcher
   def through(through); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1393
-  def through?(*_arg0, **_arg1, &_arg2); end
+  def through?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matcher.rb:1534
   def touch(touch = T.unsafe(nil)); end
@@ -9107,19 +9107,19 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatchers::JoinTableMatcher
   def initialize(association_matcher, reflector); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:11
-  def associated_class(*_arg0, **_arg1, &_arg2); end
+  def associated_class(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:69
-  def association_foreign_key(*_arg0, **_arg1, &_arg2); end
+  def association_foreign_key(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:14
-  def connection(*_arg0, **_arg1, &_arg2); end
+  def connection(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:7
   def failure_message; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:69
-  def foreign_key(*_arg0, **_arg1, &_arg2); end
+  def foreign_key(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:44
   def join_table_exists?; end
@@ -9128,7 +9128,7 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatchers::JoinTableMatcher
   def join_table_has_correct_columns?; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:11
-  def join_table_name(*_arg0, **_arg1, &_arg2); end
+  def join_table_name(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:27
   def join_table_option_correct?; end
@@ -9140,16 +9140,16 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatchers::JoinTableMatcher
   def missing_option; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:11
-  def model_class(*_arg0, **_arg1, &_arg2); end
+  def model_class(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:11
-  def name(*_arg0, **_arg1, &_arg2); end
+  def name(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:11
-  def option_verifier(*_arg0, **_arg1, &_arg2); end
+  def option_verifier(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/join_table_matcher.rb:11
-  def options(*_arg0, **_arg1, &_arg2); end
+  def options(*, **, &); end
 
   protected
 
@@ -9242,10 +9242,10 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ModelReflector
   def initialize(subject, name); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:7
-  def associated_class(*_arg0, **_arg1, &_arg2); end
+  def associated_class(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:7
-  def association_foreign_key(*_arg0, **_arg1, &_arg2); end
+  def association_foreign_key(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:30
   def association_relation; end
@@ -9257,22 +9257,22 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ModelReflector
   def extract_relation_clause_from(relation, name); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:7
-  def foreign_key(*_arg0, **_arg1, &_arg2); end
+  def foreign_key(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:7
-  def foreign_type(*_arg0, **_arg1, &_arg2); end
+  def foreign_type(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:7
-  def has_and_belongs_to_many_name(*_arg0, **_arg1, &_arg2); end
+  def has_and_belongs_to_many_name(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:7
-  def join_table_name(*_arg0, **_arg1, &_arg2); end
+  def join_table_name(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:46
   def model_class; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:7
-  def polymorphic?(*_arg0, **_arg1, &_arg2); end
+  def polymorphic?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:38
   def reflect_on_association(name); end
@@ -9281,10 +9281,10 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatchers::ModelReflector
   def reflection; end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:19
-  def through?(*_arg0, **_arg1, &_arg2); end
+  def through?(*, **, &); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/model_reflector.rb:7
-  def validate_inverse_of_through_association!(*_arg0, **_arg1, &_arg2); end
+  def validate_inverse_of_through_association!(*, **, &); end
 
   protected
 
@@ -9327,7 +9327,7 @@ class Shoulda::Matchers::ActiveRecord::AssociationMatchers::OptionVerifier
   def correct_for_string?(name, expected_value); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/association_matchers/option_verifier.rb:7
-  def reflection(*_arg0, **_arg1, &_arg2); end
+  def reflection(*, **, &); end
 
   protected
 
@@ -10337,10 +10337,6 @@ class Shoulda::Matchers::ActiveRecord::SerializeMatcher
 end
 
 # @private
-# @private
-# @private
-# @private
-# @private
 #
 # pkg:gem/shoulda-matchers#lib/shoulda/matchers/active_record/uniqueness.rb:5
 module Shoulda::Matchers::ActiveRecord::Uniqueness; end
@@ -10855,10 +10851,10 @@ module Shoulda::Matchers::Doublespeak
     def debugging_enabled?; end
 
     # pkg:gem/shoulda-matchers#lib/shoulda/matchers/doublespeak.rb:10
-    def double_collection_for(*args, **_arg1, &block); end
+    def double_collection_for(*, **, &); end
 
     # pkg:gem/shoulda-matchers#lib/shoulda/matchers/doublespeak.rb:10
-    def with_doubles_activated(*args, **_arg1, &block); end
+    def with_doubles_activated(*, **, &); end
 
     # pkg:gem/shoulda-matchers#lib/shoulda/matchers/doublespeak.rb:13
     def world; end
@@ -11068,7 +11064,7 @@ class Shoulda::Matchers::Doublespeak::ProxyImplementation
   def call(call); end
 
   # pkg:gem/shoulda-matchers#lib/shoulda/matchers/doublespeak/proxy_implementation.rb:10
-  def returns(*args, **_arg1, &block); end
+  def returns(*, **, &); end
 
   protected
 

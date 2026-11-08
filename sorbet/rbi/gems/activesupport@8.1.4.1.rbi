@@ -84,13 +84,13 @@ module ActiveSupport
     def error_reporter=(_arg0); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
-    def escape_html_entities_in_json(*_arg0, **_arg1, &_arg2); end
+    def escape_html_entities_in_json(*, **, &); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
     def escape_html_entities_in_json=(arg); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
-    def escape_js_separators_in_json(*_arg0, **_arg1, &_arg2); end
+    def escape_js_separators_in_json(*, **, &); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
     def escape_js_separators_in_json=(arg); end
@@ -113,7 +113,7 @@ module ActiveSupport
     def gem_version; end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
-    def json_encoder(*_arg0, **_arg1, &_arg2); end
+    def json_encoder(*, **, &); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
     def json_encoder=(arg); end
@@ -143,7 +143,7 @@ module ActiveSupport
     def test_parallelization_threshold=(val); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
-    def time_precision(*_arg0, **_arg1, &_arg2); end
+    def time_precision(*, **, &); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
     def time_precision=(arg); end
@@ -155,7 +155,7 @@ module ActiveSupport
     def to_time_preserves_timezone=(value); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
-    def use_standard_json_time_format(*_arg0, **_arg1, &_arg2); end
+    def use_standard_json_time_format(*, **, &); end
 
     # pkg:gem/activesupport#lib/active_support/json/encoding.rb:8
     def use_standard_json_time_format=(arg); end
@@ -261,7 +261,7 @@ class ActiveSupport::ArrayInquirer < ::Array
   private
 
   # pkg:gem/activesupport#lib/active_support/array_inquirer.rb:42
-  def method_missing(name, *_arg1, **_arg2, &_arg3); end
+  def method_missing(name, *, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/array_inquirer.rb:38
   def respond_to_missing?(name, include_private = T.unsafe(nil)); end
@@ -394,18 +394,10 @@ class ActiveSupport::BacktraceCleaner
   # Returns the first clean frame of the caller's backtrace, or +nil+.
   #
   # Frames are strings.
-  # Returns the first clean frame of the caller's backtrace, or +nil+.
-  #
-  # Frames are strings.
   #
   # pkg:gem/activesupport#lib/active_support/backtrace_cleaner.rb:129
   def first_clean_frame(kind = T.unsafe(nil)); end
 
-  # Returns the first clean location of the caller's call stack, or +nil+.
-  #
-  # Locations are Thread::Backtrace::Location objects. Since they are
-  # immutable, their +path+ attributes are the original ones, but filters
-  # are applied internally so silencers can still rely on them.
   # Returns the first clean location of the caller's call stack, or +nil+.
   #
   # Locations are Thread::Backtrace::Location objects. Since they are
@@ -602,10 +594,10 @@ class ActiveSupport::BroadcastLogger
   def initialize(*loggers); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def <<(*_arg0, **_arg1, &_arg2); end
+  def <<(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def add(*_arg0, **_arg1, &_arg2); end
+  def add(*, **, &); end
 
   # Add logger(s) to the broadcast.
   #
@@ -621,10 +613,10 @@ class ActiveSupport::BroadcastLogger
   def broadcasts; end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def close(*_arg0, **_arg1, &_arg2); end
+  def close(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def debug(*_arg0, **_arg1, &_arg2); end
+  def debug(*, **, &); end
 
   # Sets the log level to +Logger::DEBUG+ for the whole broadcast.
   #
@@ -638,7 +630,7 @@ class ActiveSupport::BroadcastLogger
   def debug?; end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def error(*_arg0, **_arg1, &_arg2); end
+  def error(*, **, &); end
 
   # Sets the log level to +Logger::ERROR+ for the whole broadcast.
   #
@@ -652,7 +644,7 @@ class ActiveSupport::BroadcastLogger
   def error?; end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def fatal(*_arg0, **_arg1, &_arg2); end
+  def fatal(*, **, &); end
 
   # Sets the log level to +Logger::FATAL+ for the whole broadcast.
   #
@@ -666,13 +658,13 @@ class ActiveSupport::BroadcastLogger
   def fatal?; end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def formatter(*_arg0, **_arg1, &_arg2); end
+  def formatter(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def formatter=(*_arg0, **_arg1, &_arg2); end
+  def formatter=(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def info(*_arg0, **_arg1, &_arg2); end
+  def info(*, **, &); end
 
   # Sets the log level to +Logger::INFO+ for the whole broadcast.
   #
@@ -693,7 +685,7 @@ class ActiveSupport::BroadcastLogger
   # Returns the lowest level of all the loggers in the broadcast.
   #
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def level=(*_arg0, **_arg1, &_arg2); end
+  def level=(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:113
   def local_level; end
@@ -702,7 +694,7 @@ class ActiveSupport::BroadcastLogger
   def local_level=(level); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def log(*_arg0, **_arg1, &_arg2); end
+  def log(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:79
   def progname; end
@@ -711,7 +703,7 @@ class ActiveSupport::BroadcastLogger
   def progname=(_arg0); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def sev_threshold=(*_arg0, **_arg1, &_arg2); end
+  def sev_threshold=(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:75
   def silencer; end
@@ -731,10 +723,10 @@ class ActiveSupport::BroadcastLogger
   def stop_broadcasting_to(logger); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def unknown(*_arg0, **_arg1, &_arg2); end
+  def unknown(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:127
-  def warn(*_arg0, **_arg1, &_arg2); end
+  def warn(*, **, &); end
 
   # Sets the log level to +Logger::WARN+ for the whole broadcast.
   #
@@ -756,7 +748,7 @@ class ActiveSupport::BroadcastLogger
   def initialize_copy(other); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:222
-  def method_missing(name, *_arg1, **_arg2, &_arg3); end
+  def method_missing(name, *, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/broadcast_logger.rb:234
   def respond_to_missing?(method, include_all); end
@@ -951,7 +943,7 @@ class ActiveSupport::Cache::Entry
   # +:compressed+, +:version+, +:expires_at+ and +:expires_in+.
   #
   # pkg:gem/activesupport#lib/active_support/cache/entry.rb:25
-  def initialize(value, compressed: T.unsafe(nil), version: T.unsafe(nil), expires_in: T.unsafe(nil), expires_at: T.unsafe(nil), **_arg5); end
+  def initialize(value, compressed: T.unsafe(nil), version: T.unsafe(nil), expires_in: T.unsafe(nil), expires_at: T.unsafe(nil), **); end
 
   # Returns the size of the cached value. This could be less than
   # <tt>value.bytesize</tt> if the data is compressed.
@@ -1111,7 +1103,7 @@ class ActiveSupport::Cache::FileStore < ::ActiveSupport::Cache::Store
   def read_entry(key, **options); end
 
   # pkg:gem/activesupport#lib/active_support/cache/file_store.rb:114
-  def read_serialized_entry(key, **_arg1); end
+  def read_serialized_entry(key, **); end
 
   # pkg:gem/activesupport#lib/active_support/cache/file_store.rb:209
   def search_dir(dir, &callback); end
@@ -1245,7 +1237,7 @@ class ActiveSupport::Cache::MemoryStore < ::ActiveSupport::Cache::Store
   def cached_size(key, payload); end
 
   # pkg:gem/activesupport#lib/active_support/cache/memory_store.rb:233
-  def delete_entry(key, **_arg1); end
+  def delete_entry(key, **); end
 
   # Modifies the amount of an integer value that is stored in the cache.
   # If the key is not found it is created and set to +amount+.
@@ -1330,7 +1322,7 @@ class ActiveSupport::Cache::NullStore < ::ActiveSupport::Cache::Store
   private
 
   # pkg:gem/activesupport#lib/active_support/cache/null_store.rb:57
-  def delete_entry(key, **_arg1); end
+  def delete_entry(key, **); end
 
   # pkg:gem/activesupport#lib/active_support/cache/null_store.rb:42
   def read_entry(key, **s); end
@@ -1339,10 +1331,10 @@ class ActiveSupport::Cache::NullStore < ::ActiveSupport::Cache::Store
   def read_serialized_entry(key, raw: T.unsafe(nil), **options); end
 
   # pkg:gem/activesupport#lib/active_support/cache/null_store.rb:49
-  def write_entry(key, entry, **_arg2); end
+  def write_entry(key, entry, **); end
 
   # pkg:gem/activesupport#lib/active_support/cache/null_store.rb:53
-  def write_serialized_entry(key, payload, **_arg2); end
+  def write_serialized_entry(key, payload, **); end
 
   class << self
     # Advertise cache versioning support.
@@ -1966,7 +1958,7 @@ class ActiveSupport::Cache::Store
   def delete_multi_entries(entries, **options); end
 
   # pkg:gem/activesupport#lib/active_support/cache.rb:862
-  def deserialize_entry(payload, **_arg1); end
+  def deserialize_entry(payload, **); end
 
   # pkg:gem/activesupport#lib/active_support/cache.rb:984
   def expand_and_namespace_key(key, options = T.unsafe(nil)); end
@@ -2164,7 +2156,7 @@ module ActiveSupport::Cache::Strategy::LocalCache
   def bypass_local_cache(&block); end
 
   # pkg:gem/activesupport#lib/active_support/cache/strategy/local_cache.rb:211
-  def delete_entry(key, **_arg1); end
+  def delete_entry(key, **); end
 
   # pkg:gem/activesupport#lib/active_support/cache/strategy/local_cache.rb:226
   def local_cache_key; end
@@ -2182,7 +2174,7 @@ module ActiveSupport::Cache::Strategy::LocalCache
   def write_cache_value(name, value, **options); end
 
   # pkg:gem/activesupport#lib/active_support/cache/strategy/local_cache.rb:202
-  def write_serialized_entry(key, payload, **_arg2); end
+  def write_serialized_entry(key, payload, **); end
 end
 
 # Class for storing and registering the local caches.
@@ -3914,7 +3906,7 @@ class ActiveSupport::CurrentAttributes
     def attribute(*names, default: T.unsafe(nil)); end
 
     # pkg:gem/activesupport#lib/active_support/current_attributes.rb:197
-    def attributes(&_arg0); end
+    def attributes(&); end
 
     # pkg:gem/activesupport#lib/active_support/current_attributes.rb:197
     def attributes=(arg); end
@@ -3944,7 +3936,7 @@ class ActiveSupport::CurrentAttributes
     # Reset all attributes. Should be called before and after actions, when used as a per-request singleton.
     #
     # pkg:gem/activesupport#lib/active_support/current_attributes.rb:155
-    def reset(*_arg0, **_arg1, &_arg2); end
+    def reset(*, **, &); end
 
     # Calls this callback after #reset is called on the instance. Used for resetting external collaborators, like Time.zone.
     #
@@ -3963,7 +3955,7 @@ class ActiveSupport::CurrentAttributes
     #   end
     #
     # pkg:gem/activesupport#lib/active_support/current_attributes.rb:155
-    def set(*_arg0, **_arg1, &_arg2); end
+    def set(*, **, &); end
 
     private
 
@@ -3992,7 +3984,7 @@ class ActiveSupport::CurrentAttributes
     def method_added(name); end
 
     # pkg:gem/activesupport#lib/active_support/current_attributes.rb:177
-    def method_missing(name, *_arg1, **_arg2, &_arg3); end
+    def method_missing(name, *, **, &); end
 
     # pkg:gem/activesupport#lib/active_support/current_attributes.rb:181
     def respond_to_missing?(name, _); end
@@ -4399,7 +4391,7 @@ class ActiveSupport::Deprecation::DeprecatedConstantProxy < ::Module
   def extended(base); end
 
   # pkg:gem/activesupport#lib/active_support/deprecation/proxy_wrappers.rb:147
-  def hash(*_arg0, **_arg1, &_arg2); end
+  def hash(*, **, &); end
 
   # Don't give a deprecation warning on inspect since test/unit and error
   # logs rely on it for diagnostics.
@@ -4408,16 +4400,16 @@ class ActiveSupport::Deprecation::DeprecatedConstantProxy < ::Module
   def inspect; end
 
   # pkg:gem/activesupport#lib/active_support/deprecation/proxy_wrappers.rb:147
-  def instance_methods(*_arg0, **_arg1, &_arg2); end
+  def instance_methods(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/deprecation/proxy_wrappers.rb:147
-  def name(*_arg0, **_arg1, &_arg2); end
+  def name(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/deprecation/proxy_wrappers.rb:163
   def prepend_features(base); end
 
   # pkg:gem/activesupport#lib/active_support/deprecation/proxy_wrappers.rb:147
-  def respond_to?(*_arg0, **_arg1, &_arg2); end
+  def respond_to?(*, **, &); end
 
   private
 
@@ -4425,7 +4417,7 @@ class ActiveSupport::Deprecation::DeprecatedConstantProxy < ::Module
   def const_missing(name); end
 
   # pkg:gem/activesupport#lib/active_support/deprecation/proxy_wrappers.rb:183
-  def method_missing(*_arg0, **_arg1, &_arg2); end
+  def method_missing(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/deprecation/proxy_wrappers.rb:174
   def target; end
@@ -4957,7 +4949,7 @@ class ActiveSupport::Duration
   def _parts; end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:224
-  def abs(&_arg0); end
+  def abs(&); end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:440
   def after(time = T.unsafe(nil)); end
@@ -5059,7 +5051,7 @@ class ActiveSupport::Duration
   def kind_of?(klass); end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:224
-  def negative?(&_arg0); end
+  def negative?(&); end
 
   # Returns a copy of the parts hash that defines the duration.
   #
@@ -5070,7 +5062,7 @@ class ActiveSupport::Duration
   def parts; end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:224
-  def positive?(&_arg0); end
+  def positive?(&); end
 
   # Calculates a new Time or Date that is as far in the future
   # as this Duration represents.
@@ -5079,7 +5071,7 @@ class ActiveSupport::Duration
   def since(time = T.unsafe(nil)); end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:224
-  def to_f(&_arg0); end
+  def to_f(&); end
 
   # Returns the number of seconds that this Duration represents.
   #
@@ -5123,12 +5115,12 @@ class ActiveSupport::Duration
   def variable?; end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:224
-  def zero?(&_arg0); end
+  def zero?(&); end
 
   private
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:516
-  def method_missing(*_arg0, **_arg1, &_arg2); end
+  def method_missing(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:520
   def raise_type_error(other); end
@@ -5371,13 +5363,13 @@ class ActiveSupport::Duration::Scalar < ::Numeric
   def coerce(other); end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:17
-  def to_f(*_arg0, **_arg1, &_arg2); end
+  def to_f(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:17
-  def to_i(*_arg0, **_arg1, &_arg2); end
+  def to_i(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:17
-  def to_s(*_arg0, **_arg1, &_arg2); end
+  def to_s(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/duration.rb:16
   def value; end
@@ -5475,7 +5467,7 @@ class ActiveSupport::EncryptedConfiguration < ::ActiveSupport::EncryptedFile
   def inspect; end
 
   # pkg:gem/activesupport#lib/active_support/encrypted_configuration.rb:52
-  def method_missing(method, *_arg1, **_arg2, &_arg3); end
+  def method_missing(method, *, **, &); end
 
   # Reads the file and returns the decrypted content. See EncryptedFile#read.
   #
@@ -5826,7 +5818,7 @@ class ActiveSupport::ErrorReporter
   #   Rails.error.set_context(section: "checkout", user_id: @user.id)
   #
   # pkg:gem/activesupport#lib/active_support/error_reporter.rb:202
-  def set_context(*_arg0, **_arg1, &_arg2); end
+  def set_context(*, **, &); end
 
   # Register a new error subscriber. The subscriber must respond to
   #
@@ -6769,7 +6761,7 @@ end
 # pkg:gem/activesupport#lib/active_support/gzip.rb:18
 class ActiveSupport::Gzip::Stream < ::StringIO
   # pkg:gem/activesupport#lib/active_support/gzip.rb:19
-  def initialize(*_arg0); end
+  def initialize(*); end
 
   # pkg:gem/activesupport#lib/active_support/gzip.rb:23
   def close; end
@@ -7788,25 +7780,25 @@ class ActiveSupport::Inflector::Inflections::Uncountables
   def delete(entry); end
 
   # pkg:gem/activesupport#lib/active_support/inflector/inflections.rb:38
-  def each(*_arg0, **_arg1, &_arg2); end
+  def each(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/inflector/inflections.rb:38
-  def empty?(*_arg0, **_arg1, &_arg2); end
+  def empty?(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/inflector/inflections.rb:57
   def flatten; end
 
   # pkg:gem/activesupport#lib/active_support/inflector/inflections.rb:38
-  def pop(*_arg0, **_arg1, &_arg2); end
+  def pop(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/inflector/inflections.rb:38
-  def to_a(*_arg0, **_arg1, &_arg2); end
+  def to_a(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/inflector/inflections.rb:38
-  def to_ary(*_arg0, **_arg1, &_arg2); end
+  def to_ary(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/inflector/inflections.rb:38
-  def to_s(*_arg0, **_arg1, &_arg2); end
+  def to_s(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/inflector/inflections.rb:68
   def uncountable?(str); end
@@ -8357,7 +8349,7 @@ class ActiveSupport::LogSubscriber < ::ActiveSupport::Subscriber
 
   class << self
     # pkg:gem/activesupport#lib/active_support/log_subscriber.rb:99
-    def attach_to(*_arg0, **_arg1, &_arg2); end
+    def attach_to(*, **, &); end
 
     # pkg:gem/activesupport#lib/active_support/log_subscriber.rb:83
     def colorize_logging; end
@@ -8506,7 +8498,7 @@ module ActiveSupport::LoggerThreadSafeLevel
   extend ::ActiveSupport::Concern
 
   # pkg:gem/activesupport#lib/active_support/logger_thread_safe_level.rb:10
-  def initialize(*_arg0, **_arg1, &_arg2); end
+  def initialize(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/logger_thread_safe_level.rb:35
   def level; end
@@ -9361,7 +9353,7 @@ module ActiveSupport::Messages::Rotator
   def catch_rotation_error(&block); end
 
   # pkg:gem/activesupport#lib/active_support/messages/rotator.rb:48
-  def initialize_dup(*_arg0); end
+  def initialize_dup(*); end
 end
 
 # pkg:gem/activesupport#lib/active_support/messages/serializer_with_fallback.rb:8
@@ -9557,13 +9549,13 @@ class ActiveSupport::Multibyte::Chars
   def initialize(string, deprecation: T.unsafe(nil)); end
 
   # pkg:gem/activesupport#lib/active_support/multibyte/chars.rb:53
-  def <=>(*_arg0, **_arg1, &_arg2); end
+  def <=>(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/multibyte/chars.rb:53
-  def =~(*_arg0, **_arg1, &_arg2); end
+  def =~(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/multibyte/chars.rb:53
-  def acts_like_string?(*_arg0, **_arg1, &_arg2); end
+  def acts_like_string?(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/multibyte/chars.rb:171
   def as_json(options = T.unsafe(nil)); end
@@ -9602,12 +9594,12 @@ class ActiveSupport::Multibyte::Chars
   def limit(limit); end
 
   # pkg:gem/activesupport#lib/active_support/multibyte/chars.rb:53
-  def match?(*_arg0, **_arg1, &_arg2); end
+  def match?(*, **, &); end
 
   # Forward all undefined methods to the wrapped string.
   #
   # pkg:gem/activesupport#lib/active_support/multibyte/chars.rb:72
-  def method_missing(method, *_arg1, **_arg2, &_arg3); end
+  def method_missing(method, *, **, &); end
 
   # Reverses all characters in the string.
   #
@@ -10117,7 +10109,7 @@ class ActiveSupport::Notifications::Fanout
   def listening?(name); end
 
   # pkg:gem/activesupport#lib/active_support/notifications/fanout.rb:311
-  def publish(name, *_arg1, **_arg2, &_arg3); end
+  def publish(name, *, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/notifications/fanout.rb:315
   def publish_event(event); end
@@ -10271,7 +10263,7 @@ class ActiveSupport::Notifications::Fanout::Subscribers::Evented
   def pattern; end
 
   # pkg:gem/activesupport#lib/active_support/notifications/fanout.rb:412
-  def publish(*_arg0, **_arg1, &_arg2); end
+  def publish(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/notifications/fanout.rb:418
   def publish_event(event); end
@@ -10318,7 +10310,7 @@ class ActiveSupport::Notifications::Fanout::Subscribers::Matcher::AllMessages
   def ===(name); end
 
   # pkg:gem/activesupport#lib/active_support/notifications/fanout.rb:391
-  def unsubscribe!(*_arg0); end
+  def unsubscribe!(*); end
 end
 
 # pkg:gem/activesupport#lib/active_support/notifications/fanout.rb:449
@@ -10333,7 +10325,7 @@ class ActiveSupport::Notifications::Fanout::Subscribers::Timed < ::ActiveSupport
   def group_class; end
 
   # pkg:gem/activesupport#lib/active_support/notifications/fanout.rb:444
-  def publish(*_arg0, **_arg1, &_arg2); end
+  def publish(*, **, &); end
 end
 
 # pkg:gem/activesupport#lib/active_support/notifications/fanout.rb:148
@@ -10436,10 +10428,10 @@ class ActiveSupport::Notifications::Instrumenter::LegacyHandle::Wrapper
   def build_handle(name, id, payload); end
 
   # pkg:gem/activesupport#lib/active_support/notifications/instrumenter.rb:31
-  def finish(*_arg0, **_arg1, &_arg2); end
+  def finish(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/notifications/instrumenter.rb:31
-  def start(*_arg0, **_arg1, &_arg2); end
+  def start(*, **, &); end
 end
 
 # = Number Helper
@@ -11358,7 +11350,7 @@ class ActiveSupport::OptionMerger
   def method_missing(method, *arguments, &block); end
 
   # pkg:gem/activesupport#lib/active_support/option_merger.rb:34
-  def respond_to_missing?(*_arg0, **_arg1, &_arg2); end
+  def respond_to_missing?(*, **, &); end
 end
 
 # DEPRECATED: +ActiveSupport::OrderedHash+ implements a hash that preserves
@@ -11892,7 +11884,7 @@ class ActiveSupport::SafeBuffer < ::String
   def []=(arg1, arg2, arg3 = T.unsafe(nil)); end
 
   # pkg:gem/activesupport#lib/active_support/core_ext/string/output_safety.rb:147
-  def as_json(*_arg0); end
+  def as_json(*); end
 
   # pkg:gem/activesupport#lib/active_support/core_ext/string/output_safety.rb:87
   def bytesplice(*args, value); end
@@ -12214,7 +12206,7 @@ class ActiveSupport::StringInquirer < ::String
   private
 
   # pkg:gem/activesupport#lib/active_support/string_inquirer.rb:27
-  def method_missing(method_name, *_arg1, **_arg2, &_arg3); end
+  def method_missing(method_name, *, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/string_inquirer.rb:23
   def respond_to_missing?(method_name, include_private = T.unsafe(nil)); end
@@ -12284,7 +12276,7 @@ class ActiveSupport::StructuredEventSubscriber < ::ActiveSupport::Subscriber
 
   class << self
     # pkg:gem/activesupport#lib/active_support/structured_event_subscriber.rb:37
-    def attach_to(*_arg0, **_arg1, &_arg2); end
+    def attach_to(*, **, &); end
 
     # pkg:gem/activesupport#lib/active_support/structured_event_subscriber.rb:32
     def debug_methods; end
@@ -12495,16 +12487,16 @@ ActiveSupport::TagStack::FIBER_KEY = T.let(T.unsafe(nil), Symbol)
 # pkg:gem/activesupport#lib/active_support/tagged_logging.rb:29
 module ActiveSupport::TaggedLogging
   # pkg:gem/activesupport#lib/active_support/tagged_logging.rb:139
-  def clear_tags!(*_arg0, **_arg1, &_arg2); end
+  def clear_tags!(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/tagged_logging.rb:152
   def flush; end
 
   # pkg:gem/activesupport#lib/active_support/tagged_logging.rb:139
-  def pop_tags(*_arg0, **_arg1, &_arg2); end
+  def pop_tags(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/tagged_logging.rb:139
-  def push_tags(*_arg0, **_arg1, &_arg2); end
+  def push_tags(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/tagged_logging.rb:141
   def tagged(*tags); end
@@ -14415,7 +14407,7 @@ class ActiveSupport::TimeWithZone
   # TimeWithZone with the existing +time_zone+.
   #
   # pkg:gem/activesupport#lib/active_support/time_with_zone.rb:555
-  def method_missing(*_arg0, **_arg1, &_arg2); end
+  def method_missing(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/time_with_zone.rb:449
   def min; end
@@ -14998,10 +14990,10 @@ end
 # pkg:gem/activesupport#lib/active_support/core_ext/object/try.rb:6
 module ActiveSupport::Tryable
   # pkg:gem/activesupport#lib/active_support/core_ext/object/try.rb:7
-  def try(*args, **_arg1, &block); end
+  def try(*args, **, &block); end
 
   # pkg:gem/activesupport#lib/active_support/core_ext/object/try.rb:20
-  def try!(*args, **_arg1, &block); end
+  def try!(*args, **, &block); end
 end
 
 # pkg:gem/activesupport#lib/active_support/gem_version.rb:9
@@ -15101,7 +15093,7 @@ module ActiveSupport::XmlMini
   def depth=(_arg0); end
 
   # pkg:gem/activesupport#lib/active_support/xml_mini.rb:100
-  def parse(*_arg0, **_arg1, &_arg2); end
+  def parse(*, **, &); end
 
   # pkg:gem/activesupport#lib/active_support/xml_mini.rb:153
   def rename_key(key, options = T.unsafe(nil)); end
@@ -18878,14 +18870,14 @@ class NilClass
   #   @person.try(:children).try(:first).try(:name)
   #
   # pkg:gem/activesupport#lib/active_support/core_ext/object/try.rb:148
-  def try(*_arg0, &_arg1); end
+  def try(*, &); end
 
   # Calling +try!+ on +nil+ always returns +nil+.
   #
   #   nil.try!(:name) # => nil
   #
   # pkg:gem/activesupport#lib/active_support/core_ext/object/try.rb:155
-  def try!(*_arg0, &_arg1); end
+  def try!(*, &); end
 end
 
 # pkg:gem/activesupport#lib/active_support/core_ext/object/blank.rb:170
@@ -20503,13 +20495,13 @@ class Time
     def ===(other); end
 
     # pkg:gem/activesupport#lib/active_support/core_ext/time/calculations.rb:61
-    def at(time_or_number, *args, **_arg2); end
+    def at(time_or_number, *args, **); end
 
     # Layers additional behavior on Time.at so that ActiveSupport::TimeWithZone and DateTime
     # instances can be used when called with a single argument
     #
     # pkg:gem/activesupport#lib/active_support/core_ext/time/calculations.rb:46
-    def at_with_coercion(time_or_number, *args, **_arg2); end
+    def at_with_coercion(time_or_number, *args, **); end
 
     # pkg:gem/activesupport#lib/active_support/core_ext/time/calculations.rb:60
     def at_without_coercion(time, subsec = T.unsafe(nil), unit = T.unsafe(nil), in: T.unsafe(nil)); end

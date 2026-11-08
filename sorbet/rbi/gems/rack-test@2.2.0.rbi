@@ -249,10 +249,10 @@ module Rack::Test::Methods
   def _rack_test_current_session=(_arg0); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def authorize(*args, **_arg1, &block); end
+  def authorize(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def basic_authorize(*args, **_arg1, &block); end
+  def basic_authorize(*, **, &); end
 
   # Create a new Rack::Test::Session for #app.
   #
@@ -260,7 +260,7 @@ module Rack::Test::Methods
   def build_rack_test_session(_name); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def clear_cookies(*args, **_arg1, &block); end
+  def clear_cookies(*, **, &); end
 
   # Return the currently actively session.  This is the session to
   # which the delegated methods are sent.
@@ -269,43 +269,43 @@ module Rack::Test::Methods
   def current_session; end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def custom_request(*args, **_arg1, &block); end
+  def custom_request(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def delete(*args, **_arg1, &block); end
+  def delete(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def env(*args, **_arg1, &block); end
+  def env(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def follow_redirect!(*args, **_arg1, &block); end
+  def follow_redirect!(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def get(*args, **_arg1, &block); end
+  def get(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def head(*args, **_arg1, &block); end
+  def head(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def header(*args, **_arg1, &block); end
+  def header(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def last_request(*args, **_arg1, &block); end
+  def last_request(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def last_response(*args, **_arg1, &block); end
+  def last_response(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def options(*args, **_arg1, &block); end
+  def options(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def patch(*args, **_arg1, &block); end
+  def patch(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def post(*args, **_arg1, &block); end
+  def post(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def put(*args, **_arg1, &block); end
+  def put(*, **, &); end
 
   # For backwards compatibility with older rack-test versions.
   #
@@ -319,10 +319,10 @@ module Rack::Test::Methods
   def rack_test_session(name = T.unsafe(nil)); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def request(*args, **_arg1, &block); end
+  def request(*, **, &); end
 
   # pkg:gem/rack-test#lib/rack/test/methods.rb:68
-  def set_cookie(*args, **_arg1, &block); end
+  def set_cookie(*, **, &); end
 
   # Create a new session (or reuse an existing session with the given name),
   # and make it the current session for the given block.

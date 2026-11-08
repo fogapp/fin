@@ -61,7 +61,7 @@ class Rswag::Api::Configuration
   def swagger_headers=(_arg0); end
 
   # pkg:gem/rswag-api#lib/rswag/api.rb:26
-  def swagger_root=(*args, **_arg1, &block); end
+  def swagger_root=(*args, **, &block); end
 end
 
 # pkg:gem/rswag-api#lib/rswag/api/engine.rb:5

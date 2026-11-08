@@ -21,10 +21,10 @@ module Parallel
     def each_with_index(array, options = T.unsafe(nil), &block); end
 
     # pkg:gem/parallel#lib/parallel.rb:318
-    def filter_map(*_arg0, **_arg1, &_arg2); end
+    def filter_map(*, **, &); end
 
     # pkg:gem/parallel#lib/parallel.rb:314
-    def flat_map(*_arg0, **_arg1, &_arg2); end
+    def flat_map(*, **, &); end
 
     # pkg:gem/parallel#lib/parallel.rb:239
     def in_processes(options = T.unsafe(nil), &block); end

@@ -3177,7 +3177,7 @@ class RSpec::Core::ExampleGroup
   private
 
   # pkg:gem/rspec-core#lib/rspec/core/example_group.rb:765
-  def method_missing(name, *args, **_arg2); end
+  def method_missing(name, *args, **); end
 
   class << self
     # Adds an example to the example group
@@ -4747,7 +4747,7 @@ end
 module RSpec::Core::Formatters::ExceptionPresenter::Factory::EmptyBacktraceFormatter
   class << self
     # pkg:gem/rspec-core#lib/rspec/core/formatters/exception_presenter.rb:418
-    def format_backtrace(*_arg0); end
+    def format_backtrace(*); end
   end
 end
 
@@ -6613,7 +6613,7 @@ module RSpec::Core::MemoizedHelpers
   # @private
   #
   # pkg:gem/rspec-core#lib/rspec/core/memoized_helpers.rb:135
-  def initialize(*_arg0); end
+  def initialize(*); end
 
   # Wraps the `subject` in `expect` to make it the target of an expectation.
   # Designed to read nicely for one-liners.
@@ -8054,7 +8054,7 @@ class RSpec::Core::NullReporter
     private
 
     # pkg:gem/rspec-core#lib/rspec/core/reporter.rb:261
-    def method_missing(*_arg0); end
+    def method_missing(*); end
   end
 end
 
