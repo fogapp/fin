@@ -109,4 +109,22 @@ Before committing: `bundle exec rspec`, `bin/rubocop`, `bin/brakeman`,
 
 ## License
 
-Fin is free software under the GNU Affero General Public License v3.0 (AGPL-3.0-only); see [LICENSE](LICENSE). The bundled fonts are under the SIL Open Font License; see `public/fonts/OFL.txt`.
+Copyright (C) 2026 Matthew Werner
+
+Fin is free software: you can redistribute it and/or modify it under the
+terms of the GNU Affero General Public License as published by the Free
+Software Foundation, version 3 (AGPL-3.0-only). See [LICENSE](LICENSE) for
+the full text.
+
+The client libraries vendored under `vendor/gems/` (`fog-client` and `flare`
+from Fog, `glass` from Glass) are under the MIT License, each with its own
+`LICENSE`. The bundled fonts are under the SIL Open Font License; see
+`public/fonts/OFL.txt`.
+
+The names and logos (Fog, fogapp, Fin, Stream and Glass) are trademarks,
+which the licenses don't cover. You may use them to refer to the software,
+and run or redistribute it unmodified under them; a modified version you
+distribute or offer to others needs its own name. See [TRADEMARKS.md](TRADEMARKS.md).
+
+Issues are welcome; pull requests aren't accepted for now. See
+[CONTRIBUTING.md](CONTRIBUTING.md).

@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
                   "profiles continuously, and ships everything to the GLASS_URL with the GLASS_API_KEY. " \
                   "Inert without both."
   s.authors     = ["Matthew Werner"]
-  s.homepage    = "https://gitea.lan/matthew/glass"
-  s.license     = "Nonstandard"
-  s.files       = Dir["lib/**/*.rb", "lib/**/*.js", "README.md"]
+  s.homepage    = "https://github.com/fogapp/glass"
+  s.license     = "MIT"
+  s.files       = Dir["lib/**/*.rb", "lib/**/*.js", "README.md", "LICENSE"]
   s.required_ruby_version = ">= 3.2.1"
   # One runtime dependency, on purpose (glass:docs/PROPOSAL.md §7.1, D2): a
   # sampler written in Ruby can only observe a thread once it has released
